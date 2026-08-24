@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "sommerville",
+    "bookTitle": "Ingeniería de Software",
+    "author": "Ian Sommerville",
+    "edition": "9ª Edición",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "Introducción a la Ingeniería de Software",
+        "what": "La ingeniería de software es una disciplina de ingeniería dedicada a todos los aspectos de la producción de software, desde las etapas iniciales de especificación hasta el mantenimiento. El software es el elemento productor en la industria moderna.",
+        "keyPoints": [
+          { "text": "El software intangible, no se desgasta como el hardware, pero puede degradarse por requerimientos cambiantes." },
+          { "text": "Los cuatro tipos de software: genérico a medida, productores de artefactos, sistemas embebidos y sistemas de LIPE." },
+          { "text": "Factores de diseño: reutilización, seguridad, eficiencia y mantenibilidad." },
+          { "text": "Los retos de la ingeniería de software: heterogeneidad, seguridad y confiabilidad, y la gestión de la complejidad." }
+        ],
+        "quote": "La ingeniería de software es una actividad de planeación, diseño, construcción, pruebas y mantenimiento de sistemas de software."
+      },
+      {
+        "num": 2,
+        "title": "Procesos de Software",
+        "what": "Un proceso de software es un conjunto de actividades que conducen a la producción de un sistema de software. Los principales modelos incluyen: cascada, incrementales, de desarrollo orientado a objetos y de desarrollo ágil.",
+        "keyPoints": [
+          { "text": "Modelo en cascada: planificación, análisis de requerimientos, diseño, implementación, pruebas y mantenimiento secuenciales." },
+          { "text": "Desarrollo incremental: el sistema se entrega en incrementos funcionales." },
+          { "text": "Proceso ágil: énfasis en iteraciones cortas, retroalimentación continua y adaptación al cambio." },
+          { "text": "Integración continua / despliegue continuo (CI/CD) como práctica moderna." }
+        ],
+        "quote": "No existe un proceso universal. La selección del proceso depende del tipo de software y los requerimientos del proyecto."
+      },
+      {
+        "num": 3,
+        "title": "Requerimientos de Software",
+        "what": "La ingeniería de requerimientos es el proceso de descubrir, definir, documentar y mantener los requerimientos de un sistema. Incluye requerimientos funcionales (qué hace el sistema) y no funcionales (cómo lo hace).",
+        "keyPoints": [
+          { "text": "El proceso de requerimientos: elicitation, análisis, especificación y validación." },
+          { "text": "Documentos de requerimientos: caso de uso, historias de usuario, especificación de requerimientos de software (SRS)." },
+          { "text": "Requerimientos no funcionales: usabilidad, eficiencia, confiabilidad, mantenibilidad y portabilidad." },
+          { "text": "Gestión de cambios: control de versiones, trazabilidad y gestión de configuración." }
+        ],
+        "quote": "Los requerimientos son la base de todo el proceso de desarrollo. Un error en esta fase cuesta 100 veces más corregido en mantenimiento."
+      }
+    ],
+    "swebokAreas": [],
+    "comparison": null,
+    "bookMeta": {
+      "label": "Libro de Texto",
+      "desc": "Los tres capítulos fundacionales que definen qué es la ingeniería de software, cómo se procesa y cómo se gestionan los requerimientos."
+    }
+  },
+  {
+    "slug": "pressman",
+    "bookTitle": "Ingeniería de Software: Un Enfoque Práctico",
+    "author": "Roger S. Pressman",
+    "edition": "7ª Edición",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "Productos de Software",
+        "what": "Pressman define el software como una colección de instrucciones que, cuando se ejecutan, proporcionan características, funciones y comportamiento deseados; datos que son procesados para producir información; y estructuras de datos que permiten el manejo de la información.",
+        "keyPoints": [
+          { "text": "Evolución del software: de programas individuales a sistemas de ingeniería de software complejos." },
+          { "text": "Características del software: es intangible, se desarrolla, no se manufactura, y no se desgasta." },
+          { "text": "Aplicaciones de software: de propósito personal, de línea de negocio, de ingeniería/Científico, embebidos, productores de artefactos." },
+          { "text": "Componentes Web: contenido estático, dinámico, scripts del lado del cliente y del servidor." }
+        ],
+        "quote": "El software es el motor que dirige la tecnología del siglo XXI."
+      },
+      {
+        "num": 2,
+        "title": "El Contexto de la Ingeniería de Software",
+        "what": "La ingeniería de software existe en un contexto más amplio que incluye la ingeniería de sistemas, la gestión de proyectos y el marco de trabajo del ciclo de vida del producto. Pressman enfatiza que el software debe entenderse dentro del ecosistema organizacional.",
+        "keyPoints": [
+          { "text": "Ingeniería de sistemas: el software es parte de un sistema más grande que incluye hardware, personas y procesos." },
+          { "text": "El marco de trabajo del ciclo de vida del producto (PDCF): planificación técnica, planificación de desarrollo, gestión de proyectos y milestones." },
+          { "text": "Procesos de la ingeniería de software: definición, desarrollo, soporte y gestión." },
+          { "text": "Características de calidad ISO/IEC 25010: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad." }
+        ],
+        "quote": "La calidad del software se mide por su capacidad de cumplir los requisitos y su mantenibilidad a lo largo del tiempo."
+      },
+      {
+        "num": 3,
+        "title": "Modelos y Procesos de Software",
+        "what": "Pressman presenta un marco de referencia para los modelos de proceso que permite comprender, evaluar y estructurar los distintos enfoques de desarrollo de software.",
+        "keyPoints": [
+          { "text": "El marco de referencia del proceso: un modelo que define un flujo de trabajo secuencial (framework activities) y tareas asociadas." },
+          { "text": "Proceso Cascada: secuencia de etapas con puntos de milestone y retroalimentación." },
+          { "text": "Proceso Incremental: entrega progresiva del software en versiones incrementales." },
+          { "text": "Proceso Prototipado: construcción rápida de un prototipo para validar requerimientos." },
+          { "text": "Modelo Espiral: combinación de iteración + análisis de riesgos (Boehm)." },
+          { "text": "Proceso Ágil: Scrum, XP, Kanban. Énfasis en personas e interacciones sobre procesos y herramientas." }
+        ],
+        "quote": "No existe un proceso único que sirva para todos los proyectos. El proceso debe adaptarse al contexto."
+      }
+    ],
+    "swebokAreas": [],
+    "comparison": {
+      "title": "Sommerville vs Pressman",
+      "items": [
+        "Sommerville enfoca en procesos y requerimientos.",
+        "Pressman enfoca en calidad y marcos de referencia.",
+        "Ambos coinciden en que no existe un proceso único.",
+        "Sommerville es más académico; Pressman, más orientado a la práctica."
+      ]
+    },
+    "bookMeta": {
+      "label": "Enfoque Práctico",
+      "desc": "La perspectiva práctica de Pressman complementa la teoría con modelos de proceso y un marco de referencia orientado a la calidad."
+    }
+  },
+  {
+    "slug": "swebok",
+    "bookTitle": "Guía del Cuerpo de Conocimiento de Ingeniería de Software (SWEBOK)",
+    "author": "IEEE Computer Society",
+    "edition": "v3",
+    "chapters": [],
+    "swebokAreas": [
+      { "area": "Requerimientos", "desc": "Obtención, análisis, especificación y validación de requerimientos de software." },
+      { "area": "Diseño", "desc": "Arquitectura, diseño de componentes, diseño de interfaces y diseño de datos." },
+      { "area": "Construcción", "desc": "Programación, verificación (pruebas unitarias), análisis de código y constructores de software." },
+      { "area": "Pruebas", "desc": "Proceso de prueba, diseño de casos de prueba, técnicas de prueba y evaluación de prueba." },
+      { "area": "Mantenimiento", "desc": "Control de cambios, reingeniería, prevención de fallas y gestión de configuración." },
+      { "area": "Configuración", "desc": "Gestión de la información de identificación, control de cambios, contabilidad de estado y verificación." },
+      { "area": "Ingeniería de Calidad", "desc": "Técnicas y métricas de calidad, aseguramiento de calidad y evaluación de procesos." },
+      { "area": "Gestión de Proyectos", "desc": "Planeación, estimación, seguimiento, riesgos y gestión de proyectos de software." },
+      { "area": "Modelos y Métodos", "desc": "Modelos de proceso, métodos ágiles, modelos de ciclo de vida y métodos formales." }
+    ],
+    "comparison": {
+      "title": "Cómo se conecta todo",
+      "items": [
+        "Sommerville → Profundiza en procesos (Cap 2) y requerimientos (Cap 3), dos áreas clave del SWEBOK.",
+        "Pressman → Enriquece las áreas de calidad, diseño y gestión de proyectos con enfoque práctico.",
+        "SWEBOK → Unifica todo bajo un marco de referencia estándar reconocido internacionalmente."
+      ]
+    },
+    "bookMeta": {
+      "label": "Guía de Referencia",
+      "desc": "El SWEBOK busca caracterizar los contenidos de las disciplinas de la ingeniería de software, promover una visión común del campo."
+    }
+  }
+]

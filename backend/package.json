@@ -1,0 +1,23 @@
+{
+  "name": "ingenieria-software-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "API de Ingeniería y Calidad de Software. Sirve datos de lecturas desde MongoDB.",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^8.6.2",
+    "helmet": "^8.3.0",
+    "hpp": "^0.2.3",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.11.0"
+  }
+}
