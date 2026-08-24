@@ -31,7 +31,6 @@ function ErrorState({ error, onRetry }: { error: string; onRetry: () => void }) 
 }
 
 function SommervilleSection({ reading }: { reading: Reading }) {
-  const reduce = useReducedMotion()
   return (
     <section id="sommerville" className="border-y border-black/10 bg-white/60 py-20">
       <div className="mx-auto max-w-6xl px-6">
