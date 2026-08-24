@@ -113,11 +113,10 @@ app.get('/api/readings/:slug', async (req, res) => {
   res.json(reading)
 })
 
-// Catch-all: SPA fallback
-app.get('*', (_req, res) => {
+// Catch-all
+app.all('*', (_req, res) => {
   res.status(404).json({ error: 'Not found' })
 })
 
 // ── Export for Vercel ──────────────────────────────────
-module.exports = app
-module.exports.handler = serverless(app)
+module.exports = serverless(app)
