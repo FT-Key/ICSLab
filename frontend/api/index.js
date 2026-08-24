@@ -1,4 +1,3 @@
-const serverless = require('serverless-http')
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
@@ -53,7 +52,7 @@ const Reading = mongoose.models.Reading || mongoose.model('Reading', readingSche
 // ── Fallback data ──────────────────────────────────────
 const readingsData = require('./seed/data/readings.json')
 
-// ── MongoDB connection (cached across invocations) ─────
+// ── MongoDB connection (cached) ────────────────────────
 let cached = null
 
 async function connectDB() {
@@ -74,23 +73,17 @@ async function connectDB() {
 
 // ── Express app ────────────────────────────────────────
 const app = express()
-
 app.use(cors({ origin: true }))
 app.use(express.json({ limit: '50kb' }))
 
-// Health
 app.get('/api/health', async (_req, res) => {
   const connected = await connectDB()
-  let count = 0
-  if (connected) {
-    count = await Reading.countDocuments()
-  } else {
-    count = readingsData.length
-  }
+  const count = connected
+    ? await Reading.countDocuments()
+    : readingsData.length
   res.json({ status: connected ? 'mongodb' : 'fallback', readings: count })
 })
 
-// List all readings
 app.get('/api/readings', async (_req, res) => {
   const connected = await connectDB()
   if (connected) {
@@ -100,7 +93,6 @@ app.get('/api/readings', async (_req, res) => {
   res.json(readingsData)
 })
 
-// Get single reading by slug
 app.get('/api/readings/:slug', async (req, res) => {
   const connected = await connectDB()
   if (connected) {
@@ -113,10 +105,16 @@ app.get('/api/readings/:slug', async (req, res) => {
   res.json(reading)
 })
 
-// Catch-all
-app.all('*', (_req, res) => {
-  res.status(404).json({ error: 'Not found' })
-})
+// ── Vercel serverless handler ──────────────────────────
+module.exports = async (req, res) => {
+  // Handle CORS preflight
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end()
+  }
 
-// ── Export for Vercel ──────────────────────────────────
-module.exports = serverless(app)
+  // Route to Express app
+  return app(req, res)
+}
