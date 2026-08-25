@@ -50,7 +50,6 @@ const globalLimiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
   message: { error: 'Demasiadas solicitudes, intenta de nuevo en 15 minutos.' },
-  keyGenerator: (req) => req.ip,
 })
 
 app.use(globalLimiter)

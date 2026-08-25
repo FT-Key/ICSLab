@@ -1,5 +1,4 @@
 const express = require('express')
-const cors = require('cors')
 const mongoose = require('mongoose')
 
 // ── Model ──────────────────────────────────────────────
@@ -35,14 +34,8 @@ const readingSchema = new mongoose.Schema(
     edition: String,
     chapters: [chapterSchema],
     swebokAreas: [swebokAreaSchema],
-    comparison: {
-      title: String,
-      items: [String],
-    },
-    bookMeta: {
-      label: String,
-      desc: String,
-    },
+    comparison: { title: String, items: [String] },
+    bookMeta: { label: String, desc: String },
   },
   { timestamps: true }
 )
@@ -52,7 +45,7 @@ const Reading = mongoose.models.Reading || mongoose.model('Reading', readingSche
 // ── Fallback data ──────────────────────────────────────
 const readingsData = require('./seed/data/readings.json')
 
-// ── MongoDB connection (cached) ────────────────────────
+// ── MongoDB (cached) ──────────────────────────────────
 let cached = null
 
 async function connectDB() {
@@ -73,48 +66,54 @@ async function connectDB() {
 
 // ── Express app ────────────────────────────────────────
 const app = express()
-app.use(cors({ origin: true }))
-app.use(express.json({ limit: '50kb' }))
 
-app.get('/api/health', async (_req, res) => {
-  const connected = await connectDB()
-  const count = connected
-    ? await Reading.countDocuments()
-    : readingsData.length
-  res.json({ status: connected ? 'mongodb' : 'fallback', readings: count })
-})
-
-app.get('/api/readings', async (_req, res) => {
-  const connected = await connectDB()
-  if (connected) {
-    const readings = await Reading.find().sort({ createdAt: 1 }).lean()
-    return res.json(readings)
-  }
-  res.json(readingsData)
-})
-
-app.get('/api/readings/:slug', async (req, res) => {
-  const connected = await connectDB()
-  if (connected) {
-    const reading = await Reading.findOne({ slug: req.params.slug }).lean()
-    if (!reading) return res.status(404).json({ error: 'Lectura no encontrada' })
-    return res.json(reading)
-  }
-  const reading = readingsData.find((r) => r.slug === req.params.slug)
-  if (!reading) return res.status(404).json({ error: 'Lectura no encontrada' })
-  res.json(reading)
-})
-
-// ── Vercel serverless handler ──────────────────────────
-module.exports = async (req, res) => {
-  // Handle CORS preflight
+app.use((_req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end()
-  }
+  if (_req.method === 'OPTIONS') return res.sendStatus(200)
+  next()
+})
 
-  // Route to Express app
-  return app(req, res)
-}
+app.use(express.json())
+
+app.get('/api/health', async (_req, res) => {
+  try {
+    const connected = await connectDB()
+    const count = connected ? await Reading.countDocuments() : readingsData.length
+    res.json({ status: connected ? 'mongodb' : 'fallback', readings: count })
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
+app.get('/api/readings', async (_req, res) => {
+  try {
+    const connected = await connectDB()
+    if (connected) {
+      const readings = await Reading.find().sort({ createdAt: 1 }).lean()
+      return res.json(readings)
+    }
+    res.json(readingsData)
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
+app.get('/api/readings/:slug', async (req, res) => {
+  try {
+    const connected = await connectDB()
+    if (connected) {
+      const reading = await Reading.findOne({ slug: req.params.slug }).lean()
+      if (!reading) return res.status(404).json({ error: 'Lectura no encontrada' })
+      return res.json(reading)
+    }
+    const reading = readingsData.find((r) => r.slug === req.params.slug)
+    if (!reading) return res.status(404).json({ error: 'Lectura no encontrada' })
+    res.json(reading)
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
+module.exports = app
