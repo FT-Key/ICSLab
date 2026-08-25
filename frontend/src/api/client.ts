@@ -1,4 +1,4 @@
-import type { Reading } from '../types'
+import type { Topic } from '../types'
 
 const API_BASE = import.meta.env.VITE_API_URL || '/api'
 
@@ -15,7 +15,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  health: () => request<{ status: string; readings: number }>('/health'),
-  readings: () => request<Reading[]>('/readings'),
-  reading: (slug: string) => request<Reading>(`/readings/${slug}`),
+  health: () => request<{ status: string; topics: number }>('/health'),
+  topics: () => request<Topic[]>('/topics'),
+  topic: (slug: string) => request<Topic>(`/topics/${slug}`),
 }
