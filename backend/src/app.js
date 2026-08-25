@@ -73,7 +73,7 @@ app.use(cors({
       callback(new Error('No permitido por CORS'))
     }
   },
-  methods: ['GET', 'HEAD'],
+  methods: ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: false,
   maxAge: 86400,
