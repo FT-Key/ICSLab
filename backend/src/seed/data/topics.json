@@ -1,0 +1,800 @@
+[
+  {
+    "slug": "sommerville-intro",
+    "title": "Introduccion a la Ingenieria de Software",
+    "subtitle": "Sommerville Cap. 1",
+    "description": "Conceptos fundamentales de la ingenieria de software, tipos de software y factores de diseno.",
+    "icon": "BookOpen",
+    "color": "#3B82F6",
+    "tags": [
+      "sommerville",
+      "fundamentos",
+      "introduccion"
+    ],
+    "sources": [
+      "Ian Sommerville - Ingenieria de Software 9a Ed."
+    ],
+    "sections": [
+      {
+        "title": "Introduccion a la Ingenieria de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Introduccion a la Ingenieria de Software",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "El Capitulo 1 de Sommerville define la ingenieria de software como una disciplina de ingenieria dedicada a todos los aspectos de la produccion de software, desde las etapas iniciales de especificacion hasta el mantenimiento. El software es el elemento productor en la industria moderna: controla los dispositivos que usamos, gestiona los datos que creamos y permite las comunicaciones que nos conectan."
+          },
+          {
+            "type": "text",
+            "content": "A diferencia del hardware, el software es intangible. No se puede ver ni tocar. Se desarrolla, no se manufactura, y una vez funcionando, no se desgasta. Sin embargo, puede degradarse por cambios en los requerimientos del entorno, por lo que necesita actualizaciones continuas para mantenerse relevante."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "El software es intangible: no se desgasta como el hardware, pero se degrada por requerimientos cambiantes.",
+              "Tipos de software: generico (comercial), a medida (personalizado), embebidos (controladores), productores de artefactos y sistemas de LIPE.",
+              "Factores de diseno criticos: reutilizacion, seguridad, eficiencia y mantenibilidad.",
+              "Retos principales: heterogeneidad de plataformas, seguridad y confiabilidad, gestion de la complejidad.",
+              "Los costos se distribuyen: ~60% desarrollo, ~40% pruebas, y el mantenimiento puede consumir hasta el 60% del costo total del ciclo de vida."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "La ingenieria de software es una actividad de planeacion, diseno, construccion, pruebas y mantenimiento de sistemas de software.",
+            "source": "Ian Sommerville"
+          },
+          {
+            "type": "text",
+            "content": "Sommerville distingue entre software generico (desarrollado para el mercado general, como Microsoft Office) y software a medida (desarrollado para un cliente especifico, como un sistema bancario). El software generico se comercializa a traves de distribuidores, mientras que el software a medida se negocia directamente con el cliente."
+          },
+          {
+            "type": "text",
+            "content": "Los costos de la ingenieria de software son particularmente relevantes: el desarrollo representa aproximadamente el 60% del presupuesto, las pruebas el 40%, pero el mantenimiento es la fase mas costosa y prolongada del ciclo de vida. Un sistema puede existir durante 20 o 30 anos, acumulando costos de mantenimiento que superan con creces los de desarrollo inicial."
+          },
+          {
+            "type": "heading",
+            "content": "Aplicacion Practica",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "Consideremos un sistema de gestion hospitalaria: debe ser confiable (los errores pueden costar vidas), seguro (proteger datos sensibles de pacientes), eficiente (responder rapido en emergencias) y mantenible (adaptarse a nuevas regulaciones y tecnologias medicas). Cada uno de estos requisitos se deriva directamente de los principios fundamentales que Sommerville presenta en este capitulo."
+          },
+          {
+            "type": "quiz",
+            "question": "Cual es la caracteristica distintiva del software frente al hardware?",
+            "options": [
+              "El software es mas barato de producir",
+              "El software no se desgasta fisicamente, pero se degrada por cambios en requerimientos",
+              "El software se puede tocar y medir",
+              "El software siempre funciona correctamente"
+            ],
+            "correctIndex": 1,
+            "explanation": "El software es intangible y no sufre desgaste fisico como el hardware. Se degrada cuando los requerimientos del entorno cambian."
+          },
+          {
+            "type": "quiz",
+            "question": "Que porcentaje aproximado del costo total de un proyecto se destina al mantenimiento?",
+            "options": [
+              "20%",
+              "40%",
+              "60%",
+              "80%"
+            ],
+            "correctIndex": 2,
+            "explanation": "Segun Sommerville, el mantenimiento puede consumir hasta el 60% del costo total del ciclo de vida del software."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El software generico se desarrolla para un cliente especifico.",
+            "correctAnswer": false,
+            "explanation": "El software generico se desarrolla para el mercado general (como Microsoft Word), no para un cliente especifico."
+          },
+          {
+            "type": "truefalse",
+            "statement": "Los sistemas embebidos son aquellos que controlan dispositivos como telefonos o electrodomesticos.",
+            "correctAnswer": true,
+            "explanation": "Los sistemas embebidos son software integrado en hardware que controla dispositivos."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "sommerville-procesos",
+    "title": "Procesos de Software",
+    "subtitle": "Sommerville Cap. 2",
+    "description": "Modelos de proceso: cascada, incremental, agil y sus variantes.",
+    "icon": "GitBranch",
+    "color": "#10B981",
+    "tags": [
+      "sommerville",
+      "procesos",
+      "cascada",
+      "agil"
+    ],
+    "sources": [
+      "Ian Sommerville - Ingenieria de Software 9a Ed."
+    ],
+    "sections": [
+      {
+        "title": "Procesos de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Procesos de Software",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "Un proceso de software es un conjunto de actividades que conducen a la produccion de un sistema de software. Estas actividades pueden incluir especificacion, diseno, validacion, evolucion y gestion. No existe un proceso universal: la seleccion depende del tipo de software, del tamano del equipo, de la cultura organizacional y de los requerimientos del proyecto."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Modelo en cascada: secuencia de fases (especificacion, diseno, implementacion, pruebas, mantenimiento) con puntos de milestone.",
+              "Desarrollo incremental: entrega progresiva del sistema en incrementos funcionales, permitiendo retroalimentacion temprana.",
+              "Proceso agil: enfasis en iteraciones cortas (1-4 semanas), retroalimentacion continua y adaptacion al cambio.",
+              "CI/CD: practicas modernas de integracion continua y despliegue continuo que automatizan la entrega.",
+              "Cada fase tiene criterios de entrada y salida definidos, lo que permite el control de calidad entre etapas."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "No existe un proceso universal. La seleccion del proceso depende del tipo de software y los requerimientos del proyecto.",
+            "source": "Ian Sommerville"
+          },
+          {
+            "type": "text",
+            "content": "El modelo en cascada es el mas tradicional: cada fase se completa antes de pasar a la siguiente. Es predecible y documentado, pero rigido. Si los requerimientos cambian despues del diseno, el costo de retorno es altisimo. Funciona bien cuando los requerimientos son estables y comprendidos desde el inicio."
+          },
+          {
+            "type": "text",
+            "content": "El desarrollo incremental evita los problemas del cascada al entregar el sistema en versiones progresivas. Cada incremento agrega funcionalidad y se basa en el feedback del usuario. Las ventajas incluyen entrega temprana, reduccion de riesgos y mejor adaptacion. Los incrementos tipicos incluyen un nucleo funcional que se expande iterativamente."
+          },
+          {
+            "type": "text",
+            "content": "El manifiesto agil (2001) establecio cuatro valores fundamentales: individuos e interacciones sobre procesos y herramientas; software funcionando sobre documentacion extensa; colaboracion con el cliente sobre negociacion de contratos; y respuesta ante cambios sobre seguir un plan."
+          },
+          {
+            "type": "heading",
+            "content": "Comparacion de Modelos",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "El modelo en cascada es ideal para proyectos con requerimientos estables y regulados (sistemas medicos, aeroespaciales). El incremental funciona mejor para proyectos donde el feedback del usuario es critico (aplicaciones web, moviles). Los procesos agiles son ideales para equipos pequenos/medianos con requerimientos cambiantes (startups, innovacion)."
+          },
+          {
+            "type": "quiz",
+            "question": "Cual es la principal ventaja del desarrollo incremental sobre el modelo en cascada?",
+            "options": [
+              "No requiere documentacion",
+              "Permite entrega temprana de software funcionando",
+              "Elimina la necesidad de pruebas",
+              "Funciona solo con equipos pequenos"
+            ],
+            "correctIndex": 1,
+            "explanation": "El desarrollo incremental permite entregar software funcionando en incrementos progresivos, lo que da retroalimentacion temprana del usuario y reduce riesgos."
+          },
+          {
+            "type": "quiz",
+            "question": "Que framework agil enfatiza iteraciones de 2-4 semanas con entregas funcionales?",
+            "options": [
+              "Waterfall",
+              "Spiral",
+              "Scrum/Sprint",
+              "Prototipado"
+            ],
+            "correctIndex": 2,
+            "explanation": "Scrum organiza el trabajo en Sprints de 2-4 semanas al final de los cuales se entrega un incremento funcional."
+          },
+          {
+            "type": "truefalse",
+            "statement": "En el modelo en cascada, las pruebas se realizan solo al final del proyecto.",
+            "correctAnswer": true,
+            "explanation": "Esta es una de las criticas principales al cascada: las pruebas se ejecutan en una fase tardia."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El manifiesto agil prioriza documentacion completa sobre software funcionando.",
+            "correctAnswer": false,
+            "explanation": "Es al reves: prioriza software funcionando sobre documentacion extensa."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "sommerville-requerimientos",
+    "title": "Requerimientos de Software",
+    "subtitle": "Sommerville Cap. 3",
+    "description": "Ingenieria de requerimientos: elicitation, analisis, especificacion y validacion.",
+    "icon": "FileText",
+    "color": "#F59E0B",
+    "tags": [
+      "sommerville",
+      "requerimientos",
+      "srs"
+    ],
+    "sources": [
+      "Ian Sommerville - Ingenieria de Software 9a Ed."
+    ],
+    "sections": [
+      {
+        "title": "Requerimientos de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Requerimientos de Software",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "La ingenieria de requerimientos es el proceso de descubrir, definir, documentar y mantener los requerimientos de un sistema. Incluye requerimientos funcionales (que hace el sistema) y no funcionales (como lo hace)."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Proceso: elicitation, analisis, especificacion y validacion.",
+              "Requerimientos funcionales (que hace) vs no funcionales (como lo hace).",
+              "Documentos: SRS (Software Requirements Specification), casos de uso, historias de usuario.",
+              "No funcionales: usabilidad, eficiencia, confiabilidad, mantenibilidad, portabilidad.",
+              "Gestion de cambios: control de versiones, tablas de trazabilidad, analisis de impacto."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "Los requerimientos son la base de todo el proceso de desarrollo. Un error en esta fase cuesta 100 veces mas corregido en mantenimiento.",
+            "source": "Ian Sommerville"
+          },
+          {
+            "type": "text",
+            "content": "La elicitation de requerimientos utiliza tecnicas como entrevistas, observacion directa, prototipado rapido y escenarios de uso. El objetivo es entender las necesidades reales del usuario, no solo lo que dice que quiere. A menudo, lo que el usuario pide no es lo que realmente necesita."
+          },
+          {
+            "type": "text",
+            "content": "Los requerimientos no funcionales son tan criticos como los funcionales. Un sistema que cumple todas las funcionalidades pero es lento, inseguro o dificil de usar fracasara. Sommerville los clasifica en: requerimientos de producto (eficiencia, fiabilidad), requerimientos organizacionales (estandares) y requerimientos externos (legislacion, etica)."
+          },
+          {
+            "type": "heading",
+            "content": "Gestion de Cambios",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "Los requerimientos cambian constantemente: cambios en el entorno del negocio, nuevas tecnologias, retroalimentacion de usuarios beta. La gestion de cambios requiere: control de versiones (que version tiene que cambios), tablas de trazabilidad (que codigo implementa que requerimiento) y analisis de impacto (que se afecta al cambiar algo)."
+          },
+          {
+            "type": "quiz",
+            "question": "Cuanto cuesta corregir un error de requerimientos en mantenimiento vs en especificacion?",
+            "options": [
+              "10 veces mas",
+              "50 veces mas",
+              "100 veces mas",
+              "No cuesta mas"
+            ],
+            "correctIndex": 2,
+            "explanation": "Un error en requerimientos cuesta aproximadamente 100 veces mas corregirlo en la fase de mantenimiento que en la fase de especificacion original."
+          },
+          {
+            "type": "quiz",
+            "question": "Que tipo de requerimiento define que debe hacer el sistema?",
+            "options": [
+              "No funcional",
+              "Funcional",
+              "De seguridad",
+              "De rendimiento"
+            ],
+            "correctIndex": 1,
+            "explanation": "Los requerimientos funcionales definen que debe hacer el sistema. Los no funcionales definen como lo hace (calidad, rendimiento, etc)."
+          },
+          {
+            "type": "truefalse",
+            "statement": "Los requerimientos no funcionales son opcionales y pueden ignorarse.",
+            "correctAnswer": false,
+            "explanation": "Son criticos para la calidad del software. Un sistema sin usabilidad o seguridad no sera aceptado por los usuarios."
+          },
+          {
+            "type": "truefalse",
+            "statement": "La trazabilidad permite rastrear un requerimiento desde su origen hasta su implementacion.",
+            "correctAnswer": true,
+            "explanation": "Las matrices de trazabilidad conectan cada requerimiento con su diseno, codigo fuente y casos de prueba."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pressman-productos",
+    "title": "Productos de Software",
+    "subtitle": "Pressman Cap. 1",
+    "description": "Definicion y tipos de software, caracteristicas y evolucion.",
+    "icon": "Package",
+    "color": "#8B5CF6",
+    "tags": [
+      "pressman",
+      "productos",
+      "tipos"
+    ],
+    "sources": [
+      "Roger S. Pressman - Ingenieria de Software 7a Ed."
+    ],
+    "sections": [
+      {
+        "title": "Productos de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Productos de Software",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "Pressman define el software como una coleccion de instrucciones que, cuando se ejecutan, proporcionan caracteristicas, funciones y comportamiento deseados; datos que son procesados para producir informacion; y estructuras de datos que permiten el manejo de la informacion."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Evolucion: de programas individuales a sistemas de ingenieria complejos.",
+              "Caracteristicas: intangible, se desarrolla (no se manufactura), no se desgasta.",
+              "Aplicaciones: proposito personal, linea de negocio, ingenieria/cientifico, embebidos.",
+              "Componentes Web: contenido estatico, dinamico, scripts del lado del cliente y del servidor.",
+              "Software como producto vs como programa individual."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "El software es el motor que dirige la tecnologia del siglo XXI.",
+            "source": "Roger S. Pressman"
+          },
+          {
+            "type": "text",
+            "content": "Pressman presenta una jerarquia conceptual: programa (instrucciones individuales), producto de software (programa documentado y empaquetado), ingenieria de software (disciplina para construir productos) y proceso de software (metodologia para guiar la construccion)."
+          },
+          {
+            "type": "text",
+            "content": "Las aplicaciones web se clasifican en: contenido estatico (HTML puro, sin interactividad), dinamico (generado en servidor con CGI, JSP, ASP), scripts del lado del cliente (JavaScript en el navegador) y del servidor (PHP, Python, Node.js que procesan peticiones)."
+          },
+          {
+            "type": "quiz",
+            "question": "Segun Pressman, cual es una caracteristica fundamental del software?",
+            "options": [
+              "Es barato de producir",
+              "Se desarrolla, no se manufactura",
+              "Es tangible",
+              "No necesita mantenimiento"
+            ],
+            "correctIndex": 1,
+            "explanation": "El software se desarrolla (se disena y construye), no se manufactura como un producto fisico en una fabrica."
+          },
+          {
+            "type": "quiz",
+            "question": "Que tipo de software se ejecuta en microondas o automoviles?",
+            "options": [
+              "De proposito personal",
+              "De linea de negocio",
+              "Embebido",
+              "Web"
+            ],
+            "correctIndex": 2,
+            "explanation": "Los sistemas embebidos estan integrados en hardware que controla dispositivos del mundo real."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El software se desgasta con el tiempo como el hardware.",
+            "correctAnswer": false,
+            "explanation": "El software no sufre desgaste fisico. Se degrada cuando los requerimientos cambian y el software ya no se adapta."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El software de proposito personal incluye procesadores de texto y hojas de calculo.",
+            "correctAnswer": true,
+            "explanation": "El software de proposito personal son aplicaciones como Word, Excel o navegadores web que usamos diariamente."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pressman-contexto",
+    "title": "El Contexto de la Ingenieria de Software",
+    "subtitle": "Pressman Cap. 2",
+    "description": "Ingenieria de sistemas, ciclo de vida del producto y calidad ISO 25010.",
+    "icon": "Layers",
+    "color": "#EC4899",
+    "tags": [
+      "pressman",
+      "contexto",
+      "calidad",
+      "iso25010"
+    ],
+    "sources": [
+      "Roger S. Pressman - Ingenieria de Software 7a Ed."
+    ],
+    "sections": [
+      {
+        "title": "El Contexto de la Ingenieria de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "El Contexto de la Ingenieria de Software",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "La ingenieria de software existe en un contexto mas amplio que incluye la ingenieria de sistemas, la gestion de proyectos y el marco de trabajo del ciclo de vida del producto (PDCF). Pressman enfatiza que el software debe entenderse dentro del ecosistema organizacional."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Ingenieria de sistemas: el software es parte de un sistema que incluye hardware, personas y procesos.",
+              "El PDCF (Product Development Framework): planificacion tecnica, de desarrollo, gestion y milestones.",
+              "Procesos de SE: definicion, desarrollo, soporte y gestion.",
+              "ISO/IEC 25010: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad.",
+              "La calidad no es solo prueba: abarca todo el ciclo de vida del producto."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "La calidad del software se mide por su capacidad de cumplir los requisitos y su mantenibilidad a lo largo del tiempo.",
+            "source": "Roger S. Pressman"
+          },
+          {
+            "type": "text",
+            "content": "El marco de referencia del ciclo de vida del producto (PDCF) define las fases por las que pasa un producto de software: planificacion tecnica, planificacion de desarrollo, gestion de proyectos y seguimiento de hitos (milestones). Cada fase tiene objetivos claros y entregables definidos."
+          },
+          {
+            "type": "text",
+            "content": "ISO/IEC 25010 define 6 caracteres de calidad: funcionalidad (hace lo que debe), fiabilidad (funciona sin fallos), usabilidad (facil de usar), eficiencia (usa recursos optimamente), mantenibilidad (facil de modificar) y portabilidad (funciona en diferentes entornos)."
+          },
+          {
+            "type": "heading",
+            "content": "Calidad como Eje Central",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "La calidad no se logra solo con pruebas al final. Se incorpora desde el diseno hasta el mantenimiento. El costo de la calidad incluye: prevencion (diseno robusto), evaluacion (pruebas), fallos internos (bugs encontrados antes de entregar) y fallos externos (bugs que llegan al usuario, los mas costosos)."
+          },
+          {
+            "type": "quiz",
+            "question": "Cuantas caracteristicas de calidad define ISO/IEC 25010?",
+            "options": [
+              "4",
+              "5",
+              "6",
+              "8"
+            ],
+            "correctIndex": 2,
+            "explanation": "ISO/IEC 25010 define 6 caracteristicas: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad."
+          },
+          {
+            "type": "quiz",
+            "question": "Que marco de referencia define las fases del ciclo de vida del producto?",
+            "options": [
+              "PDCF",
+              "SWEBOK",
+              "ITIL",
+              "CMMI"
+            ],
+            "correctIndex": 0,
+            "explanation": "El PDCF (Product Development Framework) de Pressman define las fases del ciclo de vida del producto de software."
+          },
+          {
+            "type": "truefalse",
+            "statement": "La ingenieria de sistemas considera al software como un componente aislado.",
+            "correctAnswer": false,
+            "explanation": "La ingenieria de sistemas ve al software como parte de un sistema mayor que incluye hardware, personas y procesos."
+          },
+          {
+            "type": "truefalse",
+            "statement": "Los fallos externos de calidad son los mas costosos de corregir.",
+            "correctAnswer": true,
+            "explanation": "Los fallos externos (que llegan al usuario final) son los mas costosos porque afectan reputacion, generan soporte y pueden tener implicaciones legales."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pressman-modelos",
+    "title": "Modelos y Procesos de Software",
+    "subtitle": "Pressman Cap. 3",
+    "description": "Marco de referencia para modelos de proceso y metodologias agiles.",
+    "icon": "Workflow",
+    "color": "#06B6D4",
+    "tags": [
+      "pressman",
+      "modelos",
+      "procesos",
+      "agil"
+    ],
+    "sources": [
+      "Roger S. Pressman - Ingenieria de Software 7a Ed."
+    ],
+    "sections": [
+      {
+        "title": "Modelos y Procesos de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Modelos y Procesos de Software",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "Pressman presenta un marco de referencia para los modelos de proceso que permite comprender, evaluar y estructurar los distintos enfoques de desarrollo de software. Cada modelo ofrece una perspectiva diferente sobre como organizar el trabajo."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Marco de proceso: actividades del marco (framework activities) y tareas asociadas.",
+              "Cascada: secuencia de etapas con milestones y retroalimentacion.",
+              "Incremental: entrega progresiva del software en versiones.",
+              "Prototipado: construccion rapida de prototipo para validar requerimientos.",
+              "Espiral: combinacion de iteracion + analisis de riesgos (Boehm).",
+              "Agil: Scrum, XP, Kanban. Enfoque en personas e interacciones."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "No existe un proceso unico que sirva para todos los proyectos. El proceso debe adaptarse al contexto.",
+            "source": "Roger S. Pressman"
+          },
+          {
+            "type": "text",
+            "content": "El marco de proceso de Pressman incluye 5 actividades: comunicacion (con el cliente), planificacion (gestion del proyecto), modelado (diseno y arquitectura), construccion (codigo y pruebas) y despliegue (entrega al usuario). Cada actividad tiene tareas especificas."
+          },
+          {
+            "type": "text",
+            "content": "El modelo espiral de Boehm combina iteraciones con analisis de riesgos sistematico. Cada vuelta del espiral tiene 4 cuadrantes: determinar objetivos, evaluar alternativas/riesgos, desarrollar/verificar y planear la siguiente fase. Es ideal para proyectos grandes y de alto riesgo."
+          },
+          {
+            "type": "heading",
+            "content": "Comparacion de Frameworks Agiles",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "Scrum: roles (Product Owner, Scrum Master, equipo), ceremonias (Sprint Planning, Daily, Review, Retrospective), artefactos (Product Backlog, Sprint Backlog, Incremento). Iteraciones de 2-4 semanas. XP: practicas de ingenieria como programacion en parejas, TDD, integracion continua, refactorizacion continua. Kanban: tableros visuales, limites de trabajo en progreso (WIP), flujo continuo sin iteraciones fijas."
+          },
+          {
+            "type": "text",
+            "content": "Factores para elegir un proceso: tamano del proyecto, estabilidad de requerimientos, experiencia del equipo, nivel de riesgo, restricciones regulatorias. Proyectos gubernamentales o medicos pueden requerir cascada o espiral. Startups y productos digitales suelen usar agil."
+          },
+          {
+            "type": "quiz",
+            "question": "Quien popularizo el modelo espiral con enfasis en analisis de riesgos?",
+            "options": [
+              "Frederick Brooks",
+              "Barry Boehm",
+              "Kent Beck",
+              "Martin Fowler"
+            ],
+            "correctIndex": 1,
+            "explanation": "Barry Boehm propuso el modelo espiral en 1988, incorporando el analisis de riesgos como componente central del proceso."
+          },
+          {
+            "type": "quiz",
+            "question": "Cuales son las 5 actividades del marco de proceso de Pressman?",
+            "options": [
+              "Analisis, Diseno, Codigo, Prueba, Despliegue",
+              "Comunicacion, Planificacion, Modelado, Construccion, Despliegue",
+              "Inicio, Planificacion, Ejecucion, Cierre, Seguimiento",
+              "Requerimientos, Arquitectura, Implementacion, Verificacion, Mantenimiento"
+            ],
+            "correctIndex": 1,
+            "explanation": "Las 5 actividades del marco de Pressman son: comunicacion, planificacion, modelado, construccion y despliegue."
+          },
+          {
+            "type": "truefalse",
+            "statement": "Kanban se basa en iteraciones fijas de tiempo como Scrum.",
+            "correctAnswer": false,
+            "explanation": "Kanban es un sistema de flujo continuo sin iteraciones fijas. Se enfoca en limitar el trabajo en progreso y optimizar el flujo."
+          },
+          {
+            "type": "truefalse",
+            "statement": "En XP, la programacion en parejas es una practica opcional.",
+            "correctAnswer": false,
+            "explanation": "La programacion en parejas es una de las 12 praticas originales de XP y es fundamental para la calidad del codigo."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "swebok",
+    "title": "Guia SWEBOK v3",
+    "subtitle": "IEEE Computer Society",
+    "description": "El estandar ISO/IEC TR 19759 que define las 15 areas de conocimiento.",
+    "icon": "BookMarked",
+    "color": "#F97316",
+    "tags": [
+      "swebok",
+      "ieee",
+      "estandar",
+      "conocimiento"
+    ],
+    "sources": [
+      "IEEE Computer Society - SWEBOK v3"
+    ],
+    "sections": [
+      {
+        "title": "Guia SWEBOK v3",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Guia SWEBOK v3",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "El SWEBOK (Software Engineering Body of Knowledge) es un estandar internacional (ISO/IEC TR 19759) publicado por la IEEE Computer Society que busca caracterizar los contenidos de las disciplinas de la ingenieria de software y promover una vision comun del campo."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Proposito: establecer un marco comun de conocimiento para la profesion.",
+              "15 areas de conocimiento organizadas en 3 secciones.",
+              "Seccion I: Fundamentos de computacion y bases matematicas.",
+              "Seccion II: Areas de practica de la ingenieria de software.",
+              "Seccion III: Areas de conocimiento distintivas de SE.",
+              "Base para certificaciones CSDA y CSDP de la IEEE."
+            ]
+          },
+          {
+            "type": "quote",
+            "content": "El SWEBOK busca caracterizar los contenidos de las disciplinas de la ingenieria de software, promover una vision comun del campo.",
+            "source": "IEEE Computer Society"
+          },
+          {
+            "type": "heading",
+            "content": "Areas de Conocimiento Relevantes",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "Las areas mas relevantes para este modulo son: Requerimientos (obtencion, analisis, especificacion y validacion), Diseno (arquitectura, componentes, interfaces y datos), Construccion (programacion, verificacion, analisis de codigo), Pruebas (proceso, diseno, tecnicas y evaluacion), Mantenimiento (control de cambios, reingenieria, prevencion de fallas), Gestion de Configuracion (identificacion, control de cambios, contabilidad de estado), Ingenieria de Calidad (tecnicas, metricas, aseguramiento), Gestion de Proyectos (planeacion, estimacion, seguimiento, riesgos) y Modelos y Metodos (procesos, agiles, ciclos de vida, metodos formales)."
+          },
+          {
+            "type": "heading",
+            "content": "Relacion con Sommerville y Pressman",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "content": "Sommerville profundiza en areas que el SWEBOK clasifica como \"Modelos y Metodos\" (procesos de software) y \"Requerimientos\" (ingenieria de requerimientos). Pressman enriquece las areas de \"Ingenieria de Calidad\" y \"Diseno\" con un enfoque practico y de referencia. El SWEBOK unifica todo bajo un marco estandar reconocido internacionalmente, dando vocabulario comun a los profesionales del mundo."
+          },
+          {
+            "type": "quiz",
+            "question": "Que organizacion publica el SWEBOK?",
+            "options": [
+              "ISO",
+              "OMG",
+              "IEEE Computer Society",
+              "W3C"
+            ],
+            "correctIndex": 2,
+            "explanation": "El SWEBOK es publicado por la IEEE Computer Society como estandar ISO/IEC TR 19759."
+          },
+          {
+            "type": "quiz",
+            "question": "Cuantas areas de conocimiento define el SWEBOK v3?",
+            "options": [
+              "9",
+              "12",
+              "15",
+              "20"
+            ],
+            "correctIndex": 2,
+            "explanation": "El SWEBOK v3 define 15 areas de conocimiento de la ingenieria de software."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El SWEBOK es un marco de proceso de desarrollo.",
+            "correctAnswer": false,
+            "explanation": "El SWEBOK es una guia de conocimiento (body of knowledge), no un marco de proceso. Describe que se debe saber, no como hacerlo."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El SWEBOK sirve de base para certificaciones profesionales como CSDA y CSDP.",
+            "correctAnswer": true,
+            "explanation": "Las certificaciones CSDA (Certified Software Development Associate) y CSDP (Certified Software Development Professional) de la IEEE estan basadas en el SWEBOK."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "conexion-libros",
+    "title": "Conectando los Tres Libros",
+    "subtitle": "Sommerville+Pressman+SWEBOK",
+    "description": "Como las tres fuentes se complementan para formar una vision completa.",
+    "icon": "Link",
+    "color": "#14B8A6",
+    "tags": [
+      "integracion",
+      "comparacion",
+      "swebok"
+    ],
+    "sources": [
+      "Sommerville",
+      "Pressman",
+      "SWEBOK"
+    ],
+    "sections": [
+      {
+        "title": "Conectando los Tres Libros",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Conectando los Tres Libros",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "content": "Los tres libros no compiten: se complementan. Sommerville ofrece la base teorica y academica, Pressman agrega la perspectiva practica y de referencia, y el SWEBOK unifica todo bajo un marco estandar reconocido internacionalmente. Juntos cubren las dimensiones fundamentales de la ingenieria de software."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sommerville: foco en procesos y requerimientos (perspectiva academica).",
+              "Pressman: foco en calidad, modelos de proceso y marcos de referencia.",
+              "SWEBOK: unifica todo bajo un estandar internacional (ISO/IEC TR 19759).",
+              "Sommerville es mas teorico; Pressman es mas orientado a la practica.",
+              "El SWEBOK provee el vocabulario comun de la profesion."
+            ]
+          },
+          {
+            "type": "text",
+            "content": "Tabla comparativa de enfoques: Procesos — Sommerville los describe en detalle (Cap 2), Pressman los enmarca en un modelo de referencia (Cap 3), SWEBOK los clasifica como area de conocimiento. Requerimientos — Sommerville dedica un capitulo completo (Cap 3), Pressman los aborda dentro del contexto de proceso, SWEBOK lo define como area independiente. Calidad — Sommerville la menciona como factor de diseno, Pressman la convierte en eje central (ISO 25010), SWEBOK tiene un area dedicada. Pruebas — Sommerville las integra en los procesos, Pressman las incluye en el ciclo de vida, SWEBOK las trata como area de conocimiento."
+          },
+          {
+            "type": "text",
+            "content": "Como profesionales, usamos los tres: Sommerville para entender el porque de las decisiones, Pressman para tener un marco de referencia practico, y SWEBOK para comunicarnos con el mundo usando un vocabulario estandar. La combinacion de los tres nos da una base solida para cualquier proyecto de software."
+          },
+          {
+            "type": "quiz",
+            "question": "Cual libro enfatiza mas en la perspectiva academica y teorica?",
+            "options": [
+              "Pressman",
+              "Sommerville",
+              "SWEBOK",
+              "Todos por igual"
+            ],
+            "correctIndex": 1,
+            "explanation": "Sommerville es considerado el mas academico de los tres, con un enfoque mas teorico y fundamentado."
+          },
+          {
+            "type": "quiz",
+            "question": "Que estandar internacional representa el SWEBOK?",
+            "options": [
+              "ISO 9001",
+              "ISO/IEC TR 19759",
+              "ISO 27001",
+              "IEEE 802.11"
+            ],
+            "correctIndex": 1,
+            "explanation": "El SWEBOK esta formalizado como el estandar ISO/IEC TR 19759."
+          },
+          {
+            "type": "truefalse",
+            "statement": "Los tres libros son redundantes y cubren exactamente lo mismo.",
+            "correctAnswer": false,
+            "explanation": "Se complementan: Sommerville (teoria), Pressman (practica y calidad), SWEBOK (estandar y vocabulario comun)."
+          },
+          {
+            "type": "truefalse",
+            "statement": "El SWEBOK se actualiza periodicamente para mantenerse relevante.",
+            "correctAnswer": true,
+            "explanation": "El SWEBOK es un documento vivo que se actualiza para reflejar la evolucion del campo de la ingenieria de software."
+          }
+        ]
+      }
+    ]
+  }
+]

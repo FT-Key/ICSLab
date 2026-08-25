@@ -1,64 +1,63 @@
-import Reading from '../models/Reading.js'
+import Topic from '../models/Topic.js'
 import { isDbConnected } from '../config/db.js'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const DATA_PATH = path.resolve(__dirname, '../seed/data/readings.json')
-
+const DATA_PATH = path.resolve(__dirname, '../seed/data/topics.json')
 let fallbackData = null
 
 function loadFallback() {
-  if (!fallbackData) {
-    fallbackData = JSON.parse(readFileSync(DATA_PATH, 'utf8'))
-  }
+  if (!fallbackData) fallbackData = JSON.parse(readFileSync(DATA_PATH, 'utf8'))
   return fallbackData
 }
 
 export async function getHealth() {
-  const connected = isDbConnected()
-  let count = 0
-  if (connected) {
-    count = await Reading.countDocuments()
-  } else {
-    count = loadFallback().length
+  if (isDbConnected()) {
+    const count = await Topic.countDocuments()
+    return { status: 'mongodb', topics: count }
   }
-  return { status: connected ? 'mongodb' : 'fallback', readings: count }
+  return { status: 'fallback', topics: loadFallback().length }
 }
 
-export async function getReadings() {
+export async function getTopics() {
   if (isDbConnected()) {
-    return Reading.find().sort({ createdAt: 1 }).lean()
+    return Topic.find().sort({ createdAt: 1 }).lean()
   }
   return loadFallback()
 }
 
-export async function getReadingBySlug(slug) {
+export async function getTopicBySlug(slug) {
   if (isDbConnected()) {
-    return Reading.findOne({ slug }).lean()
+    return Topic.findOne({ slug }).lean()
   }
-  return loadFallback().find((r) => r.slug === slug) || null
+  return loadFallback().find((t) => t.slug === slug) || null
 }
 
-export async function createReading(data) {
+export async function createTopic(data) {
   if (!isDbConnected()) {
-    throw { status: 503, message: 'MongoDB no conectado' }
+    const err = new Error('Base de datos no disponible')
+    err.status = 503
+    throw err
   }
-  const reading = await Reading.create(data)
-  return reading.toObject()
+  return Topic.create(data)
 }
 
-export async function updateReading(slug, data) {
+export async function updateTopic(slug, data) {
   if (!isDbConnected()) {
-    throw { status: 503, message: 'MongoDB no conectado' }
+    const err = new Error('Base de datos no disponible')
+    err.status = 503
+    throw err
   }
-  return Reading.findOneAndUpdate({ slug }, data, { new: true, runValidators: true }).lean()
+  return Topic.findOneAndUpdate({ slug }, data, { new: true, runValidators: true }).lean()
 }
 
-export async function deleteReading(slug) {
+export async function deleteTopic(slug) {
   if (!isDbConnected()) {
-    throw { status: 503, message: 'MongoDB no conectado' }
+    const err = new Error('Base de datos no disponible')
+    err.status = 503
+    throw err
   }
-  return Reading.findOneAndDelete({ slug }).lean()
+  return Topic.findOneAndDelete({ slug })
 }

@@ -1,36 +1,68 @@
-export interface KeyPoint {
-  text: string
+// ── Content Blocks ─────────────────────────────────────
+export interface TextBlock {
+  type: 'text'
+  content: string
 }
 
-export interface Chapter {
-  num: number
+export interface HeadingBlock {
+  type: 'heading'
+  content: string
+  level: 2 | 3
+}
+
+export interface KeyPointsBlock {
+  type: 'keypoints'
+  items: string[]
+}
+
+export interface QuoteBlock {
+  type: 'quote'
+  content: string
+  source?: string
+}
+
+export interface QuizBlock {
+  type: 'quiz'
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+}
+
+export interface TrueFalseBlock {
+  type: 'truefalse'
+  statement: string
+  correctAnswer: boolean
+  explanation: string
+}
+
+export type ContentBlock =
+  | TextBlock
+  | HeadingBlock
+  | KeyPointsBlock
+  | QuoteBlock
+  | QuizBlock
+  | TrueFalseBlock
+
+// ── Sections ───────────────────────────────────────────
+export interface Section {
+  _id?: string
   title: string
-  what: string
-  keyPoints: KeyPoint[]
-  quote?: string
+  blocks: ContentBlock[]
 }
 
-export interface SwebokArea {
-  area: string
-  desc: string
-}
-
-export interface Reading {
+// ── Topics ─────────────────────────────────────────────
+export interface Topic {
   _id?: string
   slug: string
-  bookTitle: string
-  author: string
-  edition?: string
-  chapters: Chapter[]
-  swebokAreas: SwebokArea[]
-  comparison?: {
-    title: string
-    items: string[]
-  }
-  bookMeta?: {
-    label: string
-    desc: string
-  }
+  title: string
+  subtitle: string
+  description: string
+  icon: string
+  color: string
+  tags: string[]
+  sources: string[]
+  sections: Section[]
   createdAt?: string
   updatedAt?: string
 }
