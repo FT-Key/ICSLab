@@ -59,6 +59,7 @@ const allowedOrigins = [
   'http://localhost:5174',
   'http://localhost:4002',
   'http://localhost:3000',
+  'https://icslab.vercel.app',
 ]
 if (process.env.ALLOWED_ORIGIN) {
   allowedOrigins.push(process.env.ALLOWED_ORIGIN)
