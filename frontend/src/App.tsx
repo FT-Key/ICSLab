@@ -5,6 +5,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<ReadingSummary />} />
+      <Route path="/lectura/:chapterIndex" element={<ReadingSummary />} />
     </Routes>
   )
 }

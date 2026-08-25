@@ -44,7 +44,7 @@ export type ContentBlock =
   | QuizBlock
   | TrueFalseBlock
 
-// ── Sections ───────────────────────────────────────────
+// ── Sections (= chapters) ─────────────────────────────
 export interface Section {
   _id?: string
   title: string

@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import mongoose, { Schema, model } from 'mongoose'
 
 const textBlockSchema = new Schema({
   type: { type: String, enum: ['text'], required: true },
