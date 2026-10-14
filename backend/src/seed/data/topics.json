@@ -67,7 +67,33 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "La documentación describe la organización del sistema, explica al usuario cómo utilizarlo y permite descargar actualizaciones y ayuda. Sin ella, el producto está incompleto."
+            "content": "La documentación describe la organización del sistema, explica al usuario cómo utilizarlo y permite descargar actualizaciones y ayuda. Sin ella, el producto está incompleto. Tres frentes: documentos que describen la organización del sistema, documentos para el usuario que explican cómo usarlo, y sitios web para descargar actualizaciones y ayuda."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Métodos, herramientas y compromiso con la calidad",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La ingeniería de software se sostiene en métodos (cómo hacer: análisis, diseño, pruebas) y herramientas (con qué: entornos, repositorios, automatización), con el compromiso con la calidad como norte. Calidad de producto (hace lo que debe) y de proceso (cómo se construye): sin proceso controlado no hay producto confiable."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "1986, por la programación orientada a objetos",
+              "1968, por la crisis del software",
+              "2001, por el Manifiesto Ágil",
+              "1999, por el problema del año 2000"
+            ],
+            "question": "¿En qué año y por qué se propuso el término “ingeniería de software”?",
+            "correctIndex": 1,
+            "explanation": "Conferencia de 1968 sobre la crisis: sistemas poco confiables, caros y tardíos."
           },
           {
             "type": "heading",
@@ -212,6 +238,12 @@
             "items": [],
             "options": [],
             "content": "Un modelo de proceso es una descripción simplificada de los enfoques de desarrollo: define el ciclo de vida a adoptar. Los modelos genéricos (cascada, incremental, espiral de Sommerville, Proceso Unificado con sus disciplinas y fases) son abstracciones para explicar enfoques, no descripciones definitivas."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El UP aporta sus disciplinas (requisitos, análisis, diseño, implementación, pruebas, gestión, entorno) que trabajan a lo largo de fases (Inicio, Elaboración, Construcción, Transición), con artefactos definidos en cada cruce. Es el modelo tradicional más estructurado y el puente hacia los enfoques ágiles de la Unidad 2."
           },
           {
             "type": "keypoints",
@@ -2016,35 +2048,31 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Enfoques de desarrollo y Scrum (clase UT2-P1, parte 1)",
+            "content": "Enfoques de desarrollo y Scrum (clase UT2-P1)",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "La Unidad 2 estudia los enfoques de desarrollo (tradicionales y ágiles), los principios y valores ágiles, Scrum (roles, artefactos y eventos), Kanban, la gestión de productos, los planes de desarrollo y mantenimiento, y la estimación. El UP visto en U1 reaparece aquí como puente: disciplinas, fases y artefactos antes de entrar a Scrum."
+            "content": "La Unidad 2 estudia: enfoques de desarrollo tradicionales y ágiles; principios y valores del desarrollo ágil; el framework Scrum con sus roles, artefactos y eventos; Kanban aplicado al desarrollo; gestión de productos; plan de desarrollo y de mantenimiento; estimación (tamaño, esfuerzo y costo); técnicas de estimación y planificación; y prácticas Lean."
           },
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Historias de usuario: las 3 partes",
+            "content": "Bibliografía de la unidad",
             "level": 3
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Una historia de usuario tiene tres partes: la descripción escrita (para planificar y como recordatorio), las conversaciones (para desarrollar los detalles) y las pruebas (que documentan detalles y dicen cuándo está completa). Describe una funcionalidad valiosa para un usuario o comprador, con lo justo escrito para no olvidar, estimar y planificar."
           },
           {
             "type": "keypoints",
             "items": [
-              "Formato Story Card: Como (rol)… Quiero (función)… Para (valor)… más criterios de aceptación.",
-              "Jerarquía: epic (ej. experiencia de compra) → feature (ej. exploración de productos) → historia (ej. consultar detalle de un producto).",
-              "Enfatizan comunicación verbal sobre escrita y son comprensibles para clientes y desarrolladores.",
-              "Tienen el tamaño justo para planificar y funcionan para desarrollo iterativo: posponen detalles hasta entender qué se necesita."
+              "Ken Schwaber y Jeff Sutherland (2020) Scrum Guide — completo.",
+              "Peter Deemer et al. (2009) The Scrum Primer v1.1 — completo.",
+              "Craig Larman (2003) UML y Patrones, Ed. 2 — Cap. 2 (sugerido: Caps. 36 y 37).",
+              "Henrik Kniberg (2007) Scrum y XP desde las trincheras — Caps. 2 y 3 (sugerido: Cap. 4).",
+              "Mike Cohn (2006) Agile Estimating and Planning — Caps. 1 y 3 (sugerido: Cohn 2004 User Stories Applied, Cap. 2).",
+              "Sitio de referencia: scrum.org."
             ],
             "options": []
           },
@@ -2052,18 +2080,56 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "INVEST: una buena historia",
+            "content": "Enfoques: tradicionales y ágiles",
             "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Los enfoques tradicionales (dirigidos por plan, vistos en U1) planean todo por anticipado y miden el avance contra el plan. Los enfoques ágiles planifican de forma incremental y modifican el proceso con facilidad para reflejar requerimientos cambiantes. La unidad recorre los principios y valores del desarrollo ágil, Kanban aplicado al software, la gestión de productos y una introducción a prácticas Lean."
+          },
+          {
+            "type": "quote",
+            "items": [],
+            "options": [],
+            "content": "Responder al cambio por sobre seguir un plan.",
+            "source": "Manifiesto Ágil (principio)"
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "UP: disciplinas, fases y artefactos (puente con U1)",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El Proceso Unificado (UP) organiza el desarrollo en disciplinas (requisitos, análisis, diseño, implementación, pruebas, gestión, entorno) que trabajan a lo largo de fases (Inicio, Elaboración, Construcción, Transición), generando artefactos (modelos, documentos, código, casos de prueba). Es el puente entre los modelos tradicionales y Scrum: iterativo e incremental, pero con más estructura formal."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Scrum: roles, artefactos y eventos",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Scrum es un marco ágil con 3 roles (Product Owner, Developers, Scrum Master), 3 artefactos (Pila del Producto, Pila del Sprint, Incremento) y 5 eventos (Sprint, Sprint Planning, Scrum Diario, Demo/Review, Retrospectiva), más el Refinement como actividad continua de clarificar, dividir, estimar y ordenar el backlog."
           },
           {
             "type": "keypoints",
             "items": [
-              "Independiente: sin dependencias que bloqueen su entrega.",
-              "Negociable: no es un contrato, se conversa.",
-              "Valiosa: aporta valor al usuario.",
-              "Estimable: el equipo puede dimensionarla.",
-              "Pequeña (Small): cabe en una iteración.",
-              "Comprobable (Testeable): se puede verificar con pruebas."
+              "Product Owner: maximiza el valor; ordena el backlog y define qué va primero.",
+              "Developers: equipo multifuncional que convierte backlog en incremento cada Sprint.",
+              "Scrum Master: facilita el proceso, remueve impedimentos, protege al equipo.",
+              "Sprint: iteración timeboxeada (1 a 4 semanas) que produce un incremento usable.",
+              "Demo/Review: inspección del incremento con stakeholders; Retrospectiva: mejora del proceso."
             ],
             "options": []
           },
@@ -2071,54 +2137,253 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Criterios de aceptación, DoR y DoD",
+            "content": "Pila del Producto y Refinement",
             "level": 3
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Los criterios de aceptación dan la pauta para saber si una historia está completamente implementada y evitan dedicarle demasiado o muy poco esfuerzo. Idealmente se escriben antes de codificar, discutiendo: ¿qué más necesitan saber los programadores?, ¿qué se asume de la implementación?, ¿en qué circunstancias se comportaría distinto?, ¿qué puede salir mal?"
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Definition of Ready (DoR): acuerdos del equipo sobre lo que debe tener una historia para abordarla (mockup, wireframe, criterios de aceptación). Exige claridad, criterios definidos, estimación hecha y dependencias resueltas. Definition of Done (DoD): criterios para considerar completo un incremento y listo para el cliente; la crea el equipo de desarrollo con opinión del PO y stakeholders. Importa porque aumenta la calidad, minimiza el riesgo, mejora la coordinación y permite medir el progreso."
-          },
-          {
-            "type": "heading",
-            "items": [],
-            "options": [],
-            "content": "Casos de uso 2.0",
-            "level": 3
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Un caso de uso se materializa con todas las formas de emplear un sistema para alcanzar una meta de un usuario. Como son grandes, se dividen en porciones: piezas pequeñas seleccionables para entregar, con tamaño apto para desarrollo y pruebas, que fluyen rápido. Cada porción son una o más historias de un caso de uso que dan valor claro. Narrando historias exploramos los casos de uso con los interesados (funcionales o no funcionales)."
+            "content": "La Pila del Producto (Product Backlog) es la lista ordenada de todo lo necesario para el producto: origen de épicas, features e historias. El Refinement (“+ Refinement” en el material) es el trabajo continuo de clarificar, partir, estimar y ordenar sus elementos para que el planning fluya. El “Refinement of Ready” conecta con la DoR: decidir qué debe tener una historia para poder abordarla en un Sprint."
           },
           {
             "type": "quiz",
             "items": [],
             "options": [
-              "Que se escribe en una línea",
-              "Que cabe en una iteración y se puede entregar",
-              "Que no tiene criterios de aceptación",
-              "Que la escribe una sola persona"
+              "Solo bugs del Sprint actual",
+              "La lista ordenada de todo lo necesario para el producto: épicas, features e historias",
+              "El plan detallado de los próximos 12 meses",
+              "Las tareas asignadas a cada developer"
             ],
-            "question": "Según INVEST, ¿qué significa que una historia sea “pequeña”?",
+            "question": "¿Qué contiene la Pila del Producto?",
             "correctIndex": 1,
-            "explanation": "Small: tamaño adecuado para planificar y entregar dentro de una iteración."
+            "explanation": "Es la única fuente ordenada de trabajo; de ella salen épicas, features e historias tras el refinement."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "La demo del Sprint",
+              "La actividad continua de clarificar, dividir, estimar y ordenar el backlog",
+              "Un documento contractual",
+              "La retrospectiva del release"
+            ],
+            "question": "¿Qué es el Refinement?",
+            "correctIndex": 1,
+            "explanation": "Sin refinement continuo, el Sprint Planning se llena de preguntas y confusión."
           },
           {
             "type": "truefalse",
             "items": [],
             "options": [],
-            "statement": "Los criterios de aceptación conviene escribirlos antes de codificar, durante la conversación cliente-equipo.",
+            "statement": "Scrum define roles, artefactos y eventos, pero el Refinement es una actividad continua fuera de los eventos formales.",
             "correctAnswer": true,
-            "explanation": "Reflejar los detalles como pruebas mientras se discute la historia evita dedicarle demasiado o muy poco esfuerzo."
+            "explanation": "El material lista los 5 eventos y suma “+ Refinement” como actividad permanente del equipo."
+          }
+        ]
+      },
+      {
+        "title": "Material de estudio — Historias de usuario y Definition of Ready/Done",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Historias de usuario, casos de uso 2.0 y DoR/DoD (clase UT2-P1)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El corazón del material: qué es una historia y sus 3 partes, jerarquía epic/feature/historia, formato de Story Card, criterios de aceptación, INVEST, casos de uso 2.0 y las definiciones de Ready y Done."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Historia de usuario: las 3 partes",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Una descripción escrita de la historia utilizada para la planificación y como recordatorio. Conversaciones sobre la historia que sirven para desarrollar los detalles de la historia. Pruebas que transmiten y documentan detalles y que pueden usarse para determinar cuando una historia está completa.” Además: “Describe una funcionalidad que será valiosa para un usuario o comprador de un sistema o software. Proporciona una manera de tener escrito lo suficiente para no olvidar, estimar y planificar.”"
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Jerarquía: epic → feature → historia",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Epic: Experiencia de compra del cliente.",
+              "Feature: Exploración de productos.",
+              "Historia: Consultar detalle de un producto (US-01: Como cliente, quiero consultar el detalle para decidir mi compra, con endpoint GET /api/products/{id})."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Pruebas y Story Cards",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Las pruebas transmiten detalles: probar un código existente, probar un código inexistente (ej. id que devuelve 404), probar sin autenticación (ver detalle libremente) y probar con autenticación (ver precio o personalización). La Story Card usa el formato: Como (rol)… Quiero (función)… Para (valor)… más los Criterios de Aceptación (Criterio 1, 2, 3). Ejemplo completo US-01: ver nombre, precio, stock y descripción; criterios: GET existente responde 200 con JSON, id inexistente responde 404, visible sin login y tiempo de respuesta menor a 200 ms."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "¿Por qué utilizarlas? (5 razones del material)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Enfatizan la comunicación verbal en lugar de la escrita.",
+              "Son comprensibles para clientes/usuarios y desarrolladores.",
+              "Tienen el tamaño adecuado para la planificación.",
+              "Funcionan para el desarrollo iterativo.",
+              "Alientan a posponer los detalles hasta tener la mejor comprensión de lo realmente necesario."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "INVEST: una buena historia es…",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Independiente: sin dependencias que la bloqueen.",
+              "Negociable: se conversa, no es contrato.",
+              "Valiosa: aporta valor al usuario o comprador.",
+              "Estimable: el equipo puede dimensionar su esfuerzo.",
+              "Pequeña (Small): cabe en una iteración.",
+              "Comprobable (Testeable): se verifica con pruebas."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Criterios de aceptación: escribirlos antes de codificar",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Proporcionan criterios básicos que pueden utilizarse para determinar si una historia está completamente implementada. Contar con criterios que nos indiquen cuándo algo está hecho es la mejor manera de evitar dedicarle demasiado o muy poco tiempo y esfuerzo.” Idealmente se escriben mientras cliente y desarrolladores discuten la historia, preguntando: ¿qué más necesitan saber los programadores?; ¿qué asumo sobre cómo se implementará?; ¿existen circunstancias en que se comportaría diferente (ej. estados Pending/Processing/Shipped/Delivered/Cancelled, página de 10 órdenes vacía)?; ¿qué puede salir mal (error de red, producto sin stock)?"
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Casos de Uso 2.0",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Un caso de uso se materializa con todas las formas de emplear un sistema para alcanzar una meta particular para un usuario particular.” Como son grandes, se dividen en porciones: piezas que permiten (1) seleccionar qué entregar, (2) dar una unidad adecuada para desarrollo y pruebas y (3) lograr piezas pequeñas de tamaño similar que fluyan rápido. Una porción son una o más historias de un caso de uso que dan valor claro. Posibilitan dividir en unidades entregables independientes, ordenar/priorizar/tratar en paralelo y vincular los modelos (requisitos, análisis, diseño, implementación y pruebas). “Narrando historias es como exploramos los casos de uso con nuestros interesados”, con historias funcionales o no funcionales."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Definition of Ready (DoR)",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Es habitualmente parte de los acuerdos de trabajo de un equipo y se usa para decidir qué elementos tiene que tener una historia de usuario para poder abordarla (mockup, wireframe, criterios de aceptación, etc.). La necesidad surge de desacuerdos entre el equipo, generalmente entre el Product Owner y los Developers.” Exige: claridad (se entiende sin confusiones), criterios de aceptación definidos, estimación realizada y dependencias resueltas."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Definition of Done (DoD)",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Es un conjunto de criterios que debe cumplir un incremento del producto para que el equipo lo considere completo y listo para los clientes.” La crea el equipo de desarrollo dirigido por el Scrum Master, pidiendo opinión a dueños del producto, evaluadores y stakeholders. Importa porque: aumenta la calidad, minimiza el riesgo, mejora la coordinación de los equipos y mide el progreso."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Código, test y deploy",
+              "Descripción escrita, conversaciones y pruebas",
+              "Epic, feature y tarea",
+              "Mockup, backend y frontend"
+            ],
+            "question": "¿Cuáles son las 3 partes de una historia de usuario según el material?",
+            "correctIndex": 1,
+            "explanation": "Escrito para recordar/planificar, conversación para detallar y pruebas para saber cuándo está completa."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Signed (firmada por el cliente)",
+              "Small: cabe en una iteración",
+              "Secure (segura)",
+              "Standard (estándar)"
+            ],
+            "question": "¿Qué significa la S de INVEST?",
+            "correctIndex": 1,
+            "explanation": "Pequeña: tamaño adecuado para planificar y entregar dentro de la iteración."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Solo el Product Owner",
+              "El equipo de desarrollo dirigido por el Scrum Master, con opinión de stakeholders",
+              "El cliente en el contrato",
+              "Un auditor externo"
+            ],
+            "question": "¿Quién crea la Definition of Done?",
+            "correctIndex": 1,
+            "explanation": "El equipo la define; PO, evaluadores y stakeholders opinan."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Los criterios de aceptación conviene escribirlos antes de codificar, durante la conversación.",
+            "correctAnswer": true,
+            "explanation": "Reflejar los detalles como pruebas evita dedicarle demasiado o muy poco esfuerzo."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Una porción de caso de uso puede estar formada por una o más historias que den valor claro.",
+            "correctAnswer": true,
+            "explanation": "Es la unidad pequeña, seleccionable y entregable de Casos de Uso 2.0."
           }
         ]
       },
@@ -2130,41 +2395,79 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Estimación, planificación y planes (clase UT2-P1, parte 2)",
+            "content": "Estimación, planificación y planes (clase UT2-P1)",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Segunda parte del material: estimar (esfuerzo, tamaño, tiempo), planificar (niveles y Sprint Planning) y los planes de desarrollo y de mantenimiento, con el ejercicio de comparar ambos bajo una restricción sorpresa."
+            "content": "Cierre del material: estimar (esfuerzo, tamaño, tiempo), planificar en niveles con el Sprint Planning, y los planes de desarrollo y de mantenimiento puestos a prueba con una restricción sorpresa."
           },
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Estimar: qué y para qué",
+            "content": "Estimar: definición",
             "level": 3
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Estimar es determinar anticipadamente el esfuerzo del proyecto, el tamaño del producto y el tiempo para finalizarlo. Es necesario para planificar: el cliente quiere saber cuándo y cuánto costará, infraestructura debe preparar ambientes, el equipo organiza su próximo proyecto y cada interesado necesita visibilidad."
+            "content": "“Estimar es determinar anticipadamente: el esfuerzo necesario para realizar el proyecto, el tamaño del producto y el tiempo necesario para finalizar el proyecto.”"
           },
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Planificación y Sprint Planning",
+            "content": "¿Para qué estimar? (4 interesados)",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "Un buen proceso de planificación reduce riesgo e incertidumbre, mejora decisiones, genera confianza y transmite información.",
-              "La planificación tiene niveles (día, iteración, release, producto): cada nivel con horizonte y detalle distintos.",
-              "El Sprint Planning produce: meta del Sprint, lista de miembros y dedicación, pila del Sprint, fecha de la demo y lugar/momento del Daily."
+              "El cliente necesita saber cuándo tendrá el producto y cuánto costará.",
+              "Infraestructura necesita saber para cuándo preparar el ambiente de producción.",
+              "El equipo necesita saber cuándo terminará para comenzar el siguiente proyecto.",
+              "Cada interesado necesita visibilidad para organizar sus tareas."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Sin estimación no hay planificación posible: estimar es necesario para poder planificar."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "La planificación y sus niveles",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Un buen proceso de planificación contribuye a: reducir el riesgo, reducir la incertidumbre, favorecer una mejor toma de decisiones, establecer confianza y transmitir información.” Se planifica en niveles (día, iteración, release, producto/portafolio): cada nivel mira un horizonte distinto con un detalle distinto."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Sprint Planning: sus 5 productos",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Una meta de Sprint.",
+              "Una lista de miembros (y su dedicación si no es del 100 %).",
+              "Una Pila de Sprint (historias incluidas).",
+              "Una fecha concreta para la Demo.",
+              "Un lugar y momento definidos para el Scrum Diario."
             ],
             "options": []
           },
@@ -2172,33 +2475,86 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Plan de desarrollo (11 puntos) y plan de mantenimiento (9 puntos)",
+            "content": "Plan de desarrollo: 11 puntos",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "1. Propósito. 2. Alcance (primera versión o posteriores). 3. Estrategia de desarrollo (modelo o marco).",
+              "4. Organización del equipo. 5. Organización del trabajo. 6. Plan temporal (calendarización).",
+              "7. Estimación. 8. Seguimiento. 9. Riesgos (en particular o general).",
+              "10. Gestión de cambios. 11. Entregables."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Tres preguntas para controlar tu plan",
             "level": 3
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Plan de desarrollo: propósito, alcance (primera versión o posteriores), estrategia (modelo o marco), organización del equipo y del trabajo, plan temporal, estimación, seguimiento, riesgos, gestión de cambios y entregables. Plan de mantenimiento: propósito, alcance, recepción de solicitudes (MR/PR), clasificación (Crítica-Alta-Media-Baja), flujo, priorización, estrategia de implementación, gestión de versiones y métricas."
+            "content": "“¿Qué supuesto importante está haciendo este plan? ¿Qué parte del plan parece más vulnerable a un cambio? ¿Qué información faltante podría modificar significativamente la planificación?” Si no podés responderlas, el plan es frágil."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Plan de mantenimiento: 9 puntos",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "1. Propósito. 2. Alcance. 3. Recepción de solicitudes (MR/PR).",
+              "4. Clasificación (Crítica - Alta - Media - Baja). 5. Flujo o proceso. 6. Priorización (tratamiento).",
+              "7. Estrategia de implementación. 8. Gestión de versiones (liberaciones). 9. Métricas básicas (evaluación)."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "El cambio y la puesta en común",
+            "level": 3
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Preguntas para poner a prueba tu plan de desarrollo: ¿qué supuesto importante hace?, ¿qué parte es más vulnerable a un cambio?, ¿qué información faltante lo modificaría? Y la lección del ejercicio de cambios: el plan no elimina la incertidumbre; organiza el trabajo, coordina decisiones, controla el avance y permite adaptarse cuando cambian las condiciones (ej. recorte del 30 % del presupuesto)."
+            "content": "Caso del material: “Dirección informa que el presupuesto disponible para los próximos tres meses se reduce un 30 %. El equipo deberá decidir qué trabajos realizará y cuáles postergará.” La puesta en común pregunta: ¿qué diferencias hay entre planificar desarrollo y mantenimiento?; ¿qué elementos aparecen en ambos?; ¿cuál estuvo sometido a mayor incertidumbre?; ¿qué cambió cuando apareció una restricción desconocida? Cierre del material: “El plan no elimina la incertidumbre. Su función es proporcionar una base para organizar el trabajo, coordinar decisiones, controlar el avance y adaptarse cuando las condiciones cambian.”"
           },
           {
             "type": "quiz",
             "items": [],
             "options": [
-              "Solo la fecha de entrega final",
-              "Meta del Sprint, pila del Sprint, fecha de demo y daily definido",
               "El contrato con el cliente",
-              "La arquitectura completa del sistema"
+              "Meta del Sprint, pila del Sprint, fecha de demo y daily definido (5 productos)",
+              "La arquitectura completa",
+              "La fecha de entrega final del proyecto"
             ],
             "question": "¿Qué produce un Sprint Planning?",
             "correctIndex": 1,
-            "explanation": "Meta, miembros/dedicación, pila del Sprint, fecha de demo y daily: esos son sus 5 productos."
+            "explanation": "Meta, miembros/dedicación, pila, fecha de demo y daily: esos son sus 5 productos."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "9",
+              "11",
+              "7",
+              "5"
+            ],
+            "question": "¿Cuántos puntos tiene el plan de desarrollo del material?",
+            "correctIndex": 1,
+            "explanation": "Propósito, alcance, estrategia, equipo, trabajo, temporal, estimación, seguimiento, riesgos, cambios y entregables."
           },
           {
             "type": "truefalse",
@@ -2211,36 +2567,49 @@
         ]
       },
       {
-        "title": "Lectura — Scrum Guide 2020 (Schwaber y Sutherland)",
+        "title": "Lectura — Scrum Guide 2020: base, pilares y valores",
         "category": "lectura",
         "blocks": [
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Scrum Guide 2020: el marco mínimo",
+            "content": "Scrum Guide 2020: el marco mínimo (Schwaber y Sutherland)",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Scrum es un marco ligero para generar valor con soluciones adaptativas a problemas complejos. Se funda en el empirismo (el conocimiento viene de la experiencia) y el pensamiento lean (reducir desperdicio). Es iterativo e incremental, intencionalmente incompleto: solo define lo necesario y envuelve tus prácticas. Regla de oro: quitar elementos o no seguir sus reglas oculta problemas y deja de ser Scrum."
+            "content": "Scrum es “un marco ligero que ayuda a personas, equipos y organizaciones a generar valor con soluciones adaptativas para problemas complejos”. En pocas palabras: el Product Owner ordena trabajo en el Product Backlog, el Scrum Team convierte una selección en un Incremento de valor en un Sprint, el equipo y los interesados inspeccionan y ajustan para el próximo Sprint, y se repite."
           },
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Los 3 pilares y los 5 valores",
+            "content": "Intencionalmente incompleto",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Scrum solo define las partes requeridas para implementar su teoría: no da instrucciones detalladas, sus reglas guían relaciones e interacciones y envuelve tus prácticas existentes (o las vuelve innecesarias). Hace visible la eficacia de la gestión, el entorno y las técnicas para poder mejorarlas. Regla de oro: cambiar su diseño central, omitir elementos o no seguir sus reglas oculta problemas, limita beneficios y puede volverlo inútil. Scrum existe solo en su totalidad, como contenedor de otras técnicas."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Teoría: empirismo y lean",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "Transparencia: proceso y trabajo visibles; las decisiones se basan en el estado de los artefactos.",
-              "Inspección: revisar con frecuencia artefactos y progreso para detectar desvíos (los 5 eventos dan la cadencia).",
-              "Adaptación: ajustar cuanto antes cuando algo se desvía; requiere un equipo empoderado.",
-              "Valores: compromiso, foco, apertura, respeto y coraje — sin ellos los pilares no funcionan."
+              "Empirismo: el conocimiento viene de la experiencia y las decisiones se basan en lo observado.",
+              "Lean thinking: reduce desperdicio y enfoca en lo esencial.",
+              "Enfoque iterativo e incremental para optimizar predictibilidad y controlar riesgo.",
+              "Origen: término del rugby (artículo Harvard 1986), primer equipo de Sutherland en Easel (1993), formalizado por Schwaber (1995)."
             ],
             "options": []
           },
@@ -2248,32 +2617,150 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Scrum Team: 1 PO + 1 SM + Developers",
-            "level": 3
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Equipo cohesivo, multifuncional y autogestionado, sin sub-equipos ni jerarquías, típicamente de 10 o menos personas, enfocado en un Product Goal a la vez. Developers: crean el plan del Sprint, aseguran calidad según la DoD y adaptan el plan a diario. Product Owner: maximiza el valor; define el Product Goal, crea y ordena el Product Backlog; es una sola persona y solo él puede cancelar un Sprint. Scrum Master: líder servidor que establece Scrum, remueve impedimentos y coachea al equipo, al PO y a la organización."
-          },
-          {
-            "type": "heading",
-            "items": [],
-            "options": [],
-            "content": "Los 5 eventos y los 3 artefactos",
+            "content": "Los 3 pilares",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "Sprint (contenedor, máx. 1 mes): convierte ideas en valor; durante el Sprint no cambian las reglas que pongan en riesgo la meta.",
-              "Sprint Planning (máx. 8 h): responde por qué (meta), qué (ítems) y cómo (plan) → Sprint Backlog.",
-              "Daily Scrum (15 min, Developers): inspecciona el progreso hacia la meta y adapta el plan del día.",
-              "Sprint Review (máx. 4 h): el equipo presenta resultados a stakeholders y se ajusta el Backlog; es trabajo, no show.",
-              "Sprint Retrospective (máx. 3 h): mejora calidad y eficacia; las mejoras pueden entrar al próximo Sprint.",
-              "Product Backlog + Product Goal · Sprint Backlog + Sprint Goal · Incremento + Definition of Done.",
-              "Definition of Done: estándar formal de calidad; lo que no la cumple no se presenta ni se libera, vuelve al Backlog."
+              "Transparencia: proceso y trabajo visibles para quienes lo hacen y quienes lo reciben; las decisiones se basan en el estado de los 3 artefactos. Sin ella, la inspección es engañosa.",
+              "Inspección: artefactos y progreso hacia las metas se revisan frecuente y diligentemente; los 5 eventos dan la cadencia. Sin adaptación posterior, es inútil.",
+              "Adaptación: si el proceso o el producto se desvían, se ajustan lo antes posible; exige gente empoderada. Lema: inspeccionar y adaptar en pasos pequeños, repetir."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Los 5 valores",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Commitment (compromiso): lograr las metas y apoyarse mutuamente.",
+              "Focus (foco): concentrarse en el trabajo del Sprint para el máximo progreso.",
+              "Openness (apertura): equipo e interesados abiertos sobre trabajo y desafíos.",
+              "Respect (respeto): miembros capaces e independientes, respetados como tales.",
+              "Courage (coraje): hacer lo correcto y trabajar en problemas duros."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Los valores dan dirección al trabajo y la conducta; cuando se encarnan, los pilares cobran vida y generan confianza."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Que le faltan partes por escribir",
+              "Que solo define lo necesario y envuelve tus prácticas existentes",
+              "Que cada equipo inventa sus propios eventos",
+              "Que no sirve para software"
+            ],
+            "question": "¿Qué significa que Scrum sea “intencionalmente incompleto”?",
+            "correctIndex": 1,
+            "explanation": "Define las partes requeridas para su teoría; no da instrucciones detalladas y funciona como contenedor de otras técnicas."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Planificar, ejecutar y controlar",
+              "Transparencia, inspección y adaptación",
+              "Roles, eventos y artefactos",
+              "Compromiso, foco y respeto"
+            ],
+            "question": "¿Cuáles son los 3 pilares de Scrum?",
+            "correctIndex": 1,
+            "explanation": "Los pilares sostienen el empirismo; lo otro son valores (la tercera opción mezcla estructura con pilares)."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Se puede implementar solo una parte de Scrum y seguir llamándolo Scrum.",
+            "correctAnswer": false,
+            "explanation": "Scrum existe solo en su totalidad: omitir elementos oculta problemas y lo vuelve inútil."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Scrum Guide 2020: el Scrum Team",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "El Scrum Team: unidad fundamental",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Equipo pequeño y cohesivo —1 Scrum Master, 1 Product Owner y Developers— sin sub-equipos ni jerarquías, enfocado en un objetivo a la vez: el Product Goal. Es multifuncional (todas las habilidades para crear valor cada Sprint) y autogestionado (decide quién hace qué, cuándo y cómo). Tamaño: lo bastante pequeño para ser ágil y grande para lograr trabajo significativo, típicamente 10 o menos; si crece, se divide en equipos con el mismo Goal, Backlog y PO."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Es responsable de todo lo del producto: colaboración con stakeholders, verificación, mantenimiento, operación, experimentación e I+D. Trabaja a ritmo sostenible y todo el equipo rinde cuentas por un Incremento valioso y útil cada Sprint."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Developers",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Personas comprometidas a crear cualquier aspecto de un Incremento usable cada Sprint.",
+              "Crean el plan del Sprint: el Sprint Backlog.",
+              "Inculcan calidad adhiriendo a la Definition of Done.",
+              "Adaptan el plan cada día hacia el Sprint Goal y se responsabilizan mutuamente."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Product Owner: maximizar el valor",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Desarrolla y comunica explícitamente el Product Goal.",
+              "Crea y comunica claramente los ítems del Product Backlog y los ordena.",
+              "Asegura un Backlog transparente, visible y entendido (puede delegar el trabajo, nunca la responsabilidad).",
+              "Es UNA persona, no un comité; representa a muchos stakeholders y solo él puede cancelar un Sprint.",
+              "En la práctica (Primer): responsable del ROI —elige cada Sprint lo de alto valor y poco esfuerzo— y no delega su interacción con el equipo."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Scrum Master: líder servidor (3 frentes)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Al equipo: coachea autogestión y multifuncionalidad, ayuda al foco en incrementos que cumplan la DoD, remueve impedimentos y asegura eventos positivos y en timebox.",
+              "Al PO: técnicas para el Product Goal y el Backlog, ítems claros y concisos, planificación empírica y colaboración con stakeholders.",
+              "A la organización: lidera la adopción de Scrum, asesora implementaciones, enseña el enfoque empírico y remueve barreras.",
+              "No es jefe ni jefe de proyecto; protege de interferencias y nunca es la misma persona que el PO."
             ],
             "options": []
           },
@@ -2281,64 +2768,67 @@
             "type": "quiz",
             "items": [],
             "options": [
-              "El Scrum Master",
-              "Los Developers votando",
-              "El Product Owner, si la meta quedó obsoleta",
+              "El Scrum Master, cuando hay bugs",
+              "Los Developers, por votación",
+              "El Product Owner, si el Sprint Goal quedó obsoleto",
               "Cualquier stakeholder"
             ],
-            "question": "¿Quién puede cancelar un Sprint?",
+            "question": "¿Quién puede cancelar un Sprint y cuándo?",
             "correctIndex": 2,
-            "explanation": "Solo el PO puede cancelar un Sprint, cuando el Sprint Goal pierde sentido."
+            "explanation": "Solo el PO, cuando una circunstancia externa vuelve inútil seguir."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "3 personas exactas",
+              "10 o menos",
+              "20 a 30",
+              "Sin límite"
+            ],
+            "question": "¿Cuál es el tamaño típico del Scrum Team?",
+            "correctIndex": 1,
+            "explanation": "Pequeño para comunicar mejor; si crece, se divide manteniendo Goal, Backlog y PO."
           },
           {
             "type": "truefalse",
             "items": [],
             "options": [],
-            "statement": "En Scrum se puede “hacer un poco de Scrum” y seguir llamándolo Scrum aunque falten eventos.",
+            "statement": "El Scrum Master y el Product Owner pueden ser la misma persona si el equipo es chico.",
             "correctAnswer": false,
-            "explanation": "Scrum existe solo en su totalidad: quitar elementos oculta problemas y deja de ser Scrum."
+            "explanation": "Nunca: el SM debe poder frenar al PO si mete trabajo a mitad del Sprint."
           }
         ]
       },
       {
-        "title": "Lectura — Scrum Primer y Kniberg en la práctica",
+        "title": "Lectura — Scrum Guide 2020: eventos y artefactos",
         "category": "lectura",
         "blocks": [
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Del manual a la trinchera (Deemer + Kniberg)",
+            "content": "Los 5 eventos (todos inspeccionan y adaptan)",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "El Scrum Primer y “Scrum y XP desde las trincheras” muestran cómo se vive Scrum: Sprints de 1 a 4 semanas de duración fija que nunca se alargan, equipos estables de 7±2 personas 100 % dedicadas, y tableros físicos con post-its (Pendiente/En curso/Terminado) más burndown en la pared."
+            "content": "Regla general: misma hora y lugar para reducir complejidad; no operarlos como está prescrito es perder oportunidades de inspección. El Sprint es el contenedor de los otros cuatro."
           },
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Planning en dos partes y velocidad",
+            "content": "Sprint y Sprint Planning",
             "level": 3
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Parte 1 (qué/por qué, con el PO): se revisa la prioridad, la meta y la DoD. Parte 2 (cómo, solo el equipo): se estima la capacidad (un día real rinde 4–6 h efectivas) y se dividen historias en tareas. La velocidad (puntos por Sprint, ej. 26) proyecta fecha y alcance; el factor de dedicación típico de un equipo nuevo es 70 %. Solo cuentan las historias 100 % terminadas."
           },
           {
             "type": "keypoints",
             "items": [
-              "Backlog útil: ID, nombre corto, importancia con huecos (10, 30, 150), estimación relativa, “cómo probarlo” y notas; Excel compartido antes que herramientas pesadas.",
-              "Refinamiento: 5–10 % de cada Sprint para preparar los próximos 1–2 Sprints; sin esto el planning se llena de preguntas.",
-              "Calidad interna (diseño, tests, refactorización) no se negocia por velocidad; se negocia alcance.",
-              "Historias de 2 a 8 días-hombre; si superan los 20–40 puntos, se dividen preservando valor de negocio.",
-              "Planning Poker: todo el equipo estima a la vez con cartas 0,1,2,3,5,8,13,20,40,100; el PO responde, no estima.",
-              "Bugs: top impreso en la pared, historia que referencia tickets, bajar el factor, o backlog dentro del tracker."
+              "Sprint (heartbeat, máx. 1 mes; en la práctica 1 a 4 semanas): convierte ideas en valor. Durante el Sprint no hay cambios que pongan en riesgo la meta, la calidad no baja, el Backlog se refina y el alcance puede renegociarse con el PO. Nunca se alarga.",
+              "Sprint Planning (máx. 8 h para 1 mes): todo el equipo crea el plan. Tema 1 ¿por qué es valioso? (PO propone, equipo define el Sprint Goal). Tema 2 ¿qué se puede hacer? (selección con el PO según rendimiento, capacidad y DoD). Tema 3 ¿cómo? (los Developers planifican, a menudo en piezas de 1 día o menos). Salida: Sprint Goal + ítems + plan = Sprint Backlog."
             ],
             "options": []
           },
@@ -2346,71 +2836,361 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Daily, demo, retro y XP",
+            "content": "Daily, Review y Retrospective",
             "level": 3
           },
           {
-            "type": "text",
+            "type": "keypoints",
+            "items": [
+              "Daily Scrum (15 min, Developers, misma hora/lugar): inspecciona el progreso hacia la meta y produce el plan del próximo día; mejora comunicación, detecta impedimentos y evita otras reuniones.",
+              "Sprint Review (máx. 4 h, penúltimo evento): el equipo presenta resultados a stakeholders, discuten el progreso al Product Goal y colaboran en los próximos pasos; el Backlog puede ajustarse. Es trabajo, no show. Nunca es puerta para liberar.",
+              "Sprint Retrospective (máx. 3 h, cierra el Sprint): inspecciona individuos, interacciones, procesos, herramientas y DoD; elige los cambios más impactantes, que pueden entrar al próximo Backlog."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
             "items": [],
             "options": [],
-            "content": "Daily de 15 min de pie frente al tablero (ayer/hoy/bloqueos, sin discusiones). Demo obligatoria cada Sprint con código funcionando, sin slides, dejando probar a la audiencia: obliga a terminar de verdad. Retro de 1–3 h con formato bien/mejorar, votación con 3 puntos por persona y 5 mejoras como foco. XP aporta la ingeniería: TDD (test → código mínimo → refactorizar), pair programming rotativo, integración continua que compila y testea cada commit, diseño incremental y ritmo sostenible sin horas extra crónicas."
+            "content": "Los 3 artefactos y sus compromisos",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Product Backlog + Product Goal: lista emergente y ordenada, única fuente de trabajo; el Goal describe el estado futuro (largo plazo: cumplirlo o abandonarlo antes del siguiente).",
+              "Sprint Backlog + Sprint Goal: por qué + qué + plan accionable (por y para Developers, visible en tiempo real); el Goal da coherencia aunque el trabajo exacto sea flexible.",
+              "Incremento + Definition of Done: escalón usable y verificado hacia el Goal; lo que no cumple la DoD no se presenta ni se libera y vuelve al Backlog. Sin estándar organizacional, el equipo crea el suyo; múltiples equipos comparten el mismo."
+            ],
+            "options": []
           },
           {
             "type": "quiz",
             "items": [],
             "options": [
-              "La calidad interna del código",
-              "El alcance, no la calidad",
+              "2 horas",
+              "4 horas",
+              "Máximo 8 horas",
+              "Sin límite"
+            ],
+            "question": "¿Cuál es el timebox del Sprint Planning para un Sprint de 1 mes?",
+            "correctIndex": 2,
+            "explanation": "Máximo 8 h; normalmente menos si el Sprint es más corto."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Se presenta igual en la Review",
+              "No se libera ni se presenta: vuelve al Backlog",
+              "Lo aprueba el Scrum Master",
+              "Se entrega como parche"
+            ],
+            "question": "¿Qué pasa con el trabajo que no cumple la Definition of Done?",
+            "correctIndex": 1,
+            "explanation": "La DoD crea transparencia compartida de qué significa “completo”."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "El Sprint se puede alargar unos días si falta poco para terminar.",
+            "correctAnswer": false,
+            "explanation": "Timebox fijo: no se alarga, se recorta alcance; alargarlo destruye predictibilidad."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Scrum Primer: equipo, planning y protección",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "El equipo y el planning en la práctica (Primer)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Equipo de 7±2 personas, multifuncional (analistas, devs, diseño, testers), auto-organizado y 100 % dedicado a un producto por Sprint, estable en el tiempo. Distinción clásica: Cerdos (comprometidos) vs. Gallinas (solo implicadas). No hay jefe de proyecto: los gestores pasan de “niñeras” a “gurús/sirvientes” (mentoring, quitar obstáculos, cuestionamiento socrático)."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Planning en 2 partes y capacidad realista",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Parte 1 (qué/por qué, con el PO): se revisa la prioridad, el contexto y la DoD (ej. codificado con estándares, revisado, TDD, 100 % tests automáticos, integrado y documentado).",
+              "Parte 2 (cómo, solo el equipo): estima su capacidad —un día rinde 4 a 6 h efectivas— y divide historias en tareas. El equipo decide cuánto entra, nadie se lo asigna.",
+              "“Ir donde está el trabajo”: todos ayudan donde haga falta (si hay muchas pruebas, todos prueban); ofrecerse de a una tarea y aprender por pair programming."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Refinement, estimación y priorización",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Refinement: 5–10 % de cada Sprint (ej. medio día en 2 semanas) para analizar, partir, estimar y re-estimar lo de los próximos 1–2 Sprints.",
+              "Estimación relativa en puntos (no personas-semana); la velocidad (ej. 26 pts/Sprint) proyecta fecha y alcance.",
+              "El PO prioriza por ROI (alto valor, poco esfuerzo) y puede sumar el riesgo; el detalle es proporcional a la cercanía.",
+              "Pila de Entrega: subconjunto del Backlog que enfoca el release actual."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Protección del Sprint y ritmo sostenible",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Comprometido el Sprint, los cambios esperan al siguiente: da certeza para terminar y disciplina al PO para priorizar.",
+              "Cancelación anormal: solo si seguir sería perder el tiempo (la decide el PO o el equipo); es tan disruptiva que desincentiva el abuso.",
+              "Los primeros Sprints se suele sobre-comprometer y fallar; al 3.º–4.º se calibra la capacidad real.",
+              "Sin descanso entre Sprints y a ritmo sostenible (horario razonable indefinido); duración constante para tomar pulso."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Nada, es pérdida de tiempo",
+              "5–10 % de cada Sprint",
+              "El 50 % del Sprint",
+              "Solo cuando el PO lo pide"
+            ],
+            "question": "¿Cuánto tiempo de refinement recomienda el Primer por Sprint?",
+            "correctIndex": 1,
+            "explanation": "Sin ese taller previo, el Planning se llena de preguntas y confusión."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Una vez comprometido el Sprint, los cambios esperan al siguiente.",
+            "correctAnswer": true,
+            "explanation": "Esa protección da certeza al equipo y disciplina al PO para priorizar en serio."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Scrum Primer: seguimiento, review, retro y entrega",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Tablero, burndown, daily y review (Primer)",
+            "level": 2
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Tablero físico con post-its (No empezado / En progreso / Completado) y burndown en papel en la pared: rápido, visible y de mucho contacto.",
+              "Burndown: personas-hora restantes por día, ideal descendente a cero; muestra el futuro que separa del objetivo, no el pasado. Si no baja, se recorta alcance.",
+              "Daily: ≤15 min de pie, 3 preguntas (hice / haré / bloqueos), sin discusiones ni jefes presentes; los bloqueos los resuelve el SM.",
+              "Review (mal llamada “demo”): lo central es la conversación profunda con stakeholders, no la demo; sin diapositivas, ≤30 min de preparación; solo se muestra lo que cumple la DoD."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Retrospectiva que sí mejora",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Tras la Review, con equipo + SM (PO bienvenido); mejor con facilitador neutral de otro equipo.",
+              "Formato simple: Qué fue bien / Qué mejorar, marcas en repetidos, causas subyacentes y pocas mejoras que se revisan en la próxima retro.",
+              "Etiquetas: C (causado por Scrum), E (expuesto por Scrum), U (no relacionado). Muchas E en “mejorar” es buena noticia: Scrum hizo visible el problema."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Sprint de Entrega, releases y fallos típicos",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Visión: potencialmente entregable al final de cada Sprint; si hace falta un Sprint final de estabilización, es señal de debilidad (prácticas de ingeniería flojas).",
+              "Planificación de entrega: producto nuevo = taller de visión + refinamiento inicial; producto establecido = refinamiento continuo sin plan especial. Fecha fija → entran los Sprints posibles; alcance fijo → hasta cumplir.",
+              "Foco producto: desarrollo continuo con equipo estable en series infinitas de Sprints, no proyecto con fin y jefe.",
+              "Fallos típicos: cambiar Scrum en vez de cambiar ellos (ej. alargar el Sprint), imponerlo desde arriba, asumir prohibido lo no dictado. Caso Yahoo: +36 % productividad, 85 % seguiría con Scrum."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Madurez del equipo",
+              "Debilidad en prácticas de ingeniería (tests, integración, refactorización)",
+              "Buena velocidad",
+              "Exceso de refinement"
+            ],
+            "question": "¿Qué indica necesitar siempre un “Sprint de Entrega” de estabilización?",
+            "correctIndex": 1,
+            "explanation": "Con CI, refactorización y tests efectivos casi no hace falta estabilización."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "En la Review solo debe mostrarse lo que cumple la Definition of Done.",
+            "correctAnswer": true,
+            "explanation": "Mostrar código desordenado sin probar es simular calidad; el SM debe frenarlo."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Kniberg: backlog y sprint planning",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "La Pila de Producto que sí funciona (Kniberg, Cap. 2)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La Pila es el corazón de Scrum: requisitos priorizados en lenguaje del cliente. Seis campos sobrevivieron Sprint tras Sprint: ID único auto-incremental; Nombre (2–10 palabras, ej. “Ver tu historial de transacciones”); Importancia del PO con huecos (10, 30, 150 —solo ordena, no multiplica); Estimación del equipo en puntos ≈ días-persona ideales (relativa, no absoluta); Cómo probarlo (spec de aceptación: “haz esto, entonces aquello”); y Notas. Extras opcionales: Categoría, Componentes, Solicitante y Bug tracking ID. Herramienta ganadora: Excel compartido en red (multi-edición sin bloqueos), dueño el PO; solo el PO pone importancia, solo el equipo estima."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Planning: los 5 productos y el PO obligatorio",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Produce: meta del Sprint, miembros + dedicación, Pila del Sprint, fecha de Demo y lugar/hora del Daily.",
+              "El PO debe asistir sí o sí (alcance+importancia suyos, estimación del equipo: se ajustan cara a cara). Escalación si falta: convencer → delegado con poder → nuevo PO → posponer el Sprint.",
+              "Calidad externa (lo que ve el usuario) es alcance y la decide el PO; calidad interna (diseño, tests, refactorización) es del equipo y NUNCA se negocia por velocidad.",
+              "Timebox estricto: si se acaba el tiempo, se cierra (“¿trabajamos con esto o meeting de 4 h mañana a las 8?”). Agenda tipo 13:00–17:00 con bloques para meta, estimación, selección y daily."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Duración, meta y qué entra",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sprint corto = agilidad y feedback; largo = impulso y margen. Favorito del libro: 3 semanas fijas (“latido corporativo”).",
+              "Meta obligatoria aunque sea cutre (“¿por qué no nos vamos de vacaciones?”); sirve a mitad del Sprint y se publica en la Wiki.",
+              "Qué entra lo decide SOLO el equipo. El PO influye re-priorizando, recortando alcance o dividiendo historias.",
+              "Estimación a ojo (¿al 90 % o al 50 %?) + cálculo de velocidad: días-hombre × factor = velocidad estimada; factor = velocidad real / días-hombre (ej. 18/45 = 40 %; 50 × 40 % = 20 pts). Default para equipo nuevo: 70 %. Solo cuentan historias 100 % terminadas."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Tarjetas, poker, división y prioridades",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Tarjetas físicas en pared/mesa: todos participan y re-priorizar es mover papel; el Excel se sincroniza después.",
+              "Planning Poker: todo el equipo estima cada historia a la vez (cartas 0,1,2,3,5,8,13,20,40,100; el PO responde, no estima); sin falsa precisión (5 u 8, nunca 7).",
+              "Clarificar rellena campos y “cómo probarlo”: descubre malentendidos (ej. “añadir usuario” de 20 pts que era un SQL manual de 5).",
+              "Historias de 2 a 8 días-hombre; dividir preservando valor de negocio; historia = entregable del PO, tarea = no-entregable.",
+              "Si falta tiempo, en orden: meta+demo, lista aceptada, estimación, cómo probarlo, velocidad/recursos, daily, dividir en tareas (puede ir a los dailies).",
+              "Historias técnicas: convertir a valor de negocio, o meterlas como tarea dentro de otra, o negociar % bajando el factor. Bugs: top impreso en pared, historia que referencia tickets, bajar factor o backlog en el tracker."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "50 puntos",
+              "20 puntos",
+              "90 puntos",
+              "40 puntos"
+            ],
+            "question": "Con 50 días-hombre y factor 40 %, ¿cuál es la velocidad estimada?",
+            "correctIndex": 1,
+            "explanation": "50 × 40 % = 20: se toman historias por ~20 puntos."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "La calidad interna",
+              "El alcance, nunca la calidad interna",
               "La Definition of Done",
-              "El timebox del Sprint"
+              "El timebox"
             ],
-            "question": "Según Kniberg, ¿qué se negocia cuando el PO pide ir más rápido?",
+            "question": "Si el PO pide “un apaño rápido en mitad de tiempo”, ¿qué se negocia?",
             "correctIndex": 1,
-            "explanation": "La calidad interna es del equipo y no se sacrifica; se recorta o reprioriza alcance."
+            "explanation": "La calidad interna es responsabilidad no negociable del equipo; se recorta o reprioriza alcance."
           },
           {
             "type": "truefalse",
             "items": [],
             "options": [],
-            "statement": "Un Sprint se puede alargar unos días si falta poco para terminar.",
+            "statement": "En Planning Poker el Product Owner también estima con cartas.",
             "correctAnswer": false,
-            "explanation": "El Sprint es timebox fijo: no se alarga, se recorta alcance; alargarlo destruye el pulso y la estimación."
+            "explanation": "El PO responde preguntas y modera; estimar es tarea del equipo."
           }
         ]
       },
       {
-        "title": "Lectura — Cohn: historias y estimación ágil",
+        "title": "Lectura — Kniberg: ejecución, demo, retro y XP",
         "category": "lectura",
         "blocks": [
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Historias (Applied) y estimación (Estimating)",
+            "content": "Task board, burndown y sala (Kniberg, Cap. 3)",
             "level": 2
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Cohn complementa la clase: User Stories Applied detalla las 3 C (Card, Conversation, Confirmation) y el formato “Como (rol) quiero (función) para (valor)”. Agile Estimating and Planning responde por qué estimar: no es por el plan (que caduca) sino por planear — reduce riesgo e incertidumbre, apoya decisiones, genera confianza y comunica."
-          },
-          {
-            "type": "heading",
-            "items": [],
-            "options": [],
-            "content": "Story points, días ideales y velocity",
-            "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "Story point: medida relativa sin unidades (un 2 es el doble que un 1); no es una duración.",
-              "Día ideal: lo que tardarías sin interrupciones; útil para arrancar, pero decae con la experiencia.",
-              "Cohn prefiere story points: impulsan equipos multifuncionales y no se devalúan como los días ideales.",
-              "Velocity: puntos terminados por iteración; gran igualador que corrige la sobre/subestimación sistemática.",
-              "Cono de incertidumbre (Boehm): en factibilidad el error va de 60 % a 160 %; no se pelea contra el cono, se re-estima.",
-              "Niveles: día, iteración (1–4 semanas, no se alarga), release (3–6 meses), producto y portafolio."
+              "Task board en pared (papel 2×2 m, post-its con cinta): columnas Pendiente / En curso / Terminado + No planificados; sin columnas de más. Se ensucia: cada Sprint uno nuevo.",
+              "Burndown en puntos restantes por día (saltar fines de semana); señales de alarma a la vista = el SM actúa. Foto diaria si hace falta trazabilidad.",
+              "Días-hombre (mínimo 0,5), no horas: las horas llevan a microgestión y confusión de unidades.",
+              "¡Sentar al equipo junto! (audible, visible, aislado). El PO cerca pero NO con el equipo; managers participan limitado y mejoran vía SM."
             ],
             "options": []
           },
@@ -2418,35 +3198,268 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Splitting: épicas y compuestas",
+            "content": "Daily, demo y retrospectiva",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Daily 15 min de pie frente al tablero, misma hora/lugar (default lo más temprano sin quejas); se actualiza el tablero al hablar. Tardones: lata de multas. “No sé qué hacer”: repasar el tablero, pair, o el truco “¿quién demuestra la beta?”.",
+              "Demo obligatoria cada Sprint con código funcionando, sin slides, ritmo rápido, a nivel negocio y dejando probar. Hasta lo “indemostrable” se demuestra (ej. informe de carga de 50k peticiones). La demo embarazosa es medicina: el próximo Sprint sí terminan.",
+              "Retro 1–3 h (2.º evento más importante): fuera de la sala, ronda bien/mejorar, velocidad estimada vs real, pizarra de 3 columnas, votación con 3 imanes por persona y 5 mejoras como foco. Ejemplos: dividir más, registrar interrupciones y canalizarlas vía SM/PO, bajar el factor ante ruido.",
+              "Descansos: nunca retro y planning el mismo día; día de laboratorio (ej. primer viernes del mes) para aprender y respirar."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Scrum + XP (Kniberg, Cap. 4)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Scrum = gestión; XP = programación. Pair programming: calidad + foco + conocimiento (rotar, no todo el día, navegante con PC propio).",
+              "TDD: test → código mínimo → refactorizar; cuesta aprenderlo (solo paireando) pero transforma el diseño. Stack: jUnit, HSQLDB en memoria, Jetty, Cobertura, Spring.",
+              "Diseño incremental + refactorización continua en vez de big design up-front.",
+              "Integración continua (Maven + QuickBuild): cada commit compila y testea en servidor compartido; de noche publica binarios, docs y cobertura.",
+              "Propiedad colectiva, espacio informativo en paredes, estándar de código mínimo y ritmo sostenible: las horas extra crónicas destruyen productividad y calidad."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Análisis, Diseño, Código, Test, Deploy",
+              "Pendiente / En curso / Terminado (+ No planificados)",
+              "Urgente, Importante, Normal, Baja",
+              "Por hacer, En revisión, Aprobado, Rechazado"
+            ],
+            "question": "¿Qué columnas base recomienda Kniberg para el task board?",
+            "correctIndex": 1,
+            "explanation": "Simplicidad valiosa: solo se agregan columnas si son imprescindibles."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Las horas extra sostenidas mejoran la productividad a largo plazo.",
+            "correctAnswer": false,
+            "explanation": "El caso del libro: al volver a horario normal, productividad y calidad subieron notablemente."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Cohn: planificar y estimar en ágil",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Planear vs. plan y los 5 aportes (Cohn, Caps. 1 y 3)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "“Planning is everything. Plans are nothing” (Moltke). El libro trata de agile planning, no de agile plans: el plan es una foto de un futuro incierto; planificar es la actividad que genera conocimiento. En ágil hay más planning que plan, se fomenta el cambio y se reparte en todo el proyecto. Cambiar el plan no es cambiar la fecha: se quita feature, se recorta alcance o se agrega gente."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Reducir riesgo: estimar expone rincones oscuros (ej. integrarse a un mainframe desconocido).",
+              "Reducir incertidumbre: cada iteración genera conocimiento de producto, tecnología y equipo.",
+              "Apoyar decisiones: ¿vale $1M vs $2M? ¿20 días todo o 10 días el 80 % del beneficio?",
+              "Generar confianza: entregas frecuentes y fiables + ritmo sostenible.",
+              "Transmitir información: el plan comunica expectativas y supuestos (7–9 meses con supuestos > “7 meses” a secas).",
+              "El mayor riesgo ignorado: construir el producto equivocado (64 % de features rara vez usadas; entregar todo lo inicial no es éxito).",
+              "Buen plan = suficientemente fiable para decidir. Regla: estimado 6 meses que da 7 = útil; que da 12 = mal plan."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Cono de incertidumbre (todos los números)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Boehm en factibilidad: error de 60 % a 160 % (estimado 20 semanas → real 12 a 32).",
+              "Tras requisitos escritos: ±15 % (20 semanas → 17 a 23).",
+              "PMI asimétrico: orden de magnitud +75 % / −25 %; presupuestario +25 % / −10 %; definitivo +10 % / −5 %.",
+              "Lectura ágil: no pelear contra el cono; re-estimar en cada iteración."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Story points vs. días ideales y velocity",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Story point: medida relativa sin unidades (un 2 es el doble que un 1); no es duración.",
+              "Día ideal: lo que tardarías sin interrupciones (supuestos: solo eso, todo a mano, cero interrupciones).",
+              "Cohn prefiere points: equipo multifuncional, no decaen con la experiencia, miden tamaño puro, más rápidos y “mis ideales ≠ tus ideales”.",
+              "Velocity: puntos terminados por iteración; gran igualador que corrige la sobre/subestimación sin re-estimar todo.",
+              "Fórmula: tamaño total / velocidad = iteraciones (ej. 100 / 11 ≈ 9,1 → 10 iters × 2 sem = 20 semanas).",
+              "Niveles (cebolla): Día / Iteración (1–4 sem, no se alarga) / Release (3–6 meses) / Producto / Portafolio / Estrategia."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Planning Poker (cómo se hace)",
             "level": 3
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Épica: historia gigante placeholder con estimado grueso, sin detallar aún. Compuesta: se divide por operaciones CRUD o por datos (ej. “publicar CV” → crear, editar, borrar). Compleja/incierta: se parte en spike timeboxed de investigación más la historia funcional. Nunca dividir en tareas técnicas (diseñar BD, codificar, testear): buscar el corte vertical que entregue valor."
+            "content": "Participan todos los developers (≤10); el PO modera y responde pero NO estima. Mazo por persona: 0,1,2,3,5,8,13,20,40,100 (cercanos para lo próximo, grandes solo para épicas; nada de 66 vs 67: falsa precisión). Procedimiento: preguntas → voto privado simultáneo → si hay dispersión, alto/bajo explican → re-voto hasta converger (rara vez >3 rondas). Timer de arena de 2 min para no eternizarse. Funciona por múltiples expertos, diálogo que explicita supuestos y promedio."
           },
           {
             "type": "quiz",
             "items": [],
             "options": [
-              "Porque equivalen a horas exactas",
-              "Porque no decaen con la experiencia e impulsan equipos multifuncionales",
-              "Porque los entiende mejor el cliente",
-              "Porque eliminan la incertidumbre"
+              "±5 %",
+              "De 60 % a 160 %",
+              "+10 % / −5 %",
+              "Cero si se estima bien"
             ],
-            "question": "¿Por qué Cohn prefiere story points sobre días ideales?",
+            "question": "Según Boehm, ¿cuál es el error en factibilidad?",
             "correctIndex": 1,
-            "explanation": "Los días ideales se devalúan (el experto tarda menos); el punto mide tamaño relativo estable."
+            "explanation": "20 semanas estimadas → real entre 12 y 32."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "9 semanas",
+              "Unas 20 semanas de calendario",
+              "11 semanas exactas",
+              "Imposible de calcular"
+            ],
+            "question": "100 puntos con velocidad 11 por iteración de 2 semanas son…",
+            "correctIndex": 1,
+            "explanation": "100/11 ≈ 9,1 → 10 iteraciones × 2 semanas = 20 semanas."
           },
           {
             "type": "truefalse",
             "items": [],
             "options": [],
-            "statement": "Una historia técnica (“diseñar la BD”) es una buena forma de dividir una historia grande.",
+            "statement": "En Planning Poker el Product Owner estima junto al equipo.",
             "correctAnswer": false,
-            "explanation": "Hay que dividir verticalmente por valor (CRUD o datos), no en capas técnicas."
+            "explanation": "El PO modera y responde preguntas; estimar es del equipo."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Cohn: historias de usuario a fondo",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Las 3 C y el formato (User Stories Applied, Cap. 2)",
+            "level": 2
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Card: tarjeta con frase corta (frente) — representa, no documenta todo.",
+              "Conversation: diálogo con quien la necesite para desarrollar detalles.",
+              "Confirmation: tests al dorso que dicen cuándo está completa.",
+              "Formato Connextra: “Como (rol) quiero (función) para (valor)” (ej. buscar por ISBN para encontrar el libro rápido).",
+              "Reglas: rol explícito, voz activa, un solo usuario, sin UI prematura, sin numerar, la escribe el cliente.",
+              "Malas historias: “escrito en C++” o “pool de conexiones” (sin valor visible) → reescribir a valor."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "INVEST letra por letra (con soluciones)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Independent: sin dependencias (Visa/MC/Amex → fusionar en “pagar con tarjeta” o re-dividir por tipos).",
+              "Negotiable: tarjeta + notas abiertas, no contrato (el exceso de detalle mata la conversación).",
+              "Valuable: para usuario o comprador (una config central o una auditoría ISO también valen).",
+              "Estimable: si falta dominio → hablar; si falta técnica → spike timeboxed; si es gigante → dividir.",
+              "Small: de medio día a 2 semanas por par (ni épica ni micro).",
+              "Testable: pasar tests = done (“pantallas <2 s en el 95 %” sí; “fácil de usar” no). Automatizar ~99 %."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Criterios de aceptación y épicas",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Van al dorso (o campo electrónico), los especifica el cliente, se escriben al conversar y antes de codificar, y se ejecutan al fin de cada iteración + regresión.",
+              "Ejemplo tarjeta de crédito: Visa/MC/Amex pasan, Diners falla, IDs buenos/malos/faltantes, expiradas, montos sobre el límite. Automatizar con tablas (FIT/FitNesse).",
+              "Épica: historia gigante placeholder con estimado grueso. Tema: conjunto grapado para estimar/planificar.",
+              "Compuesta: se divide por CRUD o por datos (publicar CV → crear/editar/borrar). Compleja: spike de investigación + historia funcional.",
+              "Muy pequeñas (bugs, colores): combinar en una historia de medio día a varios días. Nunca dividir en capas técnicas."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Un bug crítico",
+              "Un experimento timeboxed para aprender lo justo y poder estimar",
+              "Una demo fallida",
+              "Un tipo de planning"
+            ],
+            "question": "¿Qué es un spike?",
+            "correctIndex": 1,
+            "explanation": "Siempre con límite de tiempo; luego van spike + historia real por separado."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "En el contrato",
+              "Al dorso de la tarjeta (o campo electrónico), escritos antes de codificar",
+              "Solo en la cabeza del tester",
+              "En el manual de usuario"
+            ],
+            "question": "¿Dónde van los criterios de aceptación?",
+            "correctIndex": 1,
+            "explanation": "Notas cortas que capturan la conversación; no una spec IEEE."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Dividir “diseñar BD, codificar, testear” es una buena forma de partir una historia grande.",
+            "correctAnswer": false,
+            "explanation": "Hay que cortar verticalmente por valor (CRUD o datos), no en capas técnicas."
           }
         ]
       },
@@ -2458,24 +3471,40 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Iterativo-incremental y UP (UML y Patrones, cap. 2)",
+            "content": "Iterativo-incremental vs. cascada (UML y Patrones, Cap. 2)",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Larman contrasta el ciclo iterativo (mini-proyectos timeboxed con análisis, diseño, código y test en cada uno; cada iteración es un ejecutable parcial con calidad de producción, no un prototipo descartable) con la cascada de Royce (fijar 100 % de requisitos, diseñar todo, implementar). El estudio MIT Sloan señala lo iterativo como factor n.º 1 de éxito. Aceptar el cambio temprano es virtud: el ciclo construir-feedback-adaptar converge al verdadero camino."
+            "content": "Iterativo: mini-proyectos de duración fija donde cada iteración incluye análisis, diseño, código y pruebas, y produce un ejecutable parcial con calidad de producción (no un prototipo descartable). Crece por ampliación y refinamiento con feedback. Longitud UP: 2 a 6 semanas (menos no da feedback, más abruma). Regla de oro: si no llegás, quitás tareas a iteraciones posteriores, NUNCA atrasás la fecha. Cascada (Royce): fijar 100 % de requisitos → diseñar todo → implementar. El estudio MIT Sloan señala lo iterativo como factor n.º 1 de éxito."
           },
           {
             "type": "keypoints",
             "items": [
-              "Iteraciones de 2 a 6 semanas: menos no da feedback significativo, más abruma.",
-              "Si no llegás: recortá alcance, no muevas la fecha.",
-              "UP = buenas prácticas (iterativo, riesgo, calidad continua) en un marco adaptable, no un método pesado.",
-              "Fases (planificación, no cascada): Inicio (visión y business case), Elaboración (núcleo + riesgos + estimados realistas), Construcción (resto) y Transición (beta y despliegue).",
+              "Aceptar el cambio es virtud temprana (“sí pedí esto, pero probándolo quiero otra cosa”); sin caer en churn reactivo.",
+              "Beneficios: mitiga riesgos altos temprano, progreso visible, feedback y compromiso del usuario, sin parálisis de análisis, y cada iteración mejora el proceso.",
+              "Ejemplo de iteración de 2 semanas: lunes clarificar + reverse a UML, martes diseño en parejas en pizarra, 8 días de código+tests+integración diaria+demo+plan."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "UP ágil: farmacia, fases y disciplinas",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "UP = buenas prácticas (iterativo, riesgo, calidad continua) en marco adaptable; como farmacia: elegís un subconjunto pequeño (Modelo de Dominio, Casos de Uso, Visión, Glosario…), registrado en el Marco de Desarrollo.",
+              "Ágil = adaptable + ligero (subset, requisitos/diseño que emergen, Plan de Fase alto nivel + Plan de Iteración detallado solo 1 iteración adelante).",
+              "No entendiste UP si creés que Inicio = requisitos, Elaboración = diseño y Construcción = código.",
+              "Fases (planificación, no cascada): Inicio (visión y viabilidad), Elaboración (núcleo + riesgos + estimados realistas, con código), Construcción (resto) y Transición (beta y despliegue).",
               "Disciplinas (negocio, requisitos, diseño, implementación, pruebas, gestión, entorno) trabajan en casi toda iteración; cambia el esfuerzo relativo.",
-              "No entendiste UP si creés que Inicio = requisitos, Elaboración = diseño y Construcción = código."
+              "Términos: ciclo (hasta el release), hito (decisión fin de fase), versión (ejecutable estable fin de iteración), incremento (delta entre versiones)."
             ],
             "options": []
           },
@@ -2485,12 +3514,20 @@
             "options": [
               "Se extiende la iteración",
               "Se recorta alcance y se mantiene la fecha",
-              "Se agregan más personas",
+              "Se agrega más gente",
               "Se saltean las pruebas"
             ],
-            "question": "Según Larman, si una iteración no alcanza, ¿qué se hace?",
+            "question": "Si una iteración no alcanza, ¿qué se hace según Larman?",
             "correctIndex": 1,
-            "explanation": "Timebox fijo: se recorta scope, nunca se mueve la fecha."
+            "explanation": "Timebox fijo: se quitan tareas a posteriores, nunca se mueve la fecha."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "En UP la fase de Elaboración es diseñar todo en papel antes de programar.",
+            "correctAnswer": false,
+            "explanation": "Elaboración implementa iterativamente el núcleo y mitiga riesgos con código de calidad."
           }
         ]
       },
@@ -2509,7 +3546,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Consigna: leer las historias para trabajar el planning en clase. Resolución modelo: evaluar cada historia con INVEST, verificar su Definition of Ready, estimar en forma relativa y deducir orden y dependencias para armar el plan de Sprints. Escala usada: Fibonacci (1, 2, 3, 5, 8, 13)."
+            "content": "Consigna: leer las 5 historias para trabajar el planning en clase. Resolución modelo: evaluar cada historia con INVEST, verificar su Definition of Ready, estimar en forma relativa (Fibonacci 1,2,3,5,8,13), detectar dependencias y armar el plan de Sprints con velocity."
           },
           {
             "type": "heading",
@@ -2521,9 +3558,9 @@
           {
             "type": "keypoints",
             "items": [
-              "INVEST: valiosa, pequeña, testeable (CA1–CA4 en formato Dado/Cuando/Entonces); independiente salvo el listado previo.",
-              "DoR: cumple — endpoint GET definido con 200/404, datos mínimos listados, caso de error contemplado.",
-              "Estimación 3: una pantalla + integración + manejo del 404; es la referencia base (“la más simple”)."
+              "INVEST: valiosa, pequeña, testeable (CA1–CA4 en Dado/Cuando/Entonces); independiente salvo el listado previo.",
+              "DoR: cumple — endpoint GET /api/products/{id} definido con 200/404, datos mínimos listados, error contemplado.",
+              "Estimación 3: una pantalla + integración + manejo del 404; es la referencia base, la más simple."
             ],
             "options": []
           },
@@ -2537,9 +3574,9 @@
           {
             "type": "keypoints",
             "items": [
-              "Ambigüedad a refinar: ¿dónde vive el carrito? CA4 (persiste al navegar) sugiere estado local; hay que explicitarlo.",
-              "Testeable (CA1–CA4 claros) pero con regla de negocio (acumular cantidades) que la hace mayor que US-01.",
-              "Estimación 5: interacción + estado + visualización; depende del catálogo/detalle (US-01)."
+              "INVEST: valiosa y testeable (CA1–CA4), pero con una ambigüedad a refinar: ¿dónde vive el carrito? CA4 (persiste al navegar) sugiere estado local: hay que explicitarlo.",
+              "Regla de negocio real: si el producto ya está, se acumula cantidad (CA2) — eso la hace mayor que US-01.",
+              "Depende del catálogo/detalle (US-01): va después en el orden."
             ],
             "options": []
           },
@@ -2550,11 +3587,11 @@
               "Nada, está perfecta",
               "Dónde persiste el carrito (local vs backend)",
               "El color del botón",
-              "El nombre del endpoint de productos"
+              "El nombre del endpoint"
             ],
             "question": "¿Qué falta refinar en US-02 antes del Sprint?",
             "correctIndex": 1,
-            "explanation": "CA4 exige continuidad al navegar: hay que acordar el mecanismo de persistencia en el refinement."
+            "explanation": "CA4 exige continuidad al navegar: el mecanismo de persistencia debe acordarse en el refinement."
           },
           {
             "type": "heading",
@@ -2566,9 +3603,10 @@
           {
             "type": "keypoints",
             "items": [
-              "Es una épica encubierta: validaciones, precios vigentes, subtotales, stock, atomicidad y checkout.",
-              "Split vertical propuesto: (a) crear orden feliz + cálculos (5), (b) stock insuficiente y atomicidad (5), (c) checkout frontend + errores (3).",
-              "Regla de oro del enunciado: precio vigente congelado en OrderItem y rechazo total si falta stock."
+              "Es una épica encubierta (viola Small): validaciones, precios vigentes, subtotales, stock, atomicidad y checkout.",
+              "Split vertical: (a) crear orden feliz + cálculos (5), (b) stock insuficiente y atomicidad (5), (c) checkout frontend + errores (3).",
+              "Reglas de oro del enunciado: precio vigente congelado en OrderItem (CA3) y rechazo total con stock intacto si falta algo (CA5). Sin pagos (fuera de alcance).",
+              "CA7 (no autenticado no compra) y CA6 (400 con datos inválidos) completan la red de seguridad."
             ],
             "options": []
           },
@@ -2576,15 +3614,15 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "US-04 Mis órdenes (Media) → 5 pts · US-05 Sobreventa (Baja) → absorber",
+            "content": "US-04 Mis órdenes (Media) → 5 pts",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "US-04: bien acotada (listado + filtro + paginación de 10); depende de US-03 porque necesita órdenes existentes.",
-              "US-05 viola la I de INVEST: no es entregable sola, es calidad de US-03 (transacción atómica, stock nunca negativo).",
-              "Resolución: convertir US-05 en criterios de aceptación de US-03b más un test de concurrencia, no un ítem aparte."
+              "Bien acotada: listado + filtro por estado (Pending/Processing/Shipped/Delivered/Cancelled) + paginación de 10 + caso vacío + error 500.",
+              "Depende de US-03: sin órdenes registradas no hay nada que listar — va en un Sprint posterior.",
+              "El filtro se mantiene al cambiar de página (CA4 + CA5): detalle a cuidar en el frontend."
             ],
             "options": []
           },
@@ -2592,26 +3630,55 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Plan de Sprints propuesto (velocity 8–10)",
+            "content": "US-05 Sobreventa (Baja) → se absorbe, no se planifica sola",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "Sprint 1: US-01 (3) + US-02 (5) = 8 → valor navegable y comprable cuanto antes.",
+              "Viola la I de INVEST: no es entregable por sí sola, es un atributo de calidad transversal (concurrencia) de US-03.",
+              "Resolución: convertirla en criterios de aceptación de US-03b (CA1 compra concurrente, CA2 stock nunca negativo, CA3 atomicidad) más un test de concurrencia.",
+              "Lección general: los requisitos no funcionales viajan pegados a su historia funcional."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Plan de Sprints (velocity 8–10) y DoD",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sprint 1: US-01 (3) + US-02 (5) = 8 → catálogo navegable y comprable cuanto antes.",
               "Sprint 2: US-03a (5) + US-03c (3) = 8 → compra feliz punta a punta.",
-              "Sprint 3: US-03b (5) + US-04 (5) = 10 → robustez (stock atómico) + seguimiento.",
-              "US-05 viaja dentro de US-03b como criterios + test de concurrencia."
+              "Sprint 3: US-03b (5) + US-04 (5) = 10 → robustez atómica + seguimiento.",
+              "DoD sugerida: codificado con estándares, revisado por pares, tests automáticos en verde, integrado y documentado."
             ],
             "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Porque es de prioridad media",
+              "Porque es una épica encubierta que viola Small (13 pts)",
+              "Porque no tiene criterios",
+              "Porque la escribió el PO"
+            ],
+            "question": "¿Por qué US-03 se divide antes de planificar?",
+            "correctIndex": 1,
+            "explanation": "De medio día a 2 semanas por historia: 13 puntos no entran con seguridad en un Sprint."
           },
           {
             "type": "truefalse",
             "items": [],
             "options": [],
-            "statement": "US-05 debe planificarse como una historia independiente en su propio Sprint.",
+            "statement": "US-05 debe planificarse como historia independiente en su propio Sprint.",
             "correctAnswer": false,
-            "explanation": "Es un atributo de calidad transversal: se absorbe como criterios de US-03, no como ítem solo."
+            "explanation": "Es calidad transversal: se absorbe como criterios de US-03, no como ítem solo."
           }
         ]
       },
@@ -2630,7 +3697,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Contexto: e-commerce (productos, carrito, ventas, pagos, stock, seguimiento), 6 meses para la primera versión operativa y el mismo equipo mantiene después. Resolución modelo: plan de desarrollo mínimo de 1 página, plan de mantenimiento mínimo de 1 página y procesamiento de las 6 tarjetas con el plan."
+            "content": "Contexto: e-commerce (productos, carrito, ventas, pagos, stock, seguimiento), 6 meses para la primera versión operativa y el mismo equipo mantiene después. Resolución: plan de desarrollo mínimo de 1 página, plan de mantenimiento mínimo de 1 página, decisión ante el recorte del 30 % y procesamiento de las 6 tarjetas con el plan."
           },
           {
             "type": "heading",
@@ -2642,12 +3709,12 @@
           {
             "type": "keypoints",
             "items": [
-              "Alcance inicial: catálogo, carrito, checkout, pagos, stock y seguimiento de pedidos; pagos con proveedor externo desde el día 1 (riesgo).",
-              "Estrategia: Scrum, Sprints de 2 semanas (≈12 Sprints), releases internas cada Sprint y demo con stakeholders.",
-              "Organización: PO + SM + equipo multifuncional; backlog ordenado por valor con US-01/US-02 primero (ver EJT2).",
-              "Entregables: incremento potencialmente liberable por Sprint; release v1.0 operativa al mes 6.",
-              "Estimación y calendario: story points + velocity (ej. 8–10/Sprint); hitos en Sprints 4 (compra feliz), 8 (pagos integrados) y 12 (v1.0).",
-              "Riesgos y seguimiento: integración de pagos, concurrencia de stock (US-05) y rendimiento; burndown + review + retro."
+              "Alcance inicial: catálogo, carrito, checkout, pagos (proveedor externo desde el día 1: es el riesgo mayor), stock y seguimiento.",
+              "Estrategia: Scrum, Sprints de 2 semanas (≈12 Sprints), incremento potencialmente liberable y demo con stakeholders cada Sprint.",
+              "Organización: PO + SM + equipo multifuncional; backlog ordenado por valor (US-01/US-02 primero, ver EJT2).",
+              "Entregables: demo por Sprint; release v1.0 operativa al mes 6. Hitos: Sprint 4 compra feliz, Sprint 8 pagos integrados, Sprint 12 v1.0.",
+              "Estimación y calendario: story points + velocity (8–10/Sprint); re-estimar cada Sprint (cono de incertidumbre).",
+              "Riesgos y seguimiento: integración de pagos, concurrencia de stock (US-05), rendimiento con carga; burndown + review + retro."
             ],
             "options": []
           },
@@ -2661,13 +3728,30 @@
           {
             "type": "keypoints",
             "items": [
-              "Tipos esperados: correctivo (defectos), adaptativo (entorno/proveedores), perfectivo (mejoras y rendimiento) y preventivo (refactors).",
-              "Recepción: tablero único (bugs + mejoras) con plantilla (pasos, esperado vs obtenido, impacto).",
-              "Clasificación: Crítica (plata/datos en riesgo), Alta, Media, Baja; prioriza por impacto × urgencia.",
-              "Análisis previo: reproducir, impacto y regresión, estimación; nada se toca sin reproducirlo.",
+              "Tipos esperados: correctivo (defectos), adaptativo (entorno/proveedores), perfectivo (mejoras, rendimiento) y preventivo (refactors).",
+              "Recepción: tablero único (bugs + mejoras) con plantilla: pasos, esperado vs obtenido, impacto.",
+              "Clasificación: Crítica (plata o datos en riesgo), Alta, Media, Baja; prioriza impacto × urgencia.",
+              "Análisis previo: reproducir el caso, evaluar impacto y regresión, estimar; nada se toca sin reproducirlo.",
               "Implementación y pruebas: rama por cambio, test del caso + regresión, revisión de pares.",
               "Liberación: versionado semántico + notas; hotfix solo para Crítica en producción.",
-              "Métricas: MTTR, defectos reabiertos, lead time de cambios."
+              "Métricas: MTTR, defectos reabiertos y lead time de cambios."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Ante el recorte del 30 % (puesta en común)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Diferencias: desarrollo construye capacidad nueva contra un plan temporal; mantenimiento reacciona a demanda con priorización continua.",
+              "En ambos: alcance, priorización, estimación, seguimiento y gestión de cambios.",
+              "Mayor incertidumbre: el desarrollo (producto que aún no existe); el mantenimiento decide con datos reales.",
+              "Decisión modelo: proteger checkout + pagos + stock (camino crítico de venta), postergar seguimiento avanzado y promos (T03)."
             ],
             "options": []
           },
@@ -2682,8 +3766,8 @@
             "type": "keypoints",
             "items": [
               "T01 pedidos pagados con pago rechazado → correctivo, Crítica: hotfix + conciliar pagos afectados y test de regresión.",
-              "T02 API de pagos discontinuada en 90 días → adaptativo, Alta: planificar migración en 2–3 Sprints antes del corte.",
-              "T03 promo “lleve 3, pague 2” → perfectivo, Media: historia de negocio al backlog, con criterios de aceptación.",
+              "T02 API de pagos discontinuada en 90 días → adaptativo, Alta: migrar en 2–3 Sprints antes del corte.",
+              "T03 promo “lleve 3, pague 2” → perfectivo, Media: historia de negocio al backlog con criterios.",
               "T04 checkout con lógica mezclada y regresiones → preventivo, Alta: refactor por capas con red de tests antes de tocar.",
               "T05 dato adicional en transacciones → adaptativo, Media: cambio de esquema + migración + reportes.",
               "T06 consultas degradadas con +300 % de operaciones → perfectivo, Alta: medir, índices/caché y prueba de carga."
@@ -2704,12 +3788,25 @@
             "explanation": "Defecto en producción con dinero real en riesgo: correctivo crítico, vía hotfix."
           },
           {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Correctivo inmediato sin tests",
+              "Preventivo: refactor con red de tests antes de seguir tocando",
+              "Perfectivo de baja prioridad",
+              "No hacer nada"
+            ],
+            "question": "T04 (checkout mezclado con regresiones) conviene tratarlo como…",
+            "correctIndex": 1,
+            "explanation": "El diseño degradado genera regresiones: primero red de seguridad, después cambios."
+          },
+          {
             "type": "truefalse",
             "items": [],
             "options": [],
-            "statement": "El plan de mantenimiento atiende defectos solo después de la entrega al cliente.",
+            "statement": "El mantenimiento atiende defectos solo después de la entrega al cliente.",
             "correctAnswer": true,
-            "explanation": "El mantenimiento (soporte) ocurre tras la entrega; el desarrollo previo usa el plan de desarrollo."
+            "explanation": "El soporte ocurre tras la entrega; lo previo lo cubre el plan de desarrollo."
           }
         ]
       }
@@ -2719,7 +3816,7 @@
     "slug": "unidad-3-gestion-de-configuracion",
     "title": "Unidad 3 — Gestión de configuración del software",
     "subtitle": "SCM · Versiones · CI/CD · Estrategias de despliegue",
-    "description": "SCM, ítems de configuración, líneas base, control de cambios y versiones, CI/CD y DevOps. Estructura lista: completar con UT3_P1 y EJT5.",
+    "description": "Unidad completa: material de clase (UT3-P1), lectura (Sommerville Cap. 25, Pressman Cap. 22, SWEBOK Cap. 6) y ejercicio resuelto (EJT5 estrategia de branching con tabla de tickets y diagrama).",
     "icon": "3",
     "color": "#D97706",
     "tags": [
@@ -2730,41 +3827,51 @@
       "devops"
     ],
     "sources": [
-      "Material ICS2026_UT3_P1",
-      "EJT5 Estrategias de ramificación"
+      "Material de clase ICS2026_UT3_P1",
+      "Ian Sommerville (2011) Ingeniería de Software, Ed. 9 — Cap. 25",
+      "Roger S. Pressman (2010) Ingeniería del Software, Ed. 7 — Cap. 22",
+      "SWEBOK Guide v3.0 — Cap. 6",
+      "Ejercicio EJT5 — Estrategias de ramificación (2026)"
     ],
     "sections": [
       {
-        "title": "Hoja de ruta — cómo completar esta unidad",
+        "title": "Material de estudio — SCM: el cambio y sus definiciones",
         "category": "material",
         "blocks": [
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Unidad 3 — en preparación (misma estructura que U1)",
+            "content": "Gestión de configuración del software (clase UT3-P1)",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Esta unidad ya tiene su lugar en la página con la misma estructura que las Unidades 1 y 2 (material + lectura + ejercicios). Seguí la guía COMO-TRABAJAR-U2-U3.md: cada fuente del material va a una sección category material, cada capítulo de la bibliografía a una sección category lectura, y cada ejercicio a una sección category ejercicio con su resolución."
+            "content": "La Unidad 3 estudia: gestión de configuración (SCM), identificación de elementos, líneas base y control de cambios, control de versiones y código fuente, integración continua (CI), entrega y despliegue continuos (CD), estrategias de despliegue y cultura DevOps. Bibliografía: Sommerville Cap. 25, Pressman Cap. 22 y SWEBOK Cap. 6."
           },
           {
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Temario (del material de estudio)",
+            "content": "El cambio: primera ley de la ingeniería de sistemas",
             "level": 3
+          },
+          {
+            "type": "quote",
+            "items": [],
+            "options": [],
+            "content": "Sin importar dónde se esté en el ciclo de vida del sistema, el sistema cambiará, y el deseo por cambiar persistirá a lo largo del ciclo de vida.",
+            "source": "Bersoff, Henderson y Siegel"
           },
           {
             "type": "keypoints",
             "items": [
-              "Gestión de configuración: políticas, procesos y herramientas",
-              "Ítems de configuración, repositorio, versiones, líneas base y releases",
-              "Control de cambios y auditorías; proceso de administración de la configuración",
-              "CI/CD, estrategias de despliegue y cultura DevOps"
+              "Nuevas condiciones de mercado dictan cambios en requerimientos o reglas de negocio.",
+              "Nuevas necesidades de los interesados demandan modificar datos, funcionalidad o servicios.",
+              "Reorganizaciones o cambios de tamaño alteran prioridades o la estructura del equipo.",
+              "Restricciones de presupuesto o calendario obligan a redefinir el sistema."
             ],
             "options": []
           },
@@ -2772,15 +3879,468 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "Ejercicios pendientes de resolución",
+            "content": "Tres definiciones + síntesis (todas valen para el parcial)",
+            "level": 3
+          },
+          {
+            "type": "quote",
+            "items": [],
+            "options": [],
+            "content": "Se ocupa de las políticas, los procesos y las herramientas para administrar los sistemas cambiantes de software.",
+            "source": "Ian Sommerville"
+          },
+          {
+            "type": "quote",
+            "items": [],
+            "options": [],
+            "content": "Es un conjunto de actividades para administrar el cambio a lo largo del ciclo de vida del software.",
+            "source": "Roger Pressman"
+          },
+          {
+            "type": "quote",
+            "items": [],
+            "options": [],
+            "content": "Disciplina que aplica dirección técnica y administrativa para identificar y documentar características de un elemento de configuración, controlar sus cambios, registrar su estado y verificar el cumplimiento de requisitos.",
+            "source": "SWEBOK v3.0"
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Síntesis operativa: identificar, controlar, registrar y auditar los elementos del producto para mantener su integridad y trazabilidad en todo el ciclo de vida."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "SCM vs. mantenimiento y objetivos",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El mantenimiento (soporte) es el conjunto de actividades que ocurren DESPUÉS de entregar el software al cliente; la SCM lo acompaña desde el inicio hasta el retiro. Objetivos: controlar el cambio (todo cambio autorizado, registrado y probado), evitar inconsistencias entre código-documentación-versiones, garantizar reproducibilidad de cualquier versión, mantener trazabilidad entre requisitos-versiones-entregas y facilitar auditorías y releases controladas."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "El software no se desgasta",
+              "El sistema cambiará sin importar la fase del ciclo de vida",
+              "Todo cambio debe aprobarlo el cliente",
+              "El mantenimiento es opcional"
+            ],
+            "question": "¿Cuál es la primera ley de la ingeniería de sistemas (Bersoff)?",
+            "correctIndex": 1,
+            "explanation": "El cambio persiste a lo largo de todo el ciclo de vida: de ahí la SCM."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "La gestión de configuración actúa solo después de la entrega, igual que el mantenimiento.",
+            "correctAnswer": false,
+            "explanation": "La SCM va del inicio al retiro; el mantenimiento (soporte) es post-entrega."
+          }
+        ]
+      },
+      {
+        "title": "Material de estudio — Elementos, conceptos y proceso de SCM",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Elementos y conceptos clave (clase UT3-P1)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Todo lo creado en el proceso que se pone explícitamente bajo control es un Ítem de Configuración del Software: documentos, diagramas, código, pruebas, datos. Viven en el repositorio (Git, Drive, Jira, Azure DevOps) con mecanismos y estructuras para administrar el cambio en forma efectiva."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Tabla de conceptos (memorizar con ejemplos)",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "EJT5 — Estrategia de branching: EC-101/EC-102, BUG-201, HOTFIX-301, release v1.3.0 (resolver como en EJT1)"
+              "Ítem de Configuración (CI): componente gestionado (código fuente, casos de prueba, scripts de despliegue).",
+              "Repositorio: donde se almacenan los CIs y sus versiones.",
+              "Versión: estado identificado de un ítem en un momento (v1.0, hash de commit, build ID).",
+              "Línea Base: conjunto aprobado de CIs como referencia (v1.0 Web + v2.3 API + docs).",
+              "Release/entrega: sistema liberado para uso de clientes (Release 1.0 estable).",
+              "Control de cambios: procedimiento formal (PR + revisión) para solicitar, revisar y aprobar.",
+              "Auditoría: verificación de integridad y consistencia (docs vs liberación)."
             ],
             "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Proceso de administración de la configuración",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Define cómo registrar y procesar cambios propuestos, decidir qué componentes modificar, gestionar versiones y distribuir cambios a clientes. Sus cuatro objetivos (Sommerville): identificar todos los ítems que definen la configuración, administrar los cambios, facilitar construir distintas versiones y preservar la calidad mientras la configuración evoluciona."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Un bug crítico",
+              "Un conjunto aprobado de CIs que sirve de referencia para desarrollo o entrega",
+              "Una rama de Git cualquiera",
+              "Un test unitario"
+            ],
+            "question": "¿Qué es una línea base?",
+            "correctIndex": 1,
+            "explanation": "Baseline = foto aprobada y recreable del sistema en un momento dado."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Un script de despliegue puede ser un ítem de configuración.",
+            "correctAnswer": true,
+            "explanation": "Todo artefacto bajo control (código, pruebas, docs, scripts, datos) es un CI."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Sommerville Cap. 25: administración de la configuración",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "CM según Sommerville: 4 actividades",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "CM = políticas + procesos + herramientas para administrar software cambiante. Sin CM: se modifica la versión equivocada, se entrega mal al cliente o se pierde el fuente de una versión. Sus 4 actividades: administración del cambio, gestión de versiones, construcción del sistema y gestión de entregas. Tras QA, todo cambio debe proponerse, registrarse y aprobarse. Vocabulario: SCI, versión, baseline, codeline, mainline (historia de baselines), release, workspace, branching, merging y build."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Gestión de cambios: el CRF y el CCB",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Todo cambio (bug o feature) entra por Change Request con formulario: qué se pide, recomendación, costos, componentes, fechas e implementación.",
+              "Proceso: enviar → validar (¿duplicado? ¿malentendido?) → registrar → analizar (implementación + costo/beneficio) → decisión del CCB → modificar + probar → cerrar.",
+              "El CCB decide con vista de negocio con 5 factores: consecuencia de NO hacerlo, beneficio y a cuántos, usuarios afectados, costo (componentes tocados = riesgo) y ciclo de release.",
+              "En ágil/XP el cliente prioriza para la próxima iteración y refactorizar es parte del proceso, no carga.",
+              "Trazabilidad: cada fuente lleva Versión/Modificador/Fecha/Cambio/Razón + ref. al CR."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Versiones, builds y releases",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Versiones: identificación única (ButtonManager 1.3), deltas en vez de copias completas, check-out/check-in con workspace privado, ramas y merges (automático si no se solapan, manual si sí).",
+              "Builds: ensamblar + compilar + vincular desde la baseline, automatizado en 1 comando; 3 plataformas separadas (desarrollo, servidor de construcción, objetivo). Integración continua en 7 pasos o build diario si el sistema es enorme.",
+              "Releases: mayor = funcionalidad nueva (se cobra), menor = fixes (gratis). Documentar todo para reconstruir años después; nunca asumir que el cliente instaló la anterior ni que no tocó sus datos."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Codificar, testear, deployar y documentar",
+              "Administración del cambio, gestión de versiones, construcción y gestión de entregas",
+              "Planificar, estimar, ejecutar y cerrar",
+              "Requisitos, diseño, código y pruebas"
+            ],
+            "question": "¿Cuáles son las 4 actividades de CM según Sommerville?",
+            "correctIndex": 1,
+            "explanation": "Son los 4 pilares del capítulo 25."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Si dos ramas tocan partes distintas del código, el merge puede ser automático por deltas.",
+            "correctAnswer": true,
+            "explanation": "Solo el solapamiento exige resolución manual del desarrollador."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Pressman Cap. 22: SCM formal",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Configuración, ICS y baselines (Pressman)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Configuración = programas + documentos + datos del proceso. Sin control, el cambio te controla: caos, baja calidad y retraso. Todo ICS (desde una sección de spec hasta una suite entera, incluyendo herramientas como el compilador) se identifica con nombre único, descripción, recursos y realización; los básicos se agrupan en agregados (ej. DesignSpecification = modelos + diagramas). Las relaciones parte-de e interrelacionado permiten el análisis de impacto. Baseline (IEEE 610.12): especificación acordada que solo cambia por control formal; antes de ella el cambio es informal, después exige evaluación y aprobación."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Control de versiones, de cambios y auditoría",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Versiones: repositorio + gestión (guardar todo o reconstruir por diferencias) + facilidad de elaboración; conjunto de cambio con razón/quién/cuándo.",
+              "Cambios (flujo formal): petición → evaluación (mérito, colaterales, impacto, costo) → ACC decide → OCI (qué, restricciones, auditoría) → checkout → cambio → revisión/auditoría → checkin → baseline de prueba → SQA → release. Niveles: pre-baseline informal, post-revisión a nivel proyecto, post-liberación formal completo.",
+              "ACC: de 1 gerente a grupo (soft, hard, BD, soporte, marketing); equilibra control vs creatividad.",
+              "Auditoría (6 preguntas): ¿se hizo lo de la OCI y nada extra? ¿hubo revisión técnica? ¿se siguió el proceso? ¿cambio fechado y firmado? ¿registrado/reportado? ¿ICS relacionados actualizados?",
+              "REC (contabilidad): qué, quién, cuándo y qué más se afecta; entrada en cada cambio de ICS, OCI aprobada y auditoría."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "SCM para web (4 conflictos y 4 clases de cambio)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Conflictos: contenido (clasificar por estático/dinámico y longevidad), personas (muchos autores no ingenieros), escalabilidad (cambios chicos, efectos lejanos) y políticas (¿quién posee y responde?).",
+              "Cambios web: C1 local, C2 que impacta otros objetos, C3 amplio (nueva funcionalidad/navegación), C4 rediseño visible; el proceso se endurece de C1 a C4.",
+              "Sin control en web: publicaciones no autorizadas, funcionalidad mal probada, huecos de seguridad y daño económico."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Un test automatizado",
+              "La autoridad que aprueba o rechaza cambios con visión global",
+              "Una rama de Git",
+              "Un tipo de baseline"
+            ],
+            "question": "¿Qué es la ACC?",
+            "correctIndex": 1,
+            "explanation": "Autoridad de Control de Cambios: decide con impacto en hardware, desempeño, cliente y calidad."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Antes de la baseline los cambios pueden ser rápidos e informales.",
+            "correctAnswer": true,
+            "explanation": "El control formal rige desde la baseline en adelante."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — SWEBOK Cap. 6: el estándar",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "SCM como proceso de soporte (SWEBOK)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La configuración es el conjunto de características funcionales y físicas descritas en documentación o logradas en el producto. La SCM identifica la configuración en distintos momentos, controla cambios sistemáticamente y mantiene integridad y trazabilidad todo el ciclo de vida. Es proceso de soporte que beneficia a gestión, desarrollo, mantenimiento, SQA y clientes. Se planifica en el SCMP (documento vivo revisado por SQA): organización, actividades, branching/merging, builds, herramientas y métricas."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Identificación, control y estado",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "SCI: planes, requisitos, diseño, fuentes, ejecutables, librerías, datos, herramientas, pruebas y docs; balancear visibilidad vs cantidad manejable.",
+              "Versión vs variante (diversidad: plataformas/capacidades); baselines típicas: funcional, asignada, de desarrollo y de producto.",
+              "Biblioteca: trabajo (laxa), proyecto/test y maestra (estricta); con control de acceso y backup.",
+              "Control: SCR formal con análisis de impacto; CCB multinivel con SCM siempre representado; deviation (previa, temporal) vs waiver (aceptar como-está).",
+              "Contabilidad (SCSA): identificación aprobada, estado de cambios, deviations/waivers; reportes y métricas (CRs por SCI, tiempo medio)."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Auditorías, releases y herramientas",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "FCA: el ítem cumple sus especificaciones (insumo: V&V). PCA: diseño/docs consistentes con lo construido.",
+              "Release: distribución fuera de desarrollo; recrear versiones, empaquetar (ejecutable, docs, notes, datos), version description + release notes + instrucciones, rastrear distribución, firma digital.",
+              "Building: combinar SCIs correctos en orden reproducible, con herramientas bajo SCM y verificación SQA.",
+              "Herramientas por escala: individual (versiones, builds, CRs), proyecto (workspaces, variantes, distribuido) y company-wide (workflow, roles, certificación)."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Son lo mismo",
+              "Deviation: autorización previa temporal; waiver: aceptar como-está lo ya producido",
+              "Waiver es previa y deviation posterior",
+              "Ninguna existe en SWEBOK"
+            ],
+            "question": "¿Diferencia entre deviation y waiver?",
+            "correctIndex": 1,
+            "explanation": "Timing y objeto distintos: apartarse antes vs aceptar después."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "La FCA verifica que el producto construido coincide con su diseño (as-built).",
+            "correctAnswer": false,
+            "explanation": "Eso es la PCA; la FCA verifica contra las especificaciones rectoras."
+          }
+        ]
+      },
+      {
+        "title": "Ejercicio resuelto — Estrategia de branching (EJT5)",
+        "category": "ejercicio",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "EJT5 Branching — del caos en Git al orden con líneas base",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Situación: e-commerce (React + .NET + SQL Server) con v1.2.0 en producción (tag sobre la rama principal = línea base actual) y v1.3.0 en preparación, pero sin estrategia formal de ramas. Hay que diseñar una que resuelva la secuencia: EC-101 + EC-102 en paralelo, BUG-201 en desarrollo, HOTFIX-301 en producción, y release v1.3.0. Estrategia modelo: principal protegida + develop + feature/bugfix/hotfix/release (GitFlow adaptado)."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "La estrategia propuesta (10 aspectos)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Principal (main): siempre desplegable y protegida; solo recibe merges vía PR con revisión + CI en verde; cada merge a main lleva tag de versión.",
+              "Develop: integración continua de lo próximo (v1.3.0); de aquí nacen features y bugfixes; se congela solo en release.",
+              "Features (feature/EC-101-…): nacen de develop, mueren en develop por PR; una rama por ticket.",
+              "Bugs en desarrollo (bugfix/BUG-201-…): nacen de develop (el defecto aún no está en producción) y vuelven a develop.",
+              "Hotfixes (hotfix/HOTFIX-301-…): nacen del tag v1.2.0 en main; se mergean a main (nuevo tag v1.2.1 = nueva línea base productiva) Y a develop (forward-merge para no perder la corrección).",
+              "Releases (release/v1.3.0-…): nace de develop cuando EC-101+EC-102+BUG-201 están listos; solo entran fixes menores; al cerrar se mergea a main (tag v1.3.0) y a develop; después develop sigue hacia v1.4.0.",
+              "PRs obligatorios siempre hacia main/develop/release; versionado semántico (parche para hotfix, menor para release)."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Tabla de tickets resuelta",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "EC-101 (promo 3×2) → origen develop, rama feature/EC-101-promo-3x2, destino develop, versión 1.3.0: funcionalidad grande que toca precios, carrito y UI.",
+              "EC-102 (estados del pedido) → origen develop, rama feature/EC-102-estados-pedido, destino develop, versión 1.3.0: paralela e independiente de EC-101.",
+              "BUG-201 (stock al cancelar) → origen develop, rama bugfix/BUG-201-stock-cancel, destino develop, versión 1.3.0: el defecto vive solo en el código futuro.",
+              "HOTFIX-301 (pago mal aprobado) → origen tag v1.2.0, rama hotfix/HOTFIX-301-pago, destino main (tag v1.2.1) + forward a develop, versiones 1.2.1 y 1.3.0: crítico, no puede esperar; el doble merge evita perderlo."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Diagrama (historia v1.2.0 → v1.3.0)",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "main: [tag v1.2.0] ──hotfix──→ [merge HOTFIX-301, tag v1.2.1] ──release──→ [merge release, tag v1.3.0]. develop: ──EC-101──┐ ├──EC-102──┤ (merges a develop) ──BUG-201──→ [release/v1.3.0: solo fixes] ──→ main. El hotfix entra a develop por forward-merge antes del release, así v1.3.0 ya lo incluye."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "De develop",
+              "Del tag v1.2.0 en main (línea base productiva)",
+              "De la rama feature",
+              "De release/v1.3.0"
+            ],
+            "question": "¿De dónde nace el hotfix HOTFIX-301?",
+            "correctIndex": 1,
+            "explanation": "La corrección urgente parte de lo que está en producción, no del desarrollo en curso."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Por convención nada más",
+              "Para no perder la corrección en v1.3.0 (forward-merge)",
+              "Para cerrar el ticket",
+              "Para borrar la rama"
+            ],
+            "question": "¿Por qué el hotfix se mergea también a develop?",
+            "correctIndex": 1,
+            "explanation": "Sin forward-merge, la futura versión reintroduciría el defecto."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "BUG-201 debe corregirse desde main porque es un defecto.",
+            "correctAnswer": false,
+            "explanation": "Aún no está en producción: nace y vuelve a develop como bugfix normal."
           }
         ]
       }

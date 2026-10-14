@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { buildUnidad2 } from './gen-u2.js'
+import { buildUnidad3 } from './gen-u3.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DATA_PATH = path.resolve(__dirname, './data/topics.json')
@@ -29,7 +30,10 @@ const u1materialA = {
       'La mayoría del software se construye a medida.',
       'Su desarrollo es mano de obra intensivo y basado en equipos; es potencialmente modificable hasta el infinito.',
     ] }),
-    B('text', { content: 'La documentación describe la organización del sistema, explica al usuario cómo utilizarlo y permite descargar actualizaciones y ayuda. Sin ella, el producto está incompleto.' }),
+    B('text', { content: 'La documentación describe la organización del sistema, explica al usuario cómo utilizarlo y permite descargar actualizaciones y ayuda. Sin ella, el producto está incompleto. Tres frentes: documentos que describen la organización del sistema, documentos para el usuario que explican cómo usarlo, y sitios web para descargar actualizaciones y ayuda.' }),
+    B('heading', { content: 'Métodos, herramientas y compromiso con la calidad', level: 3 }),
+    B('text', { content: 'La ingeniería de software se sostiene en métodos (cómo hacer: análisis, diseño, pruebas) y herramientas (con qué: entornos, repositorios, automatización), con el compromiso con la calidad como norte. Calidad de producto (hace lo que debe) y de proceso (cómo se construye): sin proceso controlado no hay producto confiable.' }),
+    B('quiz', { question: '¿En qué año y por qué se propuso el término “ingeniería de software”?', options: ['1986, por la programación orientada a objetos', '1968, por la crisis del software', '2001, por el Manifiesto Ágil', '1999, por el problema del año 2000'], correctIndex: 1, explanation: 'Conferencia de 1968 sobre la crisis: sistemas poco confiables, caros y tardíos.' }),
     B('heading', { content: 'Ingeniería de Software: crisis del software y definiciones', level: 3 }),
     B('text', { content: 'El término ingeniería de software se propuso en 1968, en una conferencia convocada para discutir la crisis del software: los enfoques individuales no escalaban a sistemas grandes y complejos, que resultaban poco confiables, costaban más de lo esperado y se entregaban con demora.' }),
     B('quote', { content: 'La aplicación de un enfoque sistemático, disciplinado y cuantificable al desarrollo, operación y mantenimiento del software; es decir, la aplicación de la ingeniería al software.', source: 'ISO/IEC/IEEE SEVOCAB' }),
@@ -67,6 +71,7 @@ const u1materialB = {
     B('text', { content: 'Procesos dirigidos por un plan (plan driven): los más tradicionales; todo se planea por anticipado y el avance se mide contra el plan. Procesos ágiles: la planeación es incremental y el proceso se modifica con facilidad para reflejar requerimientos cambiantes del cliente. La estandarización mejora la comunicación, reduce el tiempo de capacitación y abarata el soporte automatizado; los estándares de ciclo de vida de sistemas y software son ISO/IEC/IEEE 12588:2023 y 12207:2017.' }),
     B('heading', { content: 'Modelos de proceso tradicionales', level: 3 }),
     B('text', { content: 'Un modelo de proceso es una descripción simplificada de los enfoques de desarrollo: define el ciclo de vida a adoptar. Los modelos genéricos (cascada, incremental, espiral de Sommerville, Proceso Unificado con sus disciplinas y fases) son abstracciones para explicar enfoques, no descripciones definitivas.' }),
+    B('text', { content: 'El UP aporta sus disciplinas (requisitos, análisis, diseño, implementación, pruebas, gestión, entorno) que trabajan a lo largo de fases (Inicio, Elaboración, Construcción, Transición), con artefactos definidos en cada cruce. Es el modelo tradicional más estructurado y el puente hacia los enfoques ágiles de la Unidad 2.' }),
     B('keypoints', { items: [
       'Cascada: fases secuenciales con verificación formal; funciona con requisitos estables.',
       'Incremental: entregas progresivas que incorporan módulos sin interrumpir lo que ya funciona.',
@@ -160,35 +165,9 @@ const unidad1 = {
   sections: [u1materialA, u1materialB, ...lecturaSections, u1ejercicio],
 }
 
-/* ── Unidad 2 completa (ver gen-u2.js) · Unidad 3: estructura lista ─ */
+/* ── Unidad 2 completa (ver gen-u2*.js) · Unidad 3 completa (gen-u3.js) */
 const unidad2 = buildUnidad2(B)
-
-const roadmap = (unidad, temario, ejercicios) => ({
-  title: `Hoja de ruta — cómo completar esta unidad`,
-  category: 'material',
-  blocks: [
-    B('heading', { content: `Unidad ${unidad} — en preparación (misma estructura que U1)`, level: 2 }),
-    B('text', { content: 'Esta unidad ya tiene su lugar en la página con la misma estructura que las Unidades 1 y 2 (material + lectura + ejercicios). Seguí la guía COMO-TRABAJAR-U2-U3.md: cada fuente del material va a una sección category material, cada capítulo de la bibliografía a una sección category lectura, y cada ejercicio a una sección category ejercicio con su resolución.' }),
-    B('heading', { content: 'Temario (del material de estudio)', level: 3 }),
-    B('keypoints', { items: temario }),
-    B('heading', { content: 'Ejercicios pendientes de resolución', level: 3 }),
-    B('keypoints', { items: ejercicios }),
-  ],
-})
-
-const unidad3 = {
-  slug: 'unidad-3-gestion-de-configuracion',
-  title: 'Unidad 3 — Gestión de configuración del software',
-  subtitle: 'SCM · Versiones · CI/CD · Estrategias de despliegue',
-  description: 'SCM, ítems de configuración, líneas base, control de cambios y versiones, CI/CD y DevOps. Estructura lista: completar con UT3_P1 y EJT5.',
-  icon: '3',
-  color: '#D97706',
-  tags: ['unidad-3', 'scm', 'versionado', 'ci-cd', 'devops'],
-  sources: ['Material ICS2026_UT3_P1', 'EJT5 Estrategias de ramificación'],
-  sections: [roadmap('3',
-    ['Gestión de configuración: políticas, procesos y herramientas', 'Ítems de configuración, repositorio, versiones, líneas base y releases', 'Control de cambios y auditorías; proceso de administración de la configuración', 'CI/CD, estrategias de despliegue y cultura DevOps'],
-    ['EJT5 — Estrategia de branching: EC-101/EC-102, BUG-201, HOTFIX-301, release v1.3.0 (resolver como en EJT1)'])],
-}
+const unidad3 = buildUnidad3(B)
 
 writeFileSync(DATA_PATH, JSON.stringify([unidad1, unidad2, unidad3], null, 2))
 // Copia empaquetada para el frontend: el sitio usa este JSON como fuente
