@@ -85,6 +85,13 @@ app.use(cors({
 
 app.use(express.json({ limit: '50kb' }))
 
+// Los datos cambian con cada seed: prohibir caché heurística del
+// navegador / edge para que el índice siempre traiga las 3 unidades.
+app.use('/api', (_req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store')
+  next()
+})
+
 app.get('/api/health', async (_req, res) => {
   try {
     res.json(await getHealth())
