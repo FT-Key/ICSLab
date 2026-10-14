@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
+import { buildUnidad2 } from './gen-u2.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DATA_PATH = path.resolve(__dirname, './data/topics.json')
@@ -134,10 +135,12 @@ const u1ejercicio = {
   ],
 }
 
-/* ── Lectura existente → categoría lectura ─────────────────── */
+/* ── Lectura U1 existente → categoría lectura (idempotente) ─── */
 const previa = JSON.parse(readFileSync(DATA_PATH, 'utf8'))
-const lecturaAnterior = previa[0]
-const lecturaSections = lecturaAnterior.sections.map((s) => ({ ...s, category: 'lectura' }))
+const previaU1 = previa.find((t) => t.slug === 'unidad-1-fundamentos') ?? previa[0]
+const lecturaSections = previaU1.sections
+  .filter((s) => (s.category ?? 'lectura') === 'lectura')
+  .map((s) => ({ ...s, category: 'lectura' }))
 
 const unidad1 = {
   slug: 'unidad-1-fundamentos',
@@ -157,33 +160,21 @@ const unidad1 = {
   sections: [u1materialA, u1materialB, ...lecturaSections, u1ejercicio],
 }
 
-/* ── Unidades 2 y 3: estructura lista ──────────────────────── */
+/* ── Unidad 2 completa (ver gen-u2.js) · Unidad 3: estructura lista ─ */
+const unidad2 = buildUnidad2(B)
+
 const roadmap = (unidad, temario, ejercicios) => ({
   title: `Hoja de ruta — cómo completar esta unidad`,
   category: 'material',
   blocks: [
     B('heading', { content: `Unidad ${unidad} — en preparación (misma estructura que U1)`, level: 2 }),
-    B('text', { content: 'Esta unidad ya tiene su lugar en la página con la misma estructura que la Unidad 1 (material + lectura + ejercicios). Seguí la guía COMO-TRABAJAR-U2-U3.md: cada fuente del material va a una sección category material, cada capítulo de la bibliografía a una sección category lectura, y cada ejercicio a una sección category ejercicio con su resolución.' }),
+    B('text', { content: 'Esta unidad ya tiene su lugar en la página con la misma estructura que las Unidades 1 y 2 (material + lectura + ejercicios). Seguí la guía COMO-TRABAJAR-U2-U3.md: cada fuente del material va a una sección category material, cada capítulo de la bibliografía a una sección category lectura, y cada ejercicio a una sección category ejercicio con su resolución.' }),
     B('heading', { content: 'Temario (del material de estudio)', level: 3 }),
     B('keypoints', { items: temario }),
     B('heading', { content: 'Ejercicios pendientes de resolución', level: 3 }),
     B('keypoints', { items: ejercicios }),
   ],
 })
-
-const unidad2 = {
-  slug: 'unidad-2-enfoques-y-planificacion',
-  title: 'Unidad 2 — Enfoques de desarrollo y planificación',
-  subtitle: 'Scrum · Historias de usuario · Estimación · Planes',
-  description: 'Enfoques tradicionales y ágiles, Scrum, historias de usuario, estimación y planes de desarrollo y mantenimiento. Estructura lista: completar con UT2_P1, EJT2 y EJT4.',
-  icon: '2',
-  color: '#80A1C1',
-  tags: ['unidad-2', 'scrum', 'historias-de-usuario', 'estimacion', 'planificacion'],
-  sources: ['Material ICS2026_UT2_P1', 'EJT2 Scrum Planning', 'EJT4 Planes de desarrollo y mantenimiento'],
-  sections: [roadmap('2',
-    ['Enfoques tradicionales y ágiles; principios y valores ágiles', 'Scrum: roles, artefactos y eventos; Kanban', 'Historias de usuario, INVEST, criterios de aceptación, DoR/DoD', 'Estimación (tamaño, esfuerzo, costo) y planificación; Sprint Planning', 'Plan de desarrollo y plan de mantenimiento'],
-    ['EJT2 — Scrum Planning: US-01 a US-05 del e-commerce (resolver como en EJT1)', 'EJT4 — Plan de desarrollo y plan de mantenimiento mínimo + tarjetas T01–T06'])],
-}
 
 const unidad3 = {
   slug: 'unidad-3-gestion-de-configuracion',

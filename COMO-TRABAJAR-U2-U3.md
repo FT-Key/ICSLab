@@ -1,6 +1,9 @@
 # Cómo completar las Unidades 2 y 3 (mismo resultado que la Unidad 1)
 
-La Unidad 1 es el modelo a replicar. Cada unidad combina 3 categorías de
+> Estado: **U1 y U2 completas**. U3 sigue este mismo procedimiento
+> (su contenido vive en `backend/src/seed/gen-u2.js` como modelo a replicar).
+
+La Unidad 1 es el modelo a replicar (y la U2 ya lo replica). Cada unidad combina 3 categorías de
 secciones, que el frontend agrupa y diferencia automáticamente:
 
 | Categoría   | Contenido                                              | Ejemplo en U1 (replicable)                        |
@@ -38,10 +41,13 @@ secciones, que el frontend agrupa y diferencia automáticamente:
    - `Segunda alternativa (2)`: alternativa + por qué es inferior.
    - `quiz`: 1 pregunta de autoevaluación por caso.
    - Cierre con `keypoints` de palabras gatillo + `truefalse` sobre la consigna.
-4. **Registrar la unidad** en `gen-unidades.js` (objeto `unidad2` / `unidad3`:
-   slug, título, subtítulo, descripción, tags, sources) y regenerar:
+4. **Registrar la unidad** en `gen-unidades.js` (U2 vive en `gen-u2.js` con
+   `buildUnidad2(B)` — para U3 crear `gen-u3.js` con `buildUnidad3(B)` y el
+   mismo formato: objeto con slug, título, subtítulo, descripción, tags,
+   sources y sections) y regenerar:
    `node ./gen-unidades.js` (desde `backend/src/seed`) → reescribe
-   `data/topics.json` con las 3 unidades.
+   `data/topics.json` con las 3 unidades. El script es idempotente: la
+   lectura de U1 se filtra por `category` y no se duplica al re-ejecutar.
 5. **Sembrar la base:** `npm run seed --prefix backend` (requiere MongoDB).
    El frontend NO necesita cambios: el home, la vista de unidad y los
    capítulos se generan solos desde la API (`GET /api/topics`).
