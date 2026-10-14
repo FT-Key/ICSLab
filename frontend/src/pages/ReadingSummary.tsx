@@ -233,38 +233,42 @@ function UnitCard({ topic, onClick, index }: { topic: Topic; onClick: () => void
         </div>
         <p className="text-base leading-relaxed text-black/60 mb-5">{topic.description}</p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
-          {cats('material') > 0 && (
-            <span className="rounded-full bg-[#80A1C1]/20 px-2.5 py-1 text-xs font-semibold text-[#2c4a63]">
-              {cats('material')} material
-            </span>
-          )}
-          {cats('lectura') > 0 && (
-            <span className="rounded-full bg-[#FAD4C0]/40 px-2.5 py-1 text-xs font-semibold text-[#7c4a2d]">
-              {cats('lectura')} lectura
-            </span>
-          )}
-          {cats('ejercicio') > 0 && (
-            <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs font-semibold text-green-800">
-              {cats('ejercicio')} ejercicio
-            </span>
-          )}
-        </div>
-
-        {total > 0 && (
-          <div className="mb-4">
-            <div className="h-2 rounded-full bg-black/10 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-green-500 transition-all"
-                style={{ width: `${Math.round((done / total) * 100)}%` }}
-              />
-            </div>
-            <p className="mt-1.5 text-xs text-black/50">{done} de {total} secciones completadas</p>
+        {/* Bloque inferior anclado: tags, progreso y CTA siempre alineados
+            entre cards aunque las descripciones midan distinto */}
+        <div className="mt-auto space-y-4 pt-2">
+          <div className="flex flex-wrap gap-2">
+            {cats('material') > 0 && (
+              <span className="rounded-full bg-[#80A1C1]/20 px-2.5 py-1 text-xs font-semibold text-[#2c4a63]">
+                {cats('material')} material
+              </span>
+            )}
+            {cats('lectura') > 0 && (
+              <span className="rounded-full bg-[#FAD4C0]/40 px-2.5 py-1 text-xs font-semibold text-[#7c4a2d]">
+                {cats('lectura')} lectura
+              </span>
+            )}
+            {cats('ejercicio') > 0 && (
+              <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs font-semibold text-green-800">
+                {cats('ejercicio')} ejercicio
+              </span>
+            )}
           </div>
-        )}
 
-        <div className="mt-auto rounded-lg bg-[#111827] px-5 py-3 text-center text-base font-medium text-white transition-transform hover:scale-[1.02] active:scale-[0.98]">
-          Abrir unidad &rarr;
+          {total > 0 && (
+            <div>
+              <div className="h-2 rounded-full bg-black/10 overflow-hidden">
+                <div
+                  className="h-full rounded-full bg-green-500 transition-all"
+                  style={{ width: `${Math.round((done / total) * 100)}%` }}
+                />
+              </div>
+              <p className="mt-1.5 text-xs text-black/50">{done} de {total} secciones completadas</p>
+            </div>
+          )}
+
+          <div className="rounded-lg bg-[#111827] px-5 py-3 text-center text-base font-medium text-white transition-transform hover:scale-[1.02] active:scale-[0.98]">
+            Abrir unidad &rarr;
+          </div>
         </div>
       </BentoCard>
     </motion.div>
@@ -340,7 +344,7 @@ function UnitOverview({ topic }: { topic: Topic }) {
                       {completed.has(i) ? <CheckCircle size={18} weight="fill" className="text-green-600" /> : i + 1}
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-base font-medium text-black/80 leading-snug">{s.title}</span>
+                      <span className="block text-base font-medium text-black/80 leading-snug line-clamp-2">{s.title}</span>
                       <span className="block text-xs text-black/40 mt-0.5">{s.blocks.length} bloques</span>
                     </span>
                     <ArrowRight size={16} className="ml-auto shrink-0 text-black/30" />
@@ -506,6 +510,22 @@ export default function ReadingSummary({ legacy = false }: { legacy?: boolean })
             ))}
           </div>
         </nav>
+        {/* Navegación entre unidades en móvil (scroll horizontal) */}
+        <div className="sm:hidden border-t border-black/10 overflow-x-auto">
+          <div className="flex items-center gap-1 px-4 py-2">
+            {topics.map((t) => (
+              <button
+                key={t.slug}
+                onClick={() => navigate(`/unidad/${t.slug}`)}
+                className={`shrink-0 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                  slug === t.slug ? 'bg-[#111827] text-white' : 'text-black/60 hover:bg-black/5'
+                }`}
+              >
+                U{t.icon} · {t.title.split('—')[0].trim()}
+              </button>
+            ))}
+          </div>
+        </div>
       </header>
 
       <main className="min-h-[calc(100vh-4rem)]">
