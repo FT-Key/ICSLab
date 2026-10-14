@@ -20,6 +20,7 @@ const topicSchema = new Schema({
   sources: [{ type: String }],
   sections: [{
     title: { type: String, required: true },
+    category: { type: String, enum: ['material', 'lectura', 'ejercicio'], default: 'lectura' },
     blocks: [{
       type: { type: String, required: true },
       content: String,

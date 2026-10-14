@@ -57,6 +57,11 @@ const contentBlockSchema = new Schema({
 
 const sectionSchema = new Schema({
   title: { type: String, required: true },
+  category: {
+    type: String,
+    enum: ['material', 'lectura', 'ejercicio'],
+    default: 'lectura',
+  },
   blocks: [contentBlockSchema],
 }, { _id: false })
 

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Skill bento (.opencode/skills/bento): tokens semánticos, jerarquía clara,
+   estados de interacción explícitos. No introducir colores fuera de paleta. */
 @theme {
   --font-sans: "Geist Variable", system-ui, "Segoe UI", Roboto, sans-serif;
   --font-mono: "Geist Mono Variable", ui-monospace, Consolas, monospace;
@@ -17,12 +19,41 @@
   color-scheme: light;
 }
 
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   background-color: #FFF5E6;
   font-family: "Geist Variable", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #111827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bento: estados de foco visibles y accesibles (WCAG 2.2 AA) */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #80A1C1;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 *::-webkit-scrollbar {

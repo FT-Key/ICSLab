@@ -45,9 +45,12 @@ export type ContentBlock =
   | TrueFalseBlock
 
 // ── Sections (= chapters) ─────────────────────────────
+export type SectionCategory = 'material' | 'lectura' | 'ejercicio'
+
 export interface Section {
   _id?: string
   title: string
+  category?: SectionCategory
   blocks: ContentBlock[]
 }
 
