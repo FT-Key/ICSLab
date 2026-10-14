@@ -478,9 +478,11 @@ export default function ReadingSummary({ legacy = false }: { legacy?: boolean })
       <header className="sticky top-0 z-40 border-b border-black/10 bg-[#FFF5E6]/80 backdrop-blur">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2 text-base font-semibold cursor-pointer" onClick={() => navigate('/')}>
-            <span className="grid h-6 w-6 place-items-center rounded-md bg-[#FAD4C0] text-xs font-bold text-[#111827]">
-              IS
-            </span>
+            <img
+              src="/is-favicon-512.png"
+              alt="Ingeniería de Software"
+              className="h-8 w-8 rounded-md object-cover"
+            />
             Ingeniería de Software
           </div>
           <div className="hidden sm:flex items-center gap-1">
