@@ -281,7 +281,7 @@ function UnitOverview({ topic }: { topic: Topic }) {
   const completed = loadCompleted(topic.slug)
   const groups: { key: SectionCategory; heading: string; desc: string }[] = [
     { key: 'material', heading: 'Material de estudio', desc: 'Lo visto en clase: la base de cada unidad.' },
-    { key: 'lectura', heading: 'Lectura recomendada', desc: 'Bibliografía: Sommerville, Pressman y SWEBOK.' },
+    { key: 'lectura', heading: 'Lectura recomendada', desc: 'Bibliografía indicada en el programa (ver fuentes arriba).' },
     { key: 'ejercicio', heading: 'Ejercicios resueltos', desc: 'Ejemplos resueltos paso a paso para aprender el cómo.' },
   ]
 
