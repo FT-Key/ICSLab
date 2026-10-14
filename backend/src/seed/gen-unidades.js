@@ -3,7 +3,7 @@
 //   recomendada (los 8 capitulos ya existentes) + ejercicio EJT1 resuelto.
 // - Unidades 2 y 3: estructura lista (hoja de ruta) para completar igual que U1.
 // Uso: node ./gen-unidades.js  (desde backend/src/seed)
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { buildUnidad2 } from './gen-u2.js'
@@ -191,5 +191,11 @@ const unidad3 = {
 }
 
 writeFileSync(DATA_PATH, JSON.stringify([unidad1, unidad2, unidad3], null, 2))
+// Copia empaquetada para el frontend: el sitio usa este JSON como fuente
+// principal (los deploys del frontend siguen a main sin fallar) y la API
+// solo lo reemplaza si trae igual o más contenido.
+const FRONTEND_COPY = path.resolve(__dirname, '../../../frontend/src/data/topics.json')
+mkdirSync(path.dirname(FRONTEND_COPY), { recursive: true })
+writeFileSync(FRONTEND_COPY, JSON.stringify([unidad1, unidad2, unidad3], null, 2))
 const counts = [unidad1, unidad2, unidad3].map((u) => `${u.slug}: ${u.sections.length} secciones`)
 console.log(`OK topics.json con 3 unidades\n  - ${counts.join('\n  - ')}`)

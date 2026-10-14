@@ -48,9 +48,11 @@ secciones, que el frontend agrupa y diferencia automáticamente:
    `node ./gen-unidades.js` (desde `backend/src/seed`) → reescribe
    `data/topics.json` con las 3 unidades. El script es idempotente: la
    lectura de U1 se filtra por `category` y no se duplica al re-ejecutar.
-5. **Sembrar la base:** `npm run seed --prefix backend` (requiere MongoDB).
-   El frontend NO necesita cambios: el home, la vista de unidad y los
-   capítulos se generan solos desde la API (`GET /api/topics`).
+5. **Sembrar la base (opcional):** `npm run seed:topics --prefix backend`
+   (requiere MongoDB). El `gen-unidades.js` además escribe una copia en
+   `frontend/src/data/topics.json`, que el sitio usa como fuente principal:
+   la API solo la reemplaza si trae igual o más secciones. Así el deploy del
+   frontend siempre muestra el contenido actualizado sin depender del seed.
 
 ## Reglas de diseño (skill bento en `.opencode/skills/bento/`)
 

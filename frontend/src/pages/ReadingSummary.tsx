@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'motion/react'
 import {
@@ -9,7 +9,11 @@ import BentoCard from '../components/BentoCard'
 import ChapterNav from '../components/ChapterNav'
 import { useAsync } from '../hooks/useAsync'
 import { api } from '../api/client'
+import bundledTopicsJson from '../data/topics.json'
 import type { Topic, ContentBlock, QuizBlock, TrueFalseBlock, SectionCategory } from '../types'
+
+const bundledTopics = bundledTopicsJson as unknown as Topic[]
+const sectionCount = (ts: Topic[]) => ts.reduce((n, t) => n + t.sections.length, 0)
 
 /* ── Progreso por unidad (localStorage) ───────────────────── */
 function loadCompleted(slug: string): Set<number> {
@@ -60,14 +64,7 @@ function CategoryBadge({ category }: { category: SectionCategory }) {
   )
 }
 
-/* ── Loading / Error ────────────────────────────────── */
-function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center min-h-[60vh]">
-      <div className="w-12 h-12 border-4 border-[#111827]/30 border-t-[#111827] animate-spin rounded-full" />
-    </div>
-  )
-}
+/* ── Error (solo si ni siquiera hay contenido empaquetado) ─── */
 
 function ErrorState({ error, onRetry }: { error: string; onRetry: () => void }) {
   return (
@@ -453,10 +450,20 @@ function ChapterView({ topic, chapterIndex }: { topic: Topic; chapterIndex: numb
 export default function ReadingSummary({ legacy = false }: { legacy?: boolean }) {
   const { slug, chapterIndex } = useParams<{ slug: string; chapterIndex: string }>()
   const navigate = useNavigate()
-  const { data: topics, error, loading, reload } = useAsync<Topic[]>(() => api.topics(), [])
+  const { data: remote, error, reload } = useAsync<Topic[]>(() => api.topics(), [])
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <ErrorState error={error.message} onRetry={reload} />
+  // Fuente principal: contenido empaquetado en el build (siempre
+  // sincronizado con esta interfaz). La API solo lo reemplaza si trae
+  // igual o más contenido; si falla o está desactualizada, se ignora.
+  const topics = useMemo<Topic[]>(
+    () => (remote?.length && sectionCount(remote) >= sectionCount(bundledTopics) ? remote : bundledTopics),
+    [remote],
+  )
+  const usingLocal = !remote?.length || sectionCount(remote) < sectionCount(bundledTopics)
+
+  // El contenido empaquetado se muestra de inmediato; la API refresca en
+  // segundo plano y solo reemplaza si trae igual o más contenido.
+  if (error) console.warn('[ICS] API no disponible, usando contenido local:', error.message)
   if (!topics?.length) {
     return <ErrorState error="No se encontraron temas. Ejecuta el seeder." onRetry={reload} />
   }
@@ -539,6 +546,7 @@ export default function ReadingSummary({ legacy = false }: { legacy?: boolean })
       <footer className="border-t border-black/10 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:px-6 text-sm text-black/50 sm:flex-row">
           <span>&copy; {new Date().getFullYear()} Ingeniería y Calidad de Software</span>
+          {usingLocal && <span className="text-xs">Contenido integrado en la página</span>}
         </div>
       </footer>
     </div>

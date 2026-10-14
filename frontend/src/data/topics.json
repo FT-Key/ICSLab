@@ -1,0 +1,2789 @@
+[
+  {
+    "slug": "unidad-1-fundamentos",
+    "title": "Unidad 1 — Fundamentos de Ingeniería de Software",
+    "subtitle": "Material de clase + lectura recomendada + ejercicio resuelto",
+    "description": "Unidad completa: lo visto en clase (UT1-P1 y UT1-P2), la lectura recomendada (Sommerville, Pressman y SWEBOK) y el ejercicio EJT1 de modelos de proceso resuelto caso por caso.",
+    "icon": "1",
+    "color": "#111827",
+    "tags": [
+      "unidad-1",
+      "fundamentos",
+      "sommerville",
+      "pressman",
+      "swebok",
+      "modelos-de-proceso"
+    ],
+    "sources": [
+      "Material de clase ICS2026_UT1_P1 y UT1_P2",
+      "Ian Sommerville (2011) Ingeniería de Software, Ed. 9 — Caps. 1, 2 y 3",
+      "Roger S. Pressman (2010) Ingeniería del Software, Ed. 7 — Caps. 1, 2 y 3",
+      "SWEBOK Guide v3.0",
+      "Ejercicio EJT1 — Modelos de proceso (2026)"
+    ],
+    "sections": [
+      {
+        "title": "Material de estudio — Fundamentos: software, IS, producto-proceso-proyecto",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Fundamentos de Ingeniería de Software (clase UT1-P1)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Esta sección resume lo visto en clase para la Unidad 1: concepto de software y características del producto software, la Ingeniería de Software como disciplina (objetivos, alcance y evolución), la crisis del software, las disciplinas que la integran, y la tríada proceso–proyecto–producto. La lectura recomendada (Sommerville caps. 1–3, Pressman caps. 1–3 y SWEBOK v3) profundiza estos mismos temas: ambas fuentes son importantes y se complementan."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "El software: definición IEEE y características",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Definición (IEEE): parte de un sistema que se puede codificar para ejecutarse en una computadora como un conjunto de instrucciones. Incluye la documentación asociada necesaria para comprender, transformar y usar esa solución. El software son los programas, los documentos asociados y la configuración de datos que se necesitan para que estos programas operen de manera correcta."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Es intangible y de alto contenido intelectual; no siempre se lo reconoce como activo contable.",
+              "El software se desarrolla, no se fabrica en el sentido clásico.",
+              "El software no se estropea: se deteriora (pierde vigencia frente a cambios del entorno).",
+              "La mayoría del software se construye a medida.",
+              "Su desarrollo es mano de obra intensivo y basado en equipos; es potencialmente modificable hasta el infinito."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La documentación describe la organización del sistema, explica al usuario cómo utilizarlo y permite descargar actualizaciones y ayuda. Sin ella, el producto está incompleto."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Ingeniería de Software: crisis del software y definiciones",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El término ingeniería de software se propuso en 1968, en una conferencia convocada para discutir la crisis del software: los enfoques individuales no escalaban a sistemas grandes y complejos, que resultaban poco confiables, costaban más de lo esperado y se entregaban con demora."
+          },
+          {
+            "type": "quote",
+            "items": [],
+            "options": [],
+            "content": "La aplicación de un enfoque sistemático, disciplinado y cuantificable al desarrollo, operación y mantenimiento del software; es decir, la aplicación de la ingeniería al software.",
+            "source": "ISO/IEC/IEEE SEVOCAB"
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Boehm la define como la aplicación práctica del conocimiento científico en el diseño y construcción de programas de computadora y la documentación asociada requerida para desarrollarlos, operarlos y mantenerlos. También se la conoce como desarrollo o producción de software. Su compromiso central es la calidad, sostenida sobre tres pilares: producto, proceso y proyecto, con métodos y herramientas."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Producto, proceso y proyecto",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Producto: los programas, documentos asociados y configuración de datos necesarios para operar correctamente. Proceso: define la estructura de trabajo y forma la base para el control y la administración de proyectos; a través del proceso se generan productos de trabajo (documentos, datos, reportes, diagramas), se establecen hitos, se asegura la calidad y se administra el cambio. Proyecto: entender el software como un proceso organizado, planificado y temporal con objetivos definidos; un conjunto de actividades coordinadas para crear, mejorar o mantener un sistema en un tiempo determinado, con presupuesto y recursos asignados."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Proyecto — temporalidad: inicio y fin definidos.",
+              "Proyecto — objetivos claros: resolver una necesidad específica.",
+              "Proyecto — restricciones: tiempo, costo, alcance, calidad, entorno.",
+              "Proyecto — múltiples disciplinas y roles involucrados.",
+              "Proyecto — incertidumbre y riesgo: casi nunca se conoce todo lo que pasará durante el desarrollo."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Se fabrica en serie como el hardware",
+              "No se estropea: se deteriora frente a cambios del entorno",
+              "Siempre se reconoce como activo contable",
+              "No necesita documentación asociada"
+            ],
+            "question": "¿Cuál es una característica distintiva del producto software vista en clase?",
+            "correctIndex": 1,
+            "explanation": "El software se desarrolla (no se fabrica), no sufre desgaste físico, pero se deteriora cuando el entorno cambia; la documentación forma parte del producto."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "La crisis del software (1968) mostró que los enfoques individuales no escalaban a sistemas grandes y complejos.",
+            "correctAnswer": true,
+            "explanation": "Sistemas poco confiables, más caros y entregados tarde: de allí la necesidad de enfoques ingenieriles."
+          }
+        ]
+      },
+      {
+        "title": "Material de estudio — SDLC, proceso y modelos de proceso",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Ciclo de vida, proceso y modelos (clase UT1-P2)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda parte del material de clase: ciclo de vida del desarrollo de sistemas (SDLC), definición y descripción del proceso, su clasificación (dirigidos por plan vs. ágiles), estándares y modelos de proceso tradicionales (cascada, incremental, espiral y Proceso Unificado)."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "SDLC y definición de proceso",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Desde el punto de vista de los Sistemas de Información, el ciclo de vida (SDLC) es el conjunto de fases o procesos por los que pasa el sistema desde que se concibe hasta que se retira del servicio (desmantelamiento), incluyendo planificación, desarrollo y mantenimiento durante la explotación. Las fases están estandarizadas para poder adaptarse a quien las use."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El proceso es un concepto más amplio, basado en el ciclo de vida, que cubre todos los elementos de las actividades de la vida de un producto software. Pressman lo resume en comunicación, planeación, modelado, construcción y despliegue; Sommerville en especificación, diseño e implementación, validación y evolución."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Flujo de trabajo: secuencia válida de actividades con entradas, salidas, precondiciones y postcondiciones.",
+              "Flujo de producto: documentos, artefactos o resultados que produce cada actividad.",
+              "Modelo de rol/acción: roles de las personas involucradas y actividades de las que son responsables."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Clasificación y estándares",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Procesos dirigidos por un plan (plan driven): los más tradicionales; todo se planea por anticipado y el avance se mide contra el plan. Procesos ágiles: la planeación es incremental y el proceso se modifica con facilidad para reflejar requerimientos cambiantes del cliente. La estandarización mejora la comunicación, reduce el tiempo de capacitación y abarata el soporte automatizado; los estándares de ciclo de vida de sistemas y software son ISO/IEC/IEEE 12588:2023 y 12207:2017."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Modelos de proceso tradicionales",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Un modelo de proceso es una descripción simplificada de los enfoques de desarrollo: define el ciclo de vida a adoptar. Los modelos genéricos (cascada, incremental, espiral de Sommerville, Proceso Unificado con sus disciplinas y fases) son abstracciones para explicar enfoques, no descripciones definitivas."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Cascada: fases secuenciales con verificación formal; funciona con requisitos estables.",
+              "Incremental: entregas progresivas que incorporan módulos sin interrumpir lo que ya funciona.",
+              "Espiral: iteraciones guiadas por análisis de riesgos; evalúa alternativas antes de invertir.",
+              "Proceso Unificado (UP): disciplinas y fases con artefactos definidos.",
+              "Elegir modelo = leer el caso: estabilidad de requisitos, necesidad de entregas parciales, riesgos y participación del cliente."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Los ágiles no planifican nada",
+              "Los ágiles planifican de forma incremental y se adaptan a requerimientos cambiantes",
+              "Los dirigidos por plan entregan cada semana",
+              "No hay diferencias reales"
+            ],
+            "question": "¿Qué diferencia a los procesos ágiles de los dirigidos por un plan?",
+            "correctIndex": 1,
+            "explanation": "En los procesos ágiles la planeación es incremental y el proceso se modifica para reflejar los cambios del cliente."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Los modelos genéricos de proceso son abstracciones para explicar enfoques, no descripciones definitivas.",
+            "correctAnswer": true,
+            "explanation": "Cada proyecto adapta el modelo a su contexto; el modelo define el ciclo de vida a adoptar."
+          }
+        ]
+      },
+      {
+        "title": "Cap. 1 - Introduccion a la Ingenieria de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Introduccion a la Ingenieria de Software",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El Capitulo 1 de Sommerville define la ingenieria de software como una disciplina de ingenieria dedicada a todos los aspectos de la produccion de software, desde las etapas iniciales de especificacion hasta el mantenimiento. El software es el elemento productor en la industria moderna: controla los dispositivos que usamos, gestiona los datos que creamos y permite las comunicaciones que nos conectan.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "A diferencia del hardware, el software es intangible. No se puede ver ni tocar. Se desarrolla, no se manufactura, y una vez funcionando, no se desgasta. Sin embargo, puede degradarse por cambios en los requerimientos del entorno, por lo que necesita actualizaciones continuas para mantenerse relevante.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Tipos de Software en Detalle",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "El software es intangible: no se desgasta como el hardware, pero se degrada por requerimientos cambiantes.",
+              "Tipos de software: generico (comercial), a medida (personalizado), embebidos (controladores), productores de artefactos y sistemas de LIPE.",
+              "Factores de diseno criticos: reutilizacion, seguridad, eficiencia y mantenibilidad.",
+              "Retos principales: heterogeneidad de plataformas, seguridad y confiabilidad, gestion de la complejidad.",
+              "Los costos se distribuyen: ~60% desarrollo, ~40% pruebas, y el mantenimiento puede consumir hasta el 60% del costo total del ciclo de vida."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "La ingenieria de software es una actividad de planeacion, diseno, construccion, pruebas y mantenimiento de sistemas de software.",
+            "items": [],
+            "source": "Ian Sommerville",
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Sommerville distingue entre software generico (desarrollado para el mercado general, como Microsoft Office) y software a medida (desarrollado para un cliente especifico, como un sistema bancario). El software generico se comercializa a traves de distribuidores, mientras que el software a medida se negocia directamente con el cliente.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El software generico (off-the-shelf) incluye sistemas operativos como Windows, macOS y Linux; suites de ofimatica como Microsoft Office y Google Workspace; navegadores web como Chrome y Firefox; y utilidades como WinRAR o Photoshop. Estos productos se desarrollan para el mercado masivo y se distribuyen a millones de usuarios. Su desarrollo requiere equipos grandes, presupuestos elevados y ciclos de vida prolongados. La clave del exito radica en la usabilidad, la compatibilidad con multiples plataformas y la capacidad de actualizacion continua.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Los costos de la ingenieria de software son particularmente relevantes: el desarrollo representa aproximadamente el 60% del presupuesto, las pruebas el 40%, pero el mantenimiento es la fase mas costosa y prolongada del ciclo de vida. Un sistema puede existir durante 20 o 30 anos, acumulando costos de mantenimiento que superan con creces los de desarrollo inicial.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Aplicacion Practica",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Consideremos un sistema de gestion hospitalaria: debe ser confiable (los errores pueden costar vidas), seguro (proteger datos sensibles de pacientes), eficiente (responder rapido en emergencias) y mantenible (adaptarse a nuevas regulaciones y tecnologias medicas). Cada uno de estos requisitos se deriva directamente de los principios fundamentales que Sommerville presenta en este capitulo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El software a medida (bespread) se diseno para las necesidades especificas de un cliente. Ejemplos incluyen sistemas de gestion hospitalaria, plataformas bancarias en linea, sistemas de control de trafico aereo y software ERP para empresas. El desarrollo de software a medida implica un proceso de Requirements Engineering exhaustivo, ya que cada funcionalidad debe alinearse con los flujos de trabajo del cliente. El costo es significativamente mayor que el software generico, pero la personalizacion justifica la inversion cuando las necesidades son unicas.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cual es la caracteristica distintiva del software frente al hardware?",
+            "options": [
+              "El software es mas barato de producir",
+              "El software no se desgasta fisicamente, pero se degrada por cambios en requerimientos",
+              "El software se puede tocar y medir",
+              "El software siempre funciona correctamente"
+            ],
+            "correctIndex": 1,
+            "explanation": "El software es intangible y no sufre desgaste fisico como el hardware. Se degrada cuando los requerimientos del entorno cambian."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que porcentaje aproximado del costo total de un proyecto se destina al mantenimiento?",
+            "options": [
+              "20%",
+              "40%",
+              "60%",
+              "80%"
+            ],
+            "correctIndex": 2,
+            "explanation": "Segun Sommerville, el mantenimiento puede consumir hasta el 60% del costo total del ciclo de vida del software."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "El software generico se desarrolla para el mercado general (como Microsoft Word), no para un cliente especifico.",
+            "statement": "El software generico se desarrolla para un cliente especifico.",
+            "correctAnswer": false
+          },
+          {
+            "type": "text",
+            "content": "Los sistemas embebidos (embedded) representan el mayor volumen de software producido anualmente. Incluyen el software en dispositivos IoT (termostatos Nest, camaras Ring), sistemas de entretenimiento automotriz, equipos medicos (respiradores, monitores cardiacos), y dispositivos de consumo (smartwatches, altavoces inteligentes). Estos sistemas deben ser ultra-confiables, eficientes en memoria y energia, y funcionar en tiempo real. La depuracion es compleja ya que no se puede conectar un depurador convencional.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Los sistemas embebidos son software integrado en hardware que controla dispositivos.",
+            "statement": "Los sistemas embebidos son aquellos que controlan dispositivos como telefonos o electrodomesticos.",
+            "correctAnswer": true
+          },
+          {
+            "type": "text",
+            "content": "Los productores de artefactos son herramientas que generan otros productos: compiladores (producen ejecutables), sistemas de gestion de bases de datos (producen esquemas y consultas), herramientas de modelado UML (producen diagramas y codigo), y frameworks como React o Angular (producen aplicaciones web). Estos tools multiplican la productividad del desarrollador y son esenciales en el ecosistema de ingenieria de software moderno.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Factores Criticos de Diseno",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La reutilizacion es el factor de diseno mas importante en la ingenieria moderna. El principio DRY (Do Not Repeat Yourself) reduce el codigo duplicado, minimiza errores y acelera el desarrollo. Los patrones de diseno (Singleton, Factory, Observer, Strategy) proporcionan soluciones reutilizables a problemas recurrentes. Las librerias y frameworks permiten reutilizar codigo probado en miles de proyectos. La reutilizacion reduce costos entre un 40-60% segun estudios de la IEEE.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La seguridad debe incorporarse desde el diseno (Security by Design), no como una capa posterior. Esto incluye: autenticacion robusta (MFA, OAuth 2.0), autorizacion basada en roles (RBAC), cifrado de datos en transito (TLS 1.3) y en reposo (AES-256), proteccion contra inyecciones SQL y XSS, y auditoria de accesos. OWASP Top 10 lista las vulnerabilidades mas comunes que deben abordarse en cada fase del desarrollo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La eficiencia se mide en tiempo de ejecucion (Big O notation), consumo de memoria, ancho de banda de red y uso de CPU. Un algoritmo O(n^2) puede ser aceptable para n=100 pero inaceptable para n=1,000,000. La optimizacion prematura es un anti-pattern (Knuth: la prematura raiz de todo mal), pero la ignorancia de la complejidad algoritmica genera sistemas lentos. El perfilamiento (profiling) identifica los cuellos de botella reales antes de optimizar.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La mantenibilidad determina el costo real del software a largo plazo. Codigo mantenible es: legible (nombres descriptivos, comentarios claros), modular (bajo acoplamiento, alta coesion), testeable (inyeccion de dependencias, interfaces limpias) y documentado (README, ADRs, API docs). El Technical Debt (deuda tecnica) acumula intereses: cada atajo tomado hoy genera un costo mayor manana. Herramientas como SonarQube miden la deuda tecnica automaticamente.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Distribucion de Costos y Retos",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La distribucion de costos varia segun el tipo de proyecto. En proyectos web tipicos: requerimientos (15%), diseno (15%), implementacion (30%), pruebas (20%), despliegue (5%) y mantenimiento (15% anual acumulativo). Un sistema con vida util de 10 anos puede acumular costos de mantenimiento que superan 5 veces el costo inicial de desarrollo. El costo de corregir un bug en produccion es 30-100 veces mayor que corregirlo en diseno.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Los retos contemporaneos incluyen: heterogeneidad (el software debe ejecutarse en multiples plataformas: web, movil, IoT, cloud), seguridad (ciberataques crecen 38% anualmente segun ENISA), confiabilidad (sistemas como Netflix requieren 99.99% de disponibilidad = 52 min de downtime/anio), y complejidad (una aplicacion moderna puede tener millones de lineas de codigo y dependencias de cientos de librerias externas).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "El software generico se distribuye masivamente; el software a medida se personaliza para un cliente.",
+              "Los sistemas embebidos son el mayor volumen de software producido y requieren ultra-confiabilidad.",
+              "La reutilizacion (DRY, patrones, frameworks) reduce costos entre 40-60%.",
+              "La seguridad debe incorporarse desde el diseno (Security by Design).",
+              "El mantenimiento acumula entre 15-60% del costo total anual del ciclo de vida.",
+              "Un bug en produccion cuesta 30-100 veces mas que en diseno."
+            ],
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 2 - Procesos de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Procesos de Software",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Un proceso de software es un conjunto de actividades que conducen a la produccion de un sistema de software. Estas actividades pueden incluir especificacion, diseno, validacion, evolucion y gestion. No existe un proceso universal: la seleccion depende del tipo de software, del tamano del equipo, de la cultura organizacional y de los requerimientos del proyecto.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Modelo en cascada: secuencia de fases (especificacion, diseno, implementacion, pruebas, mantenimiento) con puntos de milestone.",
+              "Desarrollo incremental: entrega progresiva del sistema en incrementos funcionales, permitiendo retroalimentacion temprana.",
+              "Proceso agil: enfasis en iteraciones cortas (1-4 semanas), retroalimentacion continua y adaptacion al cambio.",
+              "CI/CD: practicas modernas de integracion continua y despliegue continuo que automatizan la entrega.",
+              "Cada fase tiene criterios de entrada y salida definidos, lo que permite el control de calidad entre etapas."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Modelo en Cascada: Profundizacion",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "No existe un proceso universal. La seleccion del proceso depende del tipo de software y los requerimientos del proyecto.",
+            "items": [],
+            "source": "Ian Sommerville",
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El modelo en cascada es el mas tradicional: cada fase se completa antes de pasar a la siguiente. Es predecible y documentado, pero rigido. Si los requerimientos cambian despues del diseno, el costo de retorno es altisimo. Funciona bien cuando los requerimientos son estables y comprendidos desde el inicio.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El desarrollo incremental evita los problemas del cascada al entregar el sistema en versiones progresivas. Cada incremento agrega funcionalidad y se basa en el feedback del usuario. Las ventajas incluyen entrega temprana, reduccion de riesgos y mejor adaptacion. Los incrementos tipicos incluyen un nucleo funcional que se expande iterativamente.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El modelo en cascada (Waterfall), propuesto por Winston Royce en 1970, es el proceso de software mas antiguo y formalizado. Cada fase tiene una secuencia estricta: 1) Analisis de requisitos: documentar todo lo que el sistema debe hacer. 2) Diseno del sistema: arquitectura de alto nivel y diseno detallado. 3) Implementacion: codigo fuente en el lenguaje elegido. 4) Integracion y pruebas: verificar que todo funcione junto. 5) Operaciones y mantenimiento: despliegue y soporte continuo. Cada fase produce documentacion formal que sirve de entrada para la siguiente.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El manifiesto agil (2001) establecio cuatro valores fundamentales: individuos e interacciones sobre procesos y herramientas; software funcionando sobre documentacion extensa; colaboracion con el cliente sobre negociacion de contratos; y respuesta ante cambios sobre seguir un plan.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Comparacion de Modelos",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El modelo en cascada es ideal para proyectos con requerimientos estables y regulados (sistemas medicos, aeroespaciales). El incremental funciona mejor para proyectos donde el feedback del usuario es critico (aplicaciones web, moviles). Los procesos agiles son ideales para equipos pequenos/medianos con requerimientos cambiantes (startups, innovacion).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El cascada funciona bien cuando: los requisitos son estables y completamente comprendidos desde el inicio (sistemas militares, aeroespaciales), el proyecto tiene restricciones regulatorias que exigen documentacion completa (ISO 26262 para automocion, DO-178C para aviacion), el equipo tiene experiencia previa en el dominio, y el proyecto es de bajo riesgo tecnologico. Su principal debilidad es la rigidez: un cambio de requisitos en fase tardia puede invalidar todo el trabajo previo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cual es la principal ventaja del desarrollo incremental sobre el modelo en cascada?",
+            "options": [
+              "No requiere documentacion",
+              "Permite entrega temprana de software funcionando",
+              "Elimina la necesidad de pruebas",
+              "Funciona solo con equipos pequenos"
+            ],
+            "correctIndex": 1,
+            "explanation": "El desarrollo incremental permite entregar software funcionando en incrementos progresivos, lo que da retroalimentacion temprana del usuario y reduce riesgos."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que framework agil enfatiza iteraciones de 2-4 semanas con entregas funcionales?",
+            "options": [
+              "Waterfall",
+              "Spiral",
+              "Scrum/Sprint",
+              "Prototipado"
+            ],
+            "correctIndex": 2,
+            "explanation": "Scrum organiza el trabajo en Sprints de 2-4 semanas al final de los cuales se entrega un incremento funcional."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Esta es una de las criticas principales al cascada: las pruebas se ejecutan en una fase tardia.",
+            "statement": "En el modelo en cascada, las pruebas se realizan solo al final del proyecto.",
+            "correctAnswer": true
+          },
+          {
+            "type": "heading",
+            "content": "Desarrollo Incremental: Estrategias",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Es al reves: prioriza software funcionando sobre documentacion extensa.",
+            "statement": "El manifiesto agil prioriza documentacion completa sobre software funcionando.",
+            "correctAnswer": false
+          },
+          {
+            "type": "text",
+            "content": "El desarrollo incremental divide el sistema en versiones progresivas. Estrategia tipica: Incremento 1 = nucleo funcional (funcionalidades esenciales, base de datos, autenticacion). Incremento 2 = funcionalidades secundarias (reportes, notificaciones, exportacion). Incremento 3 = funcionalidades avanzadas (IA, analytics, integraciones externas). Cada incremento pasa por todas las fases del ciclo de vida. Ventaja clave: el usuario puede usar y evaluar el sistema desde el primer incremento.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La planificacion de incrementos requiere identificar: dependencias entre funcionalidades (no se puede hacer un reporte sin datos), riesgos tecnicos (integrar primero lo mas riesgoso), y valor para el usuario (priorizar funcionalidades de mayor impacto). El Product Owner prioriza el backlog de incrementos segun el criterio MoSCoW: Must have, Should have, Could have, Won not have (este ciclo).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Procesos Agiles: Detalle",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Scrum define 3 roles: Product Owner (prioriza el backlog, representa al cliente), Scrum Master (facilita el proceso, elimina impedimentos), y el Equipo de Desarrollo (auto-organizado, multidisciplinario, 3-9 personas). Las ceremonias incluyen: Sprint Planning (2-4h, planificar el sprint), Daily Scrum (15min, sincronizacion), Sprint Review (1-2h, demo al stakeholder), y Sprint Retrospective (1-1.5h, mejora continua). Los artefactos son: Product Backlog (lista priorizada), Sprint Backlog (trabajo del sprint), e Incremento (entregable funcional).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "XP (Extreme Programming) promueve practicas de ingenieria radical: Programacion en Parejas (dos developers, una estacion, codigo compartido), TDD (escribir prueba antes del codigo), Refactorizacion Continua (mejorar codigo sin cambiar comportamiento), Integracion Continua (integrar codigo multiples veces al dia), Diseno Simple (YAGNI: You Ain Gonna Need It), y Locucion (el cliente define las historias de usuario en el equipo).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Kanban se centra en el flujo de trabajo visual: tablero con columnas (To Do, In Progress, Review, Done), tarjetas que representan trabajo, y limites WIP (Work In Progress) que previenen la sobrecarga. A diferencia de Scrum, Kanban no tiene sprints fijos ni roles definidos. El cambio se introduce cuando hay capacidad (cuando una columna baja su WIP). Metricas clave: Lead Time (tiempo desde solicitud hasta entrega), Throughput (trabajo completado por unidad de tiempo), y Cycle Time (tiempo desde inicio hasta fin de una tarea).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "CI/CD: Automatizacion",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La Integracion Continua (CI) automatiza: 1) Compilacion automatica al hacer push al repositorio. 2) Ejecucion de pruebas unitarias, de integracion y end-to-end. 3) Analisis estatico de codigo (SonarQube, ESLint). 4) Generacion de artefactos (Docker images, JAR files). El Despliegue Continuo (CD) agrega: 5) Despliegue automatico a staging. 6) Pruebas de aceptacion automatizadas. 7) Despliegue a produccion con feature flags o blue-green deployment. Herramientas: GitHub Actions, GitLab CI/CD, Jenkins, CircleCI. Un pipeline tipico ejecuta 100-500 pruebas en 5-15 minutos.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Cascada: secuencia estricta, ideal para requisitos estables y proyectos regulados.",
+              "Incremental: entregas progresivas, feedback temprano del usuario.",
+              "Scrum: roles definidos (PO, SM, Equipo), sprints de 2-4 semanas, ceremonias estructuradas.",
+              "XP: practicas de ingenieria radicales (TDD, pair programming, CI).",
+              "Kanban: flujo continuo, limites WIP, sin sprints fijos.",
+              "CI/CD: automatiza compilacion, pruebas y despliegue continuo."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "El mejor proceso es el que se adapta al contexto del proyecto, no el que sigue un dogma.",
+            "items": [],
+            "source": "Ian Sommerville",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 3 - Requerimientos de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Requerimientos de Software",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La ingenieria de requerimientos es el proceso de descubrir, definir, documentar y mantener los requerimientos de un sistema. Incluye requerimientos funcionales (que hace el sistema) y no funcionales (como lo hace).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Proceso: elicitation, analisis, especificacion y validacion.",
+              "Requerimientos funcionales (que hace) vs no funcionales (como lo hace).",
+              "Documentos: SRS (Software Requirements Specification), casos de uso, historias de usuario.",
+              "No funcionales: usabilidad, eficiencia, confiabilidad, mantenibilidad, portabilidad.",
+              "Gestion de cambios: control de versiones, tablas de trazabilidad, analisis de impacto."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Proceso de Ingenieria de Requerimientos",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "Los requerimientos son la base de todo el proceso de desarrollo. Un error en esta fase cuesta 100 veces mas corregido en mantenimiento.",
+            "items": [],
+            "source": "Ian Sommerville",
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La elicitation de requerimientos utiliza tecnicas como entrevistas, observacion directa, prototipado rapido y escenarios de uso. El objetivo es entender las necesidades reales del usuario, no solo lo que dice que quiere. A menudo, lo que el usuario pide no es lo que realmente necesita.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Los requerimientos no funcionales son tan criticos como los funcionales. Un sistema que cumple todas las funcionalidades pero es lento, inseguro o dificil de usar fracasara. Sommerville los clasifica en: requerimientos de producto (eficiencia, fiabilidad), requerimientos organizacionales (estandares) y requerimientos externos (legislacion, etica).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La ingenieria de requerimientos es un proceso iterativo que transforma las necesidades vagas del negocio en especificaciones precisas y verificables. El proceso tiene 4 fases principales: 1) Elicitacion: descubrir que necesita el usuario mediante entrevistas, observacion, brainstorming y analisis de sistemas existentes. 2) Analisis: clasificar, priorizar y resolver conflictos entre requerimientos. 3) Especificacion: documentar los requerimientos en formatos estandarizados (SRS, casos de uso, historias de usuario). 4) Validacion: verificar que los requerimientos sean correctos, completos y consistentes.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Gestion de Cambios",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Los requerimientos cambian constantemente: cambios en el entorno del negocio, nuevas tecnologias, retroalimentacion de usuarios beta. La gestion de cambios requiere: control de versiones (que version tiene que cambios), tablas de trazabilidad (que codigo implementa que requerimiento) y analisis de impacto (que se afecta al cambiar algo).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cuanto cuesta corregir un error de requerimientos en mantenimiento vs en especificacion?",
+            "options": [
+              "10 veces mas",
+              "50 veces mas",
+              "100 veces mas",
+              "No cuesta mas"
+            ],
+            "correctIndex": 2,
+            "explanation": "Un error en requerimientos cuesta aproximadamente 100 veces mas corregirlo en la fase de mantenimiento que en la fase de especificacion original."
+          },
+          {
+            "type": "text",
+            "content": "Las tecnicas de elicitation son variadas y complementarias: Entrevistas individuales (profundas pero lentas), workshops grupales (eficientes para consenso), observacion directa (descubre requerimientos no declarados), analisis de documentos (sistemas existentes, manuales, regulaciones), prototipado rapido (valida ideas con el usuario), y encuestas (utiles para grandes poblaciones). La tecnica mas efectiva combina multiples metodos para cubrir ciegas de cada uno.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que tipo de requerimiento define que debe hacer el sistema?",
+            "options": [
+              "No funcional",
+              "Funcional",
+              "De seguridad",
+              "De rendimiento"
+            ],
+            "correctIndex": 1,
+            "explanation": "Los requerimientos funcionales definen que debe hacer el sistema. Los no funcionales definen como lo hace (calidad, rendimiento, etc)."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Son criticos para la calidad del software. Un sistema sin usabilidad o seguridad no sera aceptado por los usuarios.",
+            "statement": "Los requerimientos no funcionales son opcionales y pueden ignorarse.",
+            "correctAnswer": false
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Las matrices de trazabilidad conectan cada requerimiento con su diseno, codigo fuente y casos de prueba.",
+            "statement": "La trazabilidad permite rastrear un requerimiento desde su origen hasta su implementacion.",
+            "correctAnswer": true
+          },
+          {
+            "type": "heading",
+            "content": "Tipos de Requerimientos No Funcionales",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Requerimientos de producto: Eficiencia (tiempo de respuesta < 200ms, uso de CPU < 70%), Fiabilidad (disponibilidad 99.9%, recuperacion en < 5 min), Usabilidad (aprendizaje en < 30 min, tasa de error < 1%). Requerimientos organizacionales: Estandares de codificacion (ESLint, Prettier), procesos de revision (peer review obligatorio), herramientas (Git, Jira). Requerimientos externos: Legislacion (GDPR, HIPAA), estandares industriales (ISO 27001), acuerdos de nivel de servicio (SLA).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La especificacion formal utiliza multiples notaciones: Diagramas de casos de uso (UML) para funcionalidades, diagramas de secuencia para interacciones, diagramas de estado para ciclos de vida, y tablas de decisiones para reglas de negocio complejas. Las historias de usuario siguen el formato: Como [rol], quiero [funcionalidad] para [beneficio]. Los criterios de aceptacion definen cuando una historia esta completa (Given/When/Then).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Gestion de Cambios en Requerimientos",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El cambio es inevitable: el 35% de los requerimientos cambian durante el desarrollo (estudio de Standish Group). La gestion de cambios incluye: 1) Solicitud formal del cambio (quien, que, por que). 2) Analisis de impacto (costo, riesgo, dependencias). 3) Decision (aprobar, rechazar, posponer). 4) Implementacion (actualizar documentacion, codigo, pruebas). 5) Comunicacion (notificar a stakeholders). Las tablas de trazabilidad conectan cada requerimiento con su diseno, codigo y pruebas.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El costo de los errores de requerimientos crece exponencialmente: corregir en requerimientos = 1x, en diseno = 5x, en implementacion = 10x, en pruebas = 20x, en produccion = 50-100x. Esto justifica la inversion en validacion temprana: prototipos, revisiones formales, y herramientas de simulacion. El prototipo permite al usuario ver y tocar una version preliminar del sistema antes de comprometerse con los requerimientos finales.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Elicitacion: entrevistas, observacion, prototipado, analisis de documentos.",
+              "No funcionales: eficiencia, fiabilidad, usabilidad, estandares, legislacion.",
+              "Especificacion: casos de uso, historias de usuario, criterios de aceptacion.",
+              "El 35% de los requerimientos cambian durante el desarrollo.",
+              "Costo de error: 1x en requerimientos a 100x en produccion.",
+              "Trazabilidad: conectar cada requerimiento con diseno, codigo y pruebas."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "Los requerimientos son la base de todo el proceso de desarrollo. Un error en esta fase cuesta 100 veces mas corregido en mantenimiento.",
+            "items": [],
+            "source": "Ian Sommerville",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 4 - Productos de Software (Pressman)",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Productos de Software",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Pressman define el software como una coleccion de instrucciones que, cuando se ejecutan, proporcionan caracteristicas, funciones y comportamiento deseados; datos que son procesados para producir informacion; y estructuras de datos que permiten el manejo de la informacion.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Evolucion: de programas individuales a sistemas de ingenieria complejos.",
+              "Caracteristicas: intangible, se desarrolla (no se manufactura), no se desgasta.",
+              "Aplicaciones: proposito personal, linea de negocio, ingenieria/cientifico, embebidos.",
+              "Componentes Web: contenido estatico, dinamico, scripts del lado del cliente y del servidor.",
+              "Software como producto vs como programa individual."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Evolucion Historica del Software",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "El software es el motor que dirige la tecnologia del siglo XXI.",
+            "items": [],
+            "source": "Roger S. Pressman",
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Pressman presenta una jerarquia conceptual: programa (instrucciones individuales), producto de software (programa documentado y empaquetado), ingenieria de software (disciplina para construir productos) y proceso de software (metodologia para guiar la construccion).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Las aplicaciones web se clasifican en: contenido estatico (HTML puro, sin interactividad), dinamico (generado en servidor con CGI, JSP, ASP), scripts del lado del cliente (JavaScript en el navegador) y del servidor (PHP, Python, Node.js que procesan peticiones).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La evolucion del software sigue una proyeccion exponencial: 1950s: programas en ensamblador, cientos de lineas. 1960s: lenguajes de alto nivel (FORTRAN, COBOL), miles de lineas. 1970s: sistemas operativos complejos, decenas de miles. 1980s: aplicaciones de escritorio, cientos de miles. 1990s: sistemas distribuidos, millones. 2000s: plataformas web, cientos de millones. 2010s: cloud y moviles, miles de millones. 2020s: sistemas de IA, billones de parametros. Cada decada multiplica por 10 la complejidad del software promedio.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Segun Pressman, cual es una caracteristica fundamental del software?",
+            "options": [
+              "Es barato de producir",
+              "Se desarrolla, no se manufactura",
+              "Es tangible",
+              "No necesita mantenimiento"
+            ],
+            "correctIndex": 1,
+            "explanation": "El software se desarrolla (se disena y construye), no se manufactura como un producto fisico en una fabrica."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que tipo de software se ejecuta en microondas o automoviles?",
+            "options": [
+              "De proposito personal",
+              "De linea de negocio",
+              "Embebido",
+              "Web"
+            ],
+            "correctIndex": 2,
+            "explanation": "Los sistemas embebidos estan integrados en hardware que controla dispositivos del mundo real."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "El software no sufre desgaste fisico. Se degrada cuando los requerimientos cambian y el software ya no se adapta.",
+            "statement": "El software se desgasta con el tiempo como el hardware.",
+            "correctAnswer": false
+          },
+          {
+            "type": "text",
+            "content": "Pressman define una jerarquia conceptual: Programa a Producto de Software a Ingenieria de Software a Proceso de Software. Un programa es un conjunto de instrucciones ejecutables. Un producto de software incluye documentacion, manuales, guias de instalacion y soporte. La ingenieria de software es la disciplina que aplica principios de ingenieria al desarrollo de software. El proceso de software es la metodologia que guia todas las actividades desde la concepcion hasta el retiro.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "El software de proposito personal son aplicaciones como Word, Excel o navegadores web que usamos diariamente.",
+            "statement": "El software de proposito personal incluye procesadores de texto y hojas de calculo.",
+            "correctAnswer": true
+          },
+          {
+            "type": "heading",
+            "content": "Clasificacion de Aplicaciones Web",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Contenido estatico: paginas HTML servidas tal cual, sin procesamiento del lado del servidor. Ejemplos: portafolios personales, documentacion de APIs, landing pages. Ventajas: rendimiento (se cachean facilmente), seguridad (sin logica del lado del servidor), escalabilidad (CDN las distribuye globalmente). Desventajas: sin interactividad, contenido fijo, mantenimiento manual.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Contenido dinamico: generado en tiempo real por el servidor. Tecnologias: CGI (Common Gateway Interface, el primero), PHP (el mas popular para startups), JSP/Servlets (enterprise Java), ASP.NET (ecosistema Microsoft), Node.js (JavaScript del lado del servidor, asincrono). El servidor procesa la peticion, ejecuta logica de negocio, accede a base de datos y genera HTML dinamicamente. Ventaja: contenido personalizado, interactivo y actualizado.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Scripts del lado del cliente: JavaScript ejecutado en el navegador. Frameworks modernos: React (componentes declarativos, virtual DOM), Angular (TypeScript, inyeccion de dependencias), Vue.js (progressive framework, Composition API). Estos frameworks permiten crear aplicaciones de una sola pagina (SPA) donde la navegacion es instantanea y la experiencia es como una app de escritorio. El servidor solo provee datos via APIs REST o GraphQL.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Software embebido en dispositivos IoT: el mercado IoT alcanzara 75 mil millones de dispositivos en 2025 (Statista). Cada dispositivo necesita firmware: codigo de bajo nivel que controla hardware. Ejemplos: termostatos Nest (aprenden tus preferencias), camaras Ring (deteccion de movimiento con IA), dispositivos medicos (monitores de glucosa continuos). Desafios: seguridad (cada dispositivo es un punto de entrada), actualizaciones OTA (over-the-air), consumo energetico (baterias que duran meses).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Evolucion exponencial: cada decada multiplica por 10 la complejidad.",
+              "Jerarquia: Programa a Producto a Ingenieria a Proceso.",
+              "Web estatica: HTML puro, rapido y seguro pero sin interactividad.",
+              "Web dinamica: servidor genera contenido en tiempo real (PHP, Node.js, JSP).",
+              "SPA: React/Angular/Vue permiten experiencias tipo app de escritorio.",
+              "IoT: 75 mil millones de dispositivos necesitan firmware seguro y eficiente."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "El software es el motor que dirige la tecnologia del siglo XXI.",
+            "items": [],
+            "source": "Roger S. Pressman",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 5 - El Contexto de la Ingenieria de Software",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "El Contexto de la Ingenieria de Software",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La ingenieria de software existe en un contexto mas amplio que incluye la ingenieria de sistemas, la gestion de proyectos y el marco de trabajo del ciclo de vida del producto (PDCF). Pressman enfatiza que el software debe entenderse dentro del ecosistema organizacional.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Ingenieria de sistemas: el software es parte de un sistema que incluye hardware, personas y procesos.",
+              "El PDCF (Product Development Framework): planificacion tecnica, de desarrollo, gestion y milestones.",
+              "Procesos de SE: definicion, desarrollo, soporte y gestion.",
+              "ISO/IEC 25010: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad.",
+              "La calidad no es solo prueba: abarca todo el ciclo de vida del producto."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Ingenieria de Sistemas y el Rol del Software",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "La calidad del software se mide por su capacidad de cumplir los requisitos y su mantenibilidad a lo largo del tiempo.",
+            "items": [],
+            "source": "Roger S. Pressman",
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El marco de referencia del ciclo de vida del producto (PDCF) define las fases por las que pasa un producto de software: planificacion tecnica, planificacion de desarrollo, gestion de proyectos y seguimiento de hitos (milestones). Cada fase tiene objetivos claros y entregables definidos.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "ISO/IEC 25010 define 6 caracteres de calidad: funcionalidad (hace lo que debe), fiabilidad (funciona sin fallos), usabilidad (facil de usar), eficiencia (usa recursos optimamente), mantenibilidad (facil de modificar) y portabilidad (funciona en diferentes entornos).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La ingenieria de sistemas ve al software como un componente dentro de un ecosistema mayor que incluye hardware (servidores, dispositivos, redes), personas (usuarios, operadores, desarrolladores) y procesos (flujos de trabajo, protocolos, gobernanza). Un sistema de software exitoso no es solo codigo funcional: es la integracion armoniosa de todos estos componentes. Ejemplo: un sistema de telemedicina requiere hardware medico, software de videoconferencia, personal capacitado y protocolos de atencion.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Calidad como Eje Central",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "La calidad no se logra solo con pruebas al final. Se incorpora desde el diseno hasta el mantenimiento. El costo de la calidad incluye: prevencion (diseno robusto), evaluacion (pruebas), fallos internos (bugs encontrados antes de entregar) y fallos externos (bugs que llegan al usuario, los mas costosos).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cuantas caracteristicas de calidad define ISO/IEC 25010?",
+            "options": [
+              "4",
+              "5",
+              "6",
+              "8"
+            ],
+            "correctIndex": 2,
+            "explanation": "ISO/IEC 25010 define 6 caracteristicas: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad."
+          },
+          {
+            "type": "text",
+            "content": "El PDCF (Product Development Framework) de Pressman define las fases del ciclo de vida: 1) Planificacion tecnica: definir arquitectura, tecnologias y herramientas. 2) Planificacion de desarrollo: estimacion de esfuerzo, cronograma y recursos. 3) Gestion de proyectos: seguimiento de avance, control de cambios, mitigacion de riesgos. 4) Seguimiento de hitos (milestones): puntos de verificacion que confirman el progreso. Cada fase produce entregables medibles que alimentan la siguiente.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que marco de referencia define las fases del ciclo de vida del producto?",
+            "options": [
+              "PDCF",
+              "SWEBOK",
+              "ITIL",
+              "CMMI"
+            ],
+            "correctIndex": 0,
+            "explanation": "El PDCF (Product Development Framework) de Pressman define las fases del ciclo de vida del producto de software."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "La ingenieria de sistemas ve al software como parte de un sistema mayor que incluye hardware, personas y procesos.",
+            "statement": "La ingenieria de sistemas considera al software como un componente aislado.",
+            "correctAnswer": false
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Los fallos externos (que llegan al usuario final) son los mas costosos porque afectan reputacion, generan soporte y pueden tener implicaciones legales.",
+            "statement": "Los fallos externos de calidad son los mas costosos de corregir.",
+            "correctAnswer": true
+          },
+          {
+            "type": "heading",
+            "content": "ISO/IEC 25010: Las 6 Caracteristicas de Calidad",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Funcionalidad: el software hace lo que debe hacer. Incluye adecuacion funcional (funciones cubren necesidades), compatibilidad (opera con otros sistemas) y seguridad de la informacion (proteccion de datos). Ejemplo: un banco exige que las transferencias sean correctas al centavo, compatibles con otros bancos, y seguras contra fraude.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Fiabilidad: el software funciona sin fallos bajo condiciones especificas. Incluye madurez (frecuencia de fallos), disponibilidad (tiempo operativo), tolerancia a fallos (continua funcionando ante errores) y capacidad de recuperacion (se restaura despues de un fallo). Un sistema con disponibilidad del 99.99% tiene maximo 52 minutos de downtime al ano.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Usabilidad: el software es facil de aprender y usar. Incluye reconocibilidad (el usuario sabe que hacer), aprendizaje (se puede aprender rapidamente), operabilidad (interfaz intuitiva), proteccion contra errores (no permite acciones destructivas sin confirmacion), y estetica (diseno agradable). La usabilidad se mide con tests de usuario: SUS (System Usability Scale), tiempo de tarea, tasa de error.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Eficiencia: el software usa recursos de manera optima. Incluye comportamiento temporal (tiempo de respuesta), utilizacion de recursos (CPU, memoria, disco, red) y capacidad (maximo rendimiento bajo carga). Un API que responde en 50ms con 1000 usuarios simultaneos es eficiente; uno que tarda 5 segundos con 10 usuarios no lo es.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Mantenibilidad: el software es facil de modificar. Incluye modularidad (componentes independientes), reusabilidad (componentes aplicables a otros sistemas), analizabilidad (facil de entender), modificabilidad (cambios sin efectos colaterales) y testabilidad (facil de probar). El codigo mantenible reduce el costo de futuras modificaciones entre un 40-70%.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Portabilidad: el software opera en diferentes entornos. Incluye adaptabilidad (se ajusta a diferentes entornos), instalabilidad (facil de instalar/desinstalar), reemplazabilidad (sustituye a otro software) y compatibilidad (coexiste con otro software). Un software portable funciona en Windows, macOS y Linux sin modificaciones significativas.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Costo de la Calidad",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El costo de la calidad tiene 4 componentes: 1) Prevencion: invertir en diseno robusto, capacitacion, estandares (reduce fallos futuros). 2) Evaluacion: pruebas, auditorias, revision de codigo (detecta fallos existentes). 3) Fallos internos: bugs encontrados antes de entregar al usuario (corregir en desarrollo es barato). 4) Fallos externos: bugs que llegan al usuario (costosos por soporte, reputacion, perdida de clientes, demandas legales). El objetivo es maximizar prevencion y evaluacion para minimizar fallos externos.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "El software es parte de un sistema que incluye hardware, personas y procesos.",
+              "PDCF: planificacion tecnica, desarrollo, gestion de proyectos, hitos.",
+              "ISO 25010: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad, portabilidad.",
+              "Fiabilidad 99.99% = maximo 52 min de downtime/anio.",
+              "Costo de calidad: prevencion + evaluacion vs. fallos internos + externos.",
+              "Fallos externos son los mas costosos (soporte, reputacion, legales)."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "La calidad del software se mide por su capacidad de cumplir los requisitos y su mantenibilidad a lo largo del tiempo.",
+            "items": [],
+            "source": "Roger S. Pressman",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 6 - Modelos y Procesos de Software (Pressman)",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Modelos y Procesos de Software",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Pressman presenta un marco de referencia para los modelos de proceso que permite comprender, evaluar y estructurar los distintos enfoques de desarrollo de software. Cada modelo ofrece una perspectiva diferente sobre como organizar el trabajo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Marco de proceso: actividades del marco (framework activities) y tareas asociadas.",
+              "Cascada: secuencia de etapas con milestones y retroalimentacion.",
+              "Incremental: entrega progresiva del software en versiones.",
+              "Prototipado: construccion rapida de prototipo para validar requerimientos.",
+              "Espiral: combinacion de iteracion + analisis de riesgos (Boehm).",
+              "Agil: Scrum, XP, Kanban. Enfoque en personas e interacciones."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "El Marco de Proceso de Pressman",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "No existe un proceso unico que sirva para todos los proyectos. El proceso debe adaptarse al contexto.",
+            "items": [],
+            "source": "Roger S. Pressman",
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El marco de proceso de Pressman incluye 5 actividades: comunicacion (con el cliente), planificacion (gestion del proyecto), modelado (diseno y arquitectura), construccion (codigo y pruebas) y despliegue (entrega al usuario). Cada actividad tiene tareas especificas.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El modelo espiral de Boehm combina iteraciones con analisis de riesgos sistematico. Cada vuelta del espiral tiene 4 cuadrantes: determinar objetivos, evaluar alternativas/riesgos, desarrollar/verificar y planear la siguiente fase. Es ideal para proyectos grandes y de alto riesgo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El marco de proceso de Pressman organiza el trabajo en 5 actividades fundamentales: 1) Comunicacion: establecer dialogo con el cliente y stakeholders para entender necesidades. Incluye reuniones, prototipos, encuestas y analisis de dominio. 2) Planificacion: definir alcance, estimar esfuerzo (puntos de funcion, COCOMO), crear cronograma (Gantt, PERT) y asignar recursos. 3) Modelado: disenar la arquitectura (capas, microservicios, eventos), crear modelos de datos (ER, UML) y definir interfaces. 4) Construccion: codificar (siguiendo estandares), compilar, probar (unitarias, integracion, sistema) y documentar. 5) Despliegue: entregar al usuario, capacitar, configurar el entorno y monitorear.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Comparacion de Frameworks Agiles",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Scrum: roles (Product Owner, Scrum Master, equipo), ceremonias (Sprint Planning, Daily, Review, Retrospective), artefactos (Product Backlog, Sprint Backlog, Incremento). Iteraciones de 2-4 semanas. XP: practicas de ingenieria como programacion en parejas, TDD, integracion continua, refactorizacion continua. Kanban: tableros visuales, limites de trabajo en progreso (WIP), flujo continuo sin iteraciones fijas.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Factores para elegir un proceso: tamano del proyecto, estabilidad de requerimientos, experiencia del equipo, nivel de riesgo, restricciones regulatorias. Proyectos gubernamentales o medicos pueden requerir cascada o espiral. Startups y productos digitales suelen usar agil.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Modelo Espiral: Analisis de Riesgos",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Quien popularizo el modelo espiral con enfasis en analisis de riesgos?",
+            "options": [
+              "Frederick Brooks",
+              "Barry Boehm",
+              "Kent Beck",
+              "Martin Fowler"
+            ],
+            "correctIndex": 1,
+            "explanation": "Barry Boehm propuso el modelo espiral en 1988, incorporando el analisis de riesgos como componente central del proceso."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cuales son las 5 actividades del marco de proceso de Pressman?",
+            "options": [
+              "Analisis, Diseno, Codigo, Prueba, Despliegue",
+              "Comunicacion, Planificacion, Modelado, Construccion, Despliegue",
+              "Inicio, Planificacion, Ejecucion, Cierre, Seguimiento",
+              "Requerimientos, Arquitectura, Implementacion, Verificacion, Mantenimiento"
+            ],
+            "correctIndex": 1,
+            "explanation": "Las 5 actividades del marco de Pressman son: comunicacion, planificacion, modelado, construccion y despliegue."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Kanban es un sistema de flujo continuo sin iteraciones fijas. Se enfoca en limitar el trabajo en progreso y optimizar el flujo.",
+            "statement": "Kanban se basa en iteraciones fijas de tiempo como Scrum.",
+            "correctAnswer": false
+          },
+          {
+            "type": "text",
+            "content": "El modelo espiral de Boehm (1988) es el primer modelo que incorpora analisis de riesgos de forma explicita. Cada vuelta del espiral tiene 4 cuadrantes: 1) Determinar objetivos: que se quiere lograr en esta iteracion. 2) Evaluar alternativas y riesgos: identificar opciones tecnicas, analizar probabilidad e impacto de cada riesgo, y planificar mitigacion. 3) Desarrollar y verificar: construir y probar el incremento. 4) Planear la siguiente fase: revisar resultados y planificar la siguiente vuelta. El espiral es ideal para proyectos grandes (> 1 ano), de alto riesgo (financiero, medico, aeroespacial) y con requisitos que evolucionan.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "La programacion en parejas es una de las 12 praticas originales de XP y es fundamental para la calidad del codigo.",
+            "statement": "En XP, la programacion en parejas es una practica opcional.",
+            "correctAnswer": false
+          },
+          {
+            "type": "heading",
+            "content": "Comparacion Detallada de Frameworks Agiles",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Scrum vs XP vs Kanban: Scrum se enfoca en la gestion del trabajo (sprints, roles, ceremonias). XP se enfoca en la ingenieria del codigo (TDD, pair programming, refactoring). Kanban se enfoca en el flujo visual (tablero, WIP limits, metricas de flujo). Muchos equipos combinan: Scrum para gestion + XP para ingenieria + Kanban para visualizacion. Esta combinacion se denomina Scrum-ban.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Estimacion agil: Planning Poker (el equipo estima en puntos de historia usando cartas Fibonacci), Velocity (puntos completados por sprint,用来 predecir capacidad futura), y Story Points (estimacion relativa, no absoluta: 1 = trivial, 2 = pequeno, 3 = mediano, 5 = grande, 8 = muy grande, 13 = epico). La velocidad promedio despues de 3-5 sprints se usa para predecir cuantos sprints tomara completar el backlog.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "5 actividades: Comunicacion, Planificacion, Modelado, Construccion, Despliegue.",
+              "Espiral: cuadrantes de objetivos, riesgos, desarrollo y planificacion.",
+              "Scrum: gestion del trabajo (sprints, roles, ceremonias).",
+              "XP: ingenieria del codigo (TDD, pair programming, CI).",
+              "Kanban: flujo visual (tablero, WIP limits, metricas).",
+              "Estimacion: Planning Poker, Velocity, Story Points."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "No existe un proceso unico que sirva para todos los proyectos. El proceso debe adaptarse al contexto.",
+            "items": [],
+            "source": "Roger S. Pressman",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 7 - Guia SWEBOK v3",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Guia SWEBOK v3",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El SWEBOK (Software Engineering Body of Knowledge) es un estandar internacional (ISO/IEC TR 19759) publicado por la IEEE Computer Society que busca caracterizar los contenidos de las disciplinas de la ingenieria de software y promover una vision comun del campo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Proposito: establecer un marco comun de conocimiento para la profesion.",
+              "15 areas de conocimiento organizadas en 3 secciones.",
+              "Seccion I: Fundamentos de computacion y bases matematicas.",
+              "Seccion II: Areas de practica de la ingenieria de software.",
+              "Seccion III: Areas de conocimiento distintivas de SE.",
+              "Base para certificaciones CSDA y CSDP de la IEEE."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Estructura Completa del SWEBOK v3",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "El SWEBOK busca caracterizar los contenidos de las disciplinas de la ingenieria de software, promover una vision comun del campo.",
+            "items": [],
+            "source": "IEEE Computer Society",
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Areas de Conocimiento Relevantes",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Las areas mas relevantes para este modulo son: Requerimientos (obtencion, analisis, especificacion y validacion), Diseno (arquitectura, componentes, interfaces y datos), Construccion (programacion, verificacion, analisis de codigo), Pruebas (proceso, diseno, tecnicas y evaluacion), Mantenimiento (control de cambios, reingenieria, prevencion de fallas), Gestion de Configuracion (identificacion, control de cambios, contabilidad de estado), Ingenieria de Calidad (tecnicas, metricas, aseguramiento), Gestion de Proyectos (planeacion, estimacion, seguimiento, riesgos) y Modelos y Metodos (procesos, agiles, ciclos de vida, metodos formales).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El SWEBOK v3 organiza el conocimiento en 3 grandes secciones: Seccion I - Fundamentos: Computing Foundations (algoritmos, estructuras de datos, programacion), Mathematical Foundations (logica, probabilidad, estadistica), y Engineering Foundations (medicion, modelado, optimizacion). Seccion II - Practica: Requerimientos, Diseno, Construccion, Pruebas, Mantenimiento, Gestion de Configuracion, Gestion de Calidad, Ingenieria de Calidad, y Gestion de Ingenieria. Seccion III - Conocimiento Distintivo: Gestion de Proyectos, Gestion de Procesos, Modelos y Metodos, y Profesionalismo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Relacion con Sommerville y Pressman",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Sommerville profundiza en areas que el SWEBOK clasifica como \"Modelos y Metodos\" (procesos de software) y \"Requerimientos\" (ingenieria de requerimientos). Pressman enriquece las areas de \"Ingenieria de Calidad\" y \"Diseno\" con un enfoque practico y de referencia. El SWEBOK unifica todo bajo un marco estandar reconocido internacionalmente, dando vocabulario comun a los profesionales del mundo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que organizacion publica el SWEBOK?",
+            "options": [
+              "ISO",
+              "OMG",
+              "IEEE Computer Society",
+              "W3C"
+            ],
+            "correctIndex": 2,
+            "explanation": "El SWEBOK es publicado por la IEEE Computer Society como estandar ISO/IEC TR 19759."
+          },
+          {
+            "type": "heading",
+            "content": "Areas Clave en Profundidad",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cuantas areas de conocimiento define el SWEBOK v3?",
+            "options": [
+              "9",
+              "12",
+              "15",
+              "20"
+            ],
+            "correctIndex": 2,
+            "explanation": "El SWEBOK v3 define 15 areas de conocimiento de la ingenieria de software."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "El SWEBOK es una guia de conocimiento (body of knowledge), no un marco de proceso. Describe que se debe saber, no como hacerlo.",
+            "statement": "El SWEBOK es un marco de proceso de desarrollo.",
+            "correctAnswer": false
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Las certificaciones CSDA (Certified Software Development Associate) y CSDP (Certified Software Development Professional) de la IEEE estan basadas en el SWEBOK.",
+            "statement": "El SWEBOK sirve de base para certificaciones profesionales como CSDA y CSDP.",
+            "correctAnswer": true
+          },
+          {
+            "type": "text",
+            "content": "Requerimientos: obtencion (elicitation), analisis (priorizacion, resolucion de conflictos), especificacion (SRS, casos de uso, historias de usuario) y validacion (revisiones, prototipos, verificacion formal). Diseno: arquitectura (patrones: MVC, microservicios, event-driven), componentes (interfaces, contratos), interfaces (APIs REST, GraphQL, gRPC) y datos (modelos ER, esquemas NoSQL). Construccion: programacion (estandares, code review), verificacion (analisis estatico, metricas de codigo) y gestion de constructores (build systems: Maven, Gradle, npm).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Pruebas: proceso (planificacion, diseno de casos, ejecucion, informes), diseno (equivalence partitioning, boundary value analysis, state transition testing), tecnicas (caja blanca: statement/branch/path coverage; caja negra: input/output), y evaluacion (metricas de cobertura, defect density, escape rate). Mantenimiento: correctivo (fix bugs), adaptivo (nuevos SO/browsers), perfectivo (nuevas funciones) y preventivo (refactoring para evitar problemas futuros).",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Relacion con Sommerville y Pressman",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Sommerville cubre en profundidad las areas de Procesos (Cap 2), Requerimientos (Cap 3), Diseno (Cap 4), Desarrollo (Cap 5) y Pruebas (Cap 7). Pressman profundiza en Ingenieria de Calidad (ISO 25010), Modelos de Proceso (cascada, espiral, agiles) y Gestion de Proyectos (estimacion, cronogramas). El SWEBOK unifica todo bajo un marco estandar, proporcionando vocabulario comun y una guia de estudio para certificaciones profesionales. Los tres juntos cubren el 100% de las 15 areas del SWEBOK.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El SWEBOK es particularmente util para: preparacion de examenes (CSDA/CSDP de IEEE), definicion de curriculos universitarios (acomoda 4-5 anos de estudios), comunicacion internacional (vocabulario estandar entre equipos globales), y evaluacion de madurez organizacional (comparar practicas contra el estandar). No es un proceso de desarrollo sino una guia de conocimiento: dice QUE saber, no COMO hacerlo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "SWEBOK v3: 3 secciones, 15 areas de conocimiento.",
+              "Seccion I: fundamentos computacionales, matematicos y de ingenieria.",
+              "Seccion II: practica de SE (requerimientos, diseno, construccion, pruebas, mantenimiento).",
+              "Seccion III: conocimiento distintivo (gestion de proyectos, procesos, modelos).",
+              "Sommerville cubre procesos y requerimientos; Pressman calidad y modelos.",
+              "Base para certificaciones CSDA y CSDP de IEEE."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "El SWEBOK busca caracterizar los contenidos de las disciplinas de la ingenieria de software, promover una vision comun del campo.",
+            "items": [],
+            "source": "IEEE Computer Society",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Cap. 8 - Conectando los Tres Libros",
+        "blocks": [
+          {
+            "type": "heading",
+            "content": "Conectando los Tres Libros",
+            "level": 2,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Los tres libros no compiten: se complementan. Sommerville ofrece la base teorica y academica, Pressman agrega la perspectiva practica y de referencia, y el SWEBOK unifica todo bajo un marco estandar reconocido internacionalmente. Juntos cubren las dimensiones fundamentales de la ingenieria de software.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sommerville: foco en procesos y requerimientos (perspectiva academica).",
+              "Pressman: foco en calidad, modelos de proceso y marcos de referencia.",
+              "SWEBOK: unifica todo bajo un estandar internacional (ISO/IEC TR 19759).",
+              "Sommerville es mas teorico; Pressman es mas orientado a la practica.",
+              "El SWEBOK provee el vocabulario comun de la profesion."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Tabla Comparativa Detallada",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Tabla comparativa de enfoques: Procesos — Sommerville los describe en detalle (Cap 2), Pressman los enmarca en un modelo de referencia (Cap 3), SWEBOK los clasifica como area de conocimiento. Requerimientos — Sommerville dedica un capitulo completo (Cap 3), Pressman los aborda dentro del contexto de proceso, SWEBOK lo define como area independiente. Calidad — Sommerville la menciona como factor de diseno, Pressman la convierte en eje central (ISO 25010), SWEBOK tiene un area dedicada. Pruebas — Sommerville las integra en los procesos, Pressman las incluye en el ciclo de vida, SWEBOK las trata como area de conocimiento.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Como profesionales, usamos los tres: Sommerville para entender el porque de las decisiones, Pressman para tener un marco de referencia practico, y SWEBOK para comunicarnos con el mundo usando un vocabulario estandar. La combinacion de los tres nos da una base solida para cualquier proyecto de software.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Cual libro enfatiza mas en la perspectiva academica y teorica?",
+            "options": [
+              "Pressman",
+              "Sommerville",
+              "SWEBOK",
+              "Todos por igual"
+            ],
+            "correctIndex": 1,
+            "explanation": "Sommerville es considerado el mas academico de los tres, con un enfoque mas teorico y fundamentado."
+          },
+          {
+            "type": "text",
+            "content": "Procesos: Sommerville (Cap 2) describe en detalle cascada, incremental, prototipado y agiles. Pressman (Cap 3) los enmarca en su PDCF con enfasis en el modelo espiral. SWEBOK los clasifica como area Procesos y Modelos. Requerimientos: Sommerville (Cap 3) dedica un capitulo completo con tecnicas de elicitation. Pressman los aborda dentro del contexto de proceso. SWEBOK lo define como area independiente con sub-areas de obtencion, analisis, especificacion y validacion.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "question": "Que estandar internacional representa el SWEBOK?",
+            "options": [
+              "ISO 9001",
+              "ISO/IEC TR 19759",
+              "ISO 27001",
+              "IEEE 802.11"
+            ],
+            "correctIndex": 1,
+            "explanation": "El SWEBOK esta formalizado como el estandar ISO/IEC TR 19759."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "Se complementan: Sommerville (teoria), Pressman (practica y calidad), SWEBOK (estandar y vocabulario comun).",
+            "statement": "Los tres libros son redundantes y cubren exactamente lo mismo.",
+            "correctAnswer": false
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "explanation": "El SWEBOK es un documento vivo que se actualiza para reflejar la evolucion del campo de la ingenieria de software.",
+            "statement": "El SWEBOK se actualiza periodicamente para mantenerse relevante.",
+            "correctAnswer": true
+          },
+          {
+            "type": "text",
+            "content": "Calidad: Sommerville la menciona como factor de diseno (Cap 1). Pressman la convierte en eje central con ISO 25010 (Cap 4). SWEBOK tiene un area dedicada Ingenieria de Calidad con metricas y aseguramiento. Pruebas: Sommerville las integra en los procesos (Cap 7). Pressman las incluye en el ciclo de vida (Cap 5). SWEBOK las trata como area de conocimiento independiente con tecnicas de caja blanca y negra.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Como Usar los Tres en la Practica",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Fase de Concepcion: usar SWEBOK para identificar que areas de conocimiento son relevantes para el proyecto. Fase de Requerimientos: Sommerville para tecnicas de elicitation, SWEBOK para la estructura de especificacion. Fase de Diseno: Pressman para arquitectura y patrones, Sommerville para principios de diseno. Fase de Construccion: XP/Scrum de Sommerville + estandares de calidad de Pressman. Fase de Pruebas: Sommerville para estrategia, SWEBOK para tecnicas especificas. Fase de Mantenimiento: los tres combinados para gestion de cambios y evolucion.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "El profesional moderno no elige UN libro: usa los tres como complementarios. Sommerville para la base academica (entender el POR QUE), Pressman para la practica profesional (saber el COMO), y SWEBOK para el marco de referencia estandar (comunicarse con el MUNDO). Esta combinacion es la base solida para cualquier carrera en ingenieria de software, desde desarrollo front-end hasta arquitectura de sistemas distribuidos a escala global.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "content": "Competencias del Ingeniero de Software",
+            "level": 3,
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "text",
+            "content": "Basado en los tres libros, el ingeniero de software necesita: Competencias tecnicas: programacion (multiples paradigmas), arquitectura (patrones, estilos), bases de datos (SQL y NoSQL), redes y seguridad, y DevOps (CI/CD, containers, cloud). Competencias de proceso: gestion de proyectos (Scrum, Kanban), ingenieria de requerimientos, pruebas y aseguramiento de calidad, y gestion de configuracion. Competencias blandas: comunicacion efectiva, trabajo en equipo, pensamiento critico, resolucion de problemas, y aprendizaje continuo.",
+            "items": [],
+            "options": []
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sommerville: teoria academica (el POR QUE).",
+              "Pressman: practica profesional (el COMO).",
+              "SWEBOK: marco estandar (comunicarse con el MUNDO).",
+              "No compiten: se complementan para cubrir las 15 areas del SWEBOK.",
+              "El profesional moderno usa los tres en cada fase del proyecto.",
+              "Competencias: tecnicas + proceso + blandas = ingeniero completo."
+            ],
+            "options": []
+          },
+          {
+            "type": "quote",
+            "content": "Los tres libros no compiten: se complementan. Juntos cubren las dimensiones fundamentales de la ingenieria de software.",
+            "items": [],
+            "source": "Curso ICS",
+            "options": []
+          }
+        ],
+        "category": "lectura"
+      },
+      {
+        "title": "Ejercicio resuelto — Modelos de proceso (EJT1)",
+        "category": "ejercicio",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "EJT1 Modelos de proceso — ejercicio de teoría N.° 1 resuelto",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Consigna: para cada caso (1) determinar el mejor modelo de proceso de desarrollo y (2) proponer una segunda alternativa indicando por qué es inferior a la primera. Método sugerido: subrayar pistas del enunciado (estabilidad de requisitos, entregas parciales, riesgos, participación del cliente) y recién después elegir el modelo."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Caso 1 — Sistema de liquidación impositiva",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Situación: Organismo gubernamental que reemplaza un sistema de cálculo de un impuesto provincial. Reglas definidas por normativa vigente y documentadas exhaustivamente; contrato con funcionalidades, documentación, revisiones y criterios formales de aceptación fijados de antemano; el organismo participa poco y espera el sistema completo tras superar las verificaciones."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Requisitos estables y documentados (normativa vigente)",
+              "Contrato fijo: alcance, documentación, revisiones y aceptación formal",
+              "Poca participación del cliente durante el desarrollo",
+              "Entrega única completa tras verificaciones"
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Solución (1): Modelo en cascada: es el mejor porque los requisitos son estables y conocidos, el contrato exige planificación anticipada y verificación formal por etapas, y no se necesitan entregas parciales ni feedback continuo."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda alternativa (2): Incremental: inferior porque fraccionar en incrementos no aporta valor (el cliente espera el sistema completo) y choca con el contrato de alcance y aceptación fijados de antemano."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Cascada",
+              "Scrum ágil",
+              "Prototipado",
+              "Espiral"
+            ],
+            "question": "Caso 1 (liquidación impositiva): ¿mejor modelo?",
+            "correctIndex": 0,
+            "explanation": "Requisitos estables + contrato fijo + entrega única = cascada (proceso dirigido por un plan)."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Caso 2 — Sistema integral para una universidad",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Situación: Reemplazo progresivo del sistema académico (inscripción, cursos, exámenes, títulos, estadísticas). No hace falta todo simultáneamente: primero inscripción y gestión de cursos en producción, luego el resto sin interrumpir lo que ya funciona."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Reemplazo progresivo, no big-bang",
+              "Prioridad explícita: primero inscripción y cursos",
+              "Módulos posteriores sin interrumpir los operativos",
+              "Alcance grande divisible por funcionalidad"
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Solución (1): Desarrollo incremental: es el mejor porque entrega el sistema en incrementos productivos (primero lo prioritario), cada uno usable, e incorpora el resto sin interrumpir el servicio."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda alternativa (2): Cascada: inferior porque obligaría a esperar al sistema completo para poner algo en producción y no permite usar ni validar los módulos prioritarios antes."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Cascada",
+              "Incremental",
+              "Espiral",
+              "Prototipado"
+            ],
+            "question": "Caso 2 (universidad por módulos): ¿mejor modelo?",
+            "correctIndex": 1,
+            "explanation": "Entregas progresivas en producción sin interrumpir lo operativo = incremental."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Caso 3 — Plataforma de detección de fraude",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Situación: Entidad financiera: plataforma nueva de detección en tiempo real. Requisitos generales pero incertidumbre sobre si la tecnología soportará volumen y tiempos de respuesta; riesgos de seguridad, integración y precisión de algoritmos. Antes de grandes inversiones, evaluar riesgos con desarrollos parciales y pruebas técnicas."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Incertidumbre tecnológica (volumen, tiempos de respuesta)",
+              "Riesgos altos: seguridad, integración, precisión",
+              "Se pide evaluar antes de comprometer inversión",
+              "Desarrollos parciales y pruebas técnicas como decisión previa"
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Solución (1): Modelo en espiral: es el mejor porque cada vuelta evalúa riesgos y alternativas con prototipos y pruebas técnicas antes de comprometer grandes inversiones, justo lo que pide el caso."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda alternativa (2): Incremental puro: inferior porque entrega incrementos de producto pero sin el análisis explícito y sistemático de riesgos que el caso exige como paso previo."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Cascada",
+              "Incremental",
+              "Espiral",
+              "Prototipado descartable"
+            ],
+            "question": "Caso 3 (fraude, alto riesgo): ¿mejor modelo?",
+            "correctIndex": 2,
+            "explanation": "Incertidumbre + riesgos altos + evaluar antes de invertir = espiral."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Caso 4 — Aplicación para un nuevo negocio digital",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Situación: Plataforma que conecta profesionales independientes con clientes. Idea clara del problema pero se desconoce qué funcionalidades valorarán los usuarios. Hay PO disponible a tiempo completo. Se quieren versiones utilizables cada pocas semanas, medir la reacción y repriorizar según esa información."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Problema claro, solución por descubrir (qué valora el usuario)",
+              "PO disponible permanentemente",
+              "Versiones utilizables cada pocas semanas + medición",
+              "Repriorización continua según feedback"
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Solución (1): Enfoque ágil (Scrum): es el mejor porque trabaja con backlog repriorizado por el PO, iteraciones cortas con producto usable y adaptación continua a lo que los usuarios realmente valoran."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda alternativa (2): Prototipado: inferior porque el objetivo no es solo clarificar requisitos con un descartable, sino entregar valor usable en cada versión y adaptar prioridades de negocio de forma sostenida."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Cascada",
+              "Ágil / Scrum",
+              "Espiral",
+              "UP rígido"
+            ],
+            "question": "Caso 4 (negocio digital, descubrir valor): ¿mejor enfoque?",
+            "correctIndex": 1,
+            "explanation": "Feedback cada pocas semanas + PO full-time + repriorizar = ágil."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Caso 5 — Sistema de apoyo a operadores logísticos",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Situación: Reemplazo de planillas y apps del centro de distribución. Los usuarios saben hacer su trabajo pero no explicar cómo debería funcionar el sistema ni qué mostrar cada pantalla; las reglas aparecen cuando ven algo funcionando. Se quiere empezar rápido con una versión simplificada, mostrársela y modificarla repetidamente hasta comprender el proceso."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Usuarios no pueden explicitar requisitos",
+              "Reglas excepcionales que solo emergen ante algo visible",
+              "Versión simplificada como punto de partida",
+              "Modificar repetidamente hasta comprender"
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Solución (1): Prototipado: es el mejor porque construye una versión simplificada para mostrar, provoca el feedback (“recién cuando ven recuerdan”) y la refina en ciclos hasta capturar el verdadero proceso de trabajo."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda alternativa (2): Cascada: inferior porque exigiría especificar por anticipado justo lo que los usuarios no pueden explicar; el riesgo de construir lo equivocado es máximo."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Cascada",
+              "Espiral",
+              "Prototipado",
+              "Incremental"
+            ],
+            "question": "Caso 5 (operadores que no pueden explicar): ¿mejor modelo?",
+            "correctIndex": 2,
+            "explanation": "Requisitos que solo emergen viendo algo funcionar = prototipado."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Cómo autoevaluarte con este ejercicio",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Tapá la solución y para cada caso escribí: modelo elegido + 2 pistas del enunciado que lo justifican.",
+              "La segunda alternativa siempre debe compararse explícitamente (“es inferior porque…”).",
+              "Palabras gatillo: normativa/contrato fijo → cascada · por módulos/sin interrumpir → incremental · riesgos/evaluar antes de invertir → espiral · descubrir qué valora el usuario/releases → ágil · no saben explicar/hasta ver funcionando → prototipado."
+            ],
+            "options": []
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "En el EJT1 basta con nombrar el modelo: la justificación y la segunda alternativa no suman.",
+            "correctAnswer": false,
+            "explanation": "La consigna pide (1) el mejor modelo y (2) una segunda alternativa indicando por qué es inferior: la comparación justificada es el corazón del ejercicio."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "unidad-2-enfoques-y-planificacion",
+    "title": "Unidad 2 — Enfoques de desarrollo y planificación",
+    "subtitle": "Scrum · Historias de usuario · Estimación · Planes",
+    "description": "Unidad completa: material de clase (UT2-P1), lectura (Scrum Guide, Scrum Primer, Kniberg, Cohn y Larman) y ejercicios resueltos (EJT2 Scrum Planning y EJT4 planes de desarrollo y mantenimiento).",
+    "icon": "2",
+    "color": "#80A1C1",
+    "tags": [
+      "unidad-2",
+      "scrum",
+      "historias-de-usuario",
+      "estimacion",
+      "planificacion"
+    ],
+    "sources": [
+      "Material de clase ICS2026_UT2_P1",
+      "Ken Schwaber y Jeff Sutherland (2020) Scrum Guide",
+      "Peter Deemer et al. (2009) The Scrum Primer v1.1",
+      "Henrik Kniberg (2007) Scrum y XP desde las trincheras — Caps. 2, 3 y 4",
+      "Mike Cohn (2006) Agile Estimating and Planning — Caps. 1 y 3",
+      "Mike Cohn (2004) User Stories Applied — Cap. 2",
+      "Craig Larman (2003) UML y Patrones, Ed. 2 — Cap. 2",
+      "Ejercicios EJT2 y EJT4 (2026)"
+    ],
+    "sections": [
+      {
+        "title": "Material de estudio — Enfoques de desarrollo y Scrum",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Enfoques de desarrollo y Scrum (clase UT2-P1, parte 1)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La Unidad 2 estudia los enfoques de desarrollo (tradicionales y ágiles), los principios y valores ágiles, Scrum (roles, artefactos y eventos), Kanban, la gestión de productos, los planes de desarrollo y mantenimiento, y la estimación. El UP visto en U1 reaparece aquí como puente: disciplinas, fases y artefactos antes de entrar a Scrum."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Historias de usuario: las 3 partes",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Una historia de usuario tiene tres partes: la descripción escrita (para planificar y como recordatorio), las conversaciones (para desarrollar los detalles) y las pruebas (que documentan detalles y dicen cuándo está completa). Describe una funcionalidad valiosa para un usuario o comprador, con lo justo escrito para no olvidar, estimar y planificar."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Formato Story Card: Como (rol)… Quiero (función)… Para (valor)… más criterios de aceptación.",
+              "Jerarquía: epic (ej. experiencia de compra) → feature (ej. exploración de productos) → historia (ej. consultar detalle de un producto).",
+              "Enfatizan comunicación verbal sobre escrita y son comprensibles para clientes y desarrolladores.",
+              "Tienen el tamaño justo para planificar y funcionan para desarrollo iterativo: posponen detalles hasta entender qué se necesita."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "INVEST: una buena historia",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Independiente: sin dependencias que bloqueen su entrega.",
+              "Negociable: no es un contrato, se conversa.",
+              "Valiosa: aporta valor al usuario.",
+              "Estimable: el equipo puede dimensionarla.",
+              "Pequeña (Small): cabe en una iteración.",
+              "Comprobable (Testeable): se puede verificar con pruebas."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Criterios de aceptación, DoR y DoD",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Los criterios de aceptación dan la pauta para saber si una historia está completamente implementada y evitan dedicarle demasiado o muy poco esfuerzo. Idealmente se escriben antes de codificar, discutiendo: ¿qué más necesitan saber los programadores?, ¿qué se asume de la implementación?, ¿en qué circunstancias se comportaría distinto?, ¿qué puede salir mal?"
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Definition of Ready (DoR): acuerdos del equipo sobre lo que debe tener una historia para abordarla (mockup, wireframe, criterios de aceptación). Exige claridad, criterios definidos, estimación hecha y dependencias resueltas. Definition of Done (DoD): criterios para considerar completo un incremento y listo para el cliente; la crea el equipo de desarrollo con opinión del PO y stakeholders. Importa porque aumenta la calidad, minimiza el riesgo, mejora la coordinación y permite medir el progreso."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Casos de uso 2.0",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Un caso de uso se materializa con todas las formas de emplear un sistema para alcanzar una meta de un usuario. Como son grandes, se dividen en porciones: piezas pequeñas seleccionables para entregar, con tamaño apto para desarrollo y pruebas, que fluyen rápido. Cada porción son una o más historias de un caso de uso que dan valor claro. Narrando historias exploramos los casos de uso con los interesados (funcionales o no funcionales)."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Que se escribe en una línea",
+              "Que cabe en una iteración y se puede entregar",
+              "Que no tiene criterios de aceptación",
+              "Que la escribe una sola persona"
+            ],
+            "question": "Según INVEST, ¿qué significa que una historia sea “pequeña”?",
+            "correctIndex": 1,
+            "explanation": "Small: tamaño adecuado para planificar y entregar dentro de una iteración."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Los criterios de aceptación conviene escribirlos antes de codificar, durante la conversación cliente-equipo.",
+            "correctAnswer": true,
+            "explanation": "Reflejar los detalles como pruebas mientras se discute la historia evita dedicarle demasiado o muy poco esfuerzo."
+          }
+        ]
+      },
+      {
+        "title": "Material de estudio — Estimación, planificación y planes",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Estimación, planificación y planes (clase UT2-P1, parte 2)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Segunda parte del material: estimar (esfuerzo, tamaño, tiempo), planificar (niveles y Sprint Planning) y los planes de desarrollo y de mantenimiento, con el ejercicio de comparar ambos bajo una restricción sorpresa."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Estimar: qué y para qué",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Estimar es determinar anticipadamente el esfuerzo del proyecto, el tamaño del producto y el tiempo para finalizarlo. Es necesario para planificar: el cliente quiere saber cuándo y cuánto costará, infraestructura debe preparar ambientes, el equipo organiza su próximo proyecto y cada interesado necesita visibilidad."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Planificación y Sprint Planning",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Un buen proceso de planificación reduce riesgo e incertidumbre, mejora decisiones, genera confianza y transmite información.",
+              "La planificación tiene niveles (día, iteración, release, producto): cada nivel con horizonte y detalle distintos.",
+              "El Sprint Planning produce: meta del Sprint, lista de miembros y dedicación, pila del Sprint, fecha de la demo y lugar/momento del Daily."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Plan de desarrollo (11 puntos) y plan de mantenimiento (9 puntos)",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Plan de desarrollo: propósito, alcance (primera versión o posteriores), estrategia (modelo o marco), organización del equipo y del trabajo, plan temporal, estimación, seguimiento, riesgos, gestión de cambios y entregables. Plan de mantenimiento: propósito, alcance, recepción de solicitudes (MR/PR), clasificación (Crítica-Alta-Media-Baja), flujo, priorización, estrategia de implementación, gestión de versiones y métricas."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Preguntas para poner a prueba tu plan de desarrollo: ¿qué supuesto importante hace?, ¿qué parte es más vulnerable a un cambio?, ¿qué información faltante lo modificaría? Y la lección del ejercicio de cambios: el plan no elimina la incertidumbre; organiza el trabajo, coordina decisiones, controla el avance y permite adaptarse cuando cambian las condiciones (ej. recorte del 30 % del presupuesto)."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Solo la fecha de entrega final",
+              "Meta del Sprint, pila del Sprint, fecha de demo y daily definido",
+              "El contrato con el cliente",
+              "La arquitectura completa del sistema"
+            ],
+            "question": "¿Qué produce un Sprint Planning?",
+            "correctIndex": 1,
+            "explanation": "Meta, miembros/dedicación, pila del Sprint, fecha de demo y daily: esos son sus 5 productos."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "El plan de desarrollo elimina la incertidumbre del proyecto.",
+            "correctAnswer": false,
+            "explanation": "El plan organiza, coordina y controla, pero su función incluye adaptarse cuando las condiciones cambian."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Scrum Guide 2020 (Schwaber y Sutherland)",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Scrum Guide 2020: el marco mínimo",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Scrum es un marco ligero para generar valor con soluciones adaptativas a problemas complejos. Se funda en el empirismo (el conocimiento viene de la experiencia) y el pensamiento lean (reducir desperdicio). Es iterativo e incremental, intencionalmente incompleto: solo define lo necesario y envuelve tus prácticas. Regla de oro: quitar elementos o no seguir sus reglas oculta problemas y deja de ser Scrum."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Los 3 pilares y los 5 valores",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Transparencia: proceso y trabajo visibles; las decisiones se basan en el estado de los artefactos.",
+              "Inspección: revisar con frecuencia artefactos y progreso para detectar desvíos (los 5 eventos dan la cadencia).",
+              "Adaptación: ajustar cuanto antes cuando algo se desvía; requiere un equipo empoderado.",
+              "Valores: compromiso, foco, apertura, respeto y coraje — sin ellos los pilares no funcionan."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Scrum Team: 1 PO + 1 SM + Developers",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Equipo cohesivo, multifuncional y autogestionado, sin sub-equipos ni jerarquías, típicamente de 10 o menos personas, enfocado en un Product Goal a la vez. Developers: crean el plan del Sprint, aseguran calidad según la DoD y adaptan el plan a diario. Product Owner: maximiza el valor; define el Product Goal, crea y ordena el Product Backlog; es una sola persona y solo él puede cancelar un Sprint. Scrum Master: líder servidor que establece Scrum, remueve impedimentos y coachea al equipo, al PO y a la organización."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Los 5 eventos y los 3 artefactos",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sprint (contenedor, máx. 1 mes): convierte ideas en valor; durante el Sprint no cambian las reglas que pongan en riesgo la meta.",
+              "Sprint Planning (máx. 8 h): responde por qué (meta), qué (ítems) y cómo (plan) → Sprint Backlog.",
+              "Daily Scrum (15 min, Developers): inspecciona el progreso hacia la meta y adapta el plan del día.",
+              "Sprint Review (máx. 4 h): el equipo presenta resultados a stakeholders y se ajusta el Backlog; es trabajo, no show.",
+              "Sprint Retrospective (máx. 3 h): mejora calidad y eficacia; las mejoras pueden entrar al próximo Sprint.",
+              "Product Backlog + Product Goal · Sprint Backlog + Sprint Goal · Incremento + Definition of Done.",
+              "Definition of Done: estándar formal de calidad; lo que no la cumple no se presenta ni se libera, vuelve al Backlog."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "El Scrum Master",
+              "Los Developers votando",
+              "El Product Owner, si la meta quedó obsoleta",
+              "Cualquier stakeholder"
+            ],
+            "question": "¿Quién puede cancelar un Sprint?",
+            "correctIndex": 2,
+            "explanation": "Solo el PO puede cancelar un Sprint, cuando el Sprint Goal pierde sentido."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "En Scrum se puede “hacer un poco de Scrum” y seguir llamándolo Scrum aunque falten eventos.",
+            "correctAnswer": false,
+            "explanation": "Scrum existe solo en su totalidad: quitar elementos oculta problemas y deja de ser Scrum."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Scrum Primer y Kniberg en la práctica",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Del manual a la trinchera (Deemer + Kniberg)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El Scrum Primer y “Scrum y XP desde las trincheras” muestran cómo se vive Scrum: Sprints de 1 a 4 semanas de duración fija que nunca se alargan, equipos estables de 7±2 personas 100 % dedicadas, y tableros físicos con post-its (Pendiente/En curso/Terminado) más burndown en la pared."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Planning en dos partes y velocidad",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Parte 1 (qué/por qué, con el PO): se revisa la prioridad, la meta y la DoD. Parte 2 (cómo, solo el equipo): se estima la capacidad (un día real rinde 4–6 h efectivas) y se dividen historias en tareas. La velocidad (puntos por Sprint, ej. 26) proyecta fecha y alcance; el factor de dedicación típico de un equipo nuevo es 70 %. Solo cuentan las historias 100 % terminadas."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Backlog útil: ID, nombre corto, importancia con huecos (10, 30, 150), estimación relativa, “cómo probarlo” y notas; Excel compartido antes que herramientas pesadas.",
+              "Refinamiento: 5–10 % de cada Sprint para preparar los próximos 1–2 Sprints; sin esto el planning se llena de preguntas.",
+              "Calidad interna (diseño, tests, refactorización) no se negocia por velocidad; se negocia alcance.",
+              "Historias de 2 a 8 días-hombre; si superan los 20–40 puntos, se dividen preservando valor de negocio.",
+              "Planning Poker: todo el equipo estima a la vez con cartas 0,1,2,3,5,8,13,20,40,100; el PO responde, no estima.",
+              "Bugs: top impreso en la pared, historia que referencia tickets, bajar el factor, o backlog dentro del tracker."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Daily, demo, retro y XP",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Daily de 15 min de pie frente al tablero (ayer/hoy/bloqueos, sin discusiones). Demo obligatoria cada Sprint con código funcionando, sin slides, dejando probar a la audiencia: obliga a terminar de verdad. Retro de 1–3 h con formato bien/mejorar, votación con 3 puntos por persona y 5 mejoras como foco. XP aporta la ingeniería: TDD (test → código mínimo → refactorizar), pair programming rotativo, integración continua que compila y testea cada commit, diseño incremental y ritmo sostenible sin horas extra crónicas."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "La calidad interna del código",
+              "El alcance, no la calidad",
+              "La Definition of Done",
+              "El timebox del Sprint"
+            ],
+            "question": "Según Kniberg, ¿qué se negocia cuando el PO pide ir más rápido?",
+            "correctIndex": 1,
+            "explanation": "La calidad interna es del equipo y no se sacrifica; se recorta o reprioriza alcance."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Un Sprint se puede alargar unos días si falta poco para terminar.",
+            "correctAnswer": false,
+            "explanation": "El Sprint es timebox fijo: no se alarga, se recorta alcance; alargarlo destruye el pulso y la estimación."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Cohn: historias y estimación ágil",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Historias (Applied) y estimación (Estimating)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Cohn complementa la clase: User Stories Applied detalla las 3 C (Card, Conversation, Confirmation) y el formato “Como (rol) quiero (función) para (valor)”. Agile Estimating and Planning responde por qué estimar: no es por el plan (que caduca) sino por planear — reduce riesgo e incertidumbre, apoya decisiones, genera confianza y comunica."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Story points, días ideales y velocity",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Story point: medida relativa sin unidades (un 2 es el doble que un 1); no es una duración.",
+              "Día ideal: lo que tardarías sin interrupciones; útil para arrancar, pero decae con la experiencia.",
+              "Cohn prefiere story points: impulsan equipos multifuncionales y no se devalúan como los días ideales.",
+              "Velocity: puntos terminados por iteración; gran igualador que corrige la sobre/subestimación sistemática.",
+              "Cono de incertidumbre (Boehm): en factibilidad el error va de 60 % a 160 %; no se pelea contra el cono, se re-estima.",
+              "Niveles: día, iteración (1–4 semanas, no se alarga), release (3–6 meses), producto y portafolio."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Splitting: épicas y compuestas",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Épica: historia gigante placeholder con estimado grueso, sin detallar aún. Compuesta: se divide por operaciones CRUD o por datos (ej. “publicar CV” → crear, editar, borrar). Compleja/incierta: se parte en spike timeboxed de investigación más la historia funcional. Nunca dividir en tareas técnicas (diseñar BD, codificar, testear): buscar el corte vertical que entregue valor."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Porque equivalen a horas exactas",
+              "Porque no decaen con la experiencia e impulsan equipos multifuncionales",
+              "Porque los entiende mejor el cliente",
+              "Porque eliminan la incertidumbre"
+            ],
+            "question": "¿Por qué Cohn prefiere story points sobre días ideales?",
+            "correctIndex": 1,
+            "explanation": "Los días ideales se devalúan (el experto tarda menos); el punto mide tamaño relativo estable."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Una historia técnica (“diseñar la BD”) es una buena forma de dividir una historia grande.",
+            "correctAnswer": false,
+            "explanation": "Hay que dividir verticalmente por valor (CRUD o datos), no en capas técnicas."
+          }
+        ]
+      },
+      {
+        "title": "Lectura — Larman: iterativo y Proceso Unificado",
+        "category": "lectura",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Iterativo-incremental y UP (UML y Patrones, cap. 2)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Larman contrasta el ciclo iterativo (mini-proyectos timeboxed con análisis, diseño, código y test en cada uno; cada iteración es un ejecutable parcial con calidad de producción, no un prototipo descartable) con la cascada de Royce (fijar 100 % de requisitos, diseñar todo, implementar). El estudio MIT Sloan señala lo iterativo como factor n.º 1 de éxito. Aceptar el cambio temprano es virtud: el ciclo construir-feedback-adaptar converge al verdadero camino."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Iteraciones de 2 a 6 semanas: menos no da feedback significativo, más abruma.",
+              "Si no llegás: recortá alcance, no muevas la fecha.",
+              "UP = buenas prácticas (iterativo, riesgo, calidad continua) en un marco adaptable, no un método pesado.",
+              "Fases (planificación, no cascada): Inicio (visión y business case), Elaboración (núcleo + riesgos + estimados realistas), Construcción (resto) y Transición (beta y despliegue).",
+              "Disciplinas (negocio, requisitos, diseño, implementación, pruebas, gestión, entorno) trabajan en casi toda iteración; cambia el esfuerzo relativo.",
+              "No entendiste UP si creés que Inicio = requisitos, Elaboración = diseño y Construcción = código."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Se extiende la iteración",
+              "Se recorta alcance y se mantiene la fecha",
+              "Se agregan más personas",
+              "Se saltean las pruebas"
+            ],
+            "question": "Según Larman, si una iteración no alcanza, ¿qué se hace?",
+            "correctIndex": 1,
+            "explanation": "Timebox fijo: se recorta scope, nunca se mueve la fecha."
+          }
+        ]
+      },
+      {
+        "title": "Ejercicio resuelto — Scrum Planning (EJT2)",
+        "category": "ejercicio",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "EJT2 Scrum Planning — 5 historias del e-commerce analizadas",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Consigna: leer las historias para trabajar el planning en clase. Resolución modelo: evaluar cada historia con INVEST, verificar su Definition of Ready, estimar en forma relativa y deducir orden y dependencias para armar el plan de Sprints. Escala usada: Fibonacci (1, 2, 3, 5, 8, 13)."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "US-01 Consultar detalle (Alta) → 3 pts",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "INVEST: valiosa, pequeña, testeable (CA1–CA4 en formato Dado/Cuando/Entonces); independiente salvo el listado previo.",
+              "DoR: cumple — endpoint GET definido con 200/404, datos mínimos listados, caso de error contemplado.",
+              "Estimación 3: una pantalla + integración + manejo del 404; es la referencia base (“la más simple”)."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "US-02 Agregar al carrito (Alta) → 5 pts",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Ambigüedad a refinar: ¿dónde vive el carrito? CA4 (persiste al navegar) sugiere estado local; hay que explicitarlo.",
+              "Testeable (CA1–CA4 claros) pero con regla de negocio (acumular cantidades) que la hace mayor que US-01.",
+              "Estimación 5: interacción + estado + visualización; depende del catálogo/detalle (US-01)."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Nada, está perfecta",
+              "Dónde persiste el carrito (local vs backend)",
+              "El color del botón",
+              "El nombre del endpoint de productos"
+            ],
+            "question": "¿Qué falta refinar en US-02 antes del Sprint?",
+            "correctIndex": 1,
+            "explanation": "CA4 exige continuidad al navegar: hay que acordar el mecanismo de persistencia en el refinement."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "US-03 Confirmar compra (Media) → 13 pts: hay que dividirla",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Es una épica encubierta: validaciones, precios vigentes, subtotales, stock, atomicidad y checkout.",
+              "Split vertical propuesto: (a) crear orden feliz + cálculos (5), (b) stock insuficiente y atomicidad (5), (c) checkout frontend + errores (3).",
+              "Regla de oro del enunciado: precio vigente congelado en OrderItem y rechazo total si falta stock."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "US-04 Mis órdenes (Media) → 5 pts · US-05 Sobreventa (Baja) → absorber",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "US-04: bien acotada (listado + filtro + paginación de 10); depende de US-03 porque necesita órdenes existentes.",
+              "US-05 viola la I de INVEST: no es entregable sola, es calidad de US-03 (transacción atómica, stock nunca negativo).",
+              "Resolución: convertir US-05 en criterios de aceptación de US-03b más un test de concurrencia, no un ítem aparte."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Plan de Sprints propuesto (velocity 8–10)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Sprint 1: US-01 (3) + US-02 (5) = 8 → valor navegable y comprable cuanto antes.",
+              "Sprint 2: US-03a (5) + US-03c (3) = 8 → compra feliz punta a punta.",
+              "Sprint 3: US-03b (5) + US-04 (5) = 10 → robustez (stock atómico) + seguimiento.",
+              "US-05 viaja dentro de US-03b como criterios + test de concurrencia."
+            ],
+            "options": []
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "US-05 debe planificarse como una historia independiente en su propio Sprint.",
+            "correctAnswer": false,
+            "explanation": "Es un atributo de calidad transversal: se absorbe como criterios de US-03, no como ítem solo."
+          }
+        ]
+      },
+      {
+        "title": "Ejercicio resuelto — Planes de desarrollo y mantenimiento (EJT4)",
+        "category": "ejercicio",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "EJT4 Planes — desarrollo, mantenimiento y tarjetas T01–T06",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Contexto: e-commerce (productos, carrito, ventas, pagos, stock, seguimiento), 6 meses para la primera versión operativa y el mismo equipo mantiene después. Resolución modelo: plan de desarrollo mínimo de 1 página, plan de mantenimiento mínimo de 1 página y procesamiento de las 6 tarjetas con el plan."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Plan de desarrollo mínimo (1 página)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Alcance inicial: catálogo, carrito, checkout, pagos, stock y seguimiento de pedidos; pagos con proveedor externo desde el día 1 (riesgo).",
+              "Estrategia: Scrum, Sprints de 2 semanas (≈12 Sprints), releases internas cada Sprint y demo con stakeholders.",
+              "Organización: PO + SM + equipo multifuncional; backlog ordenado por valor con US-01/US-02 primero (ver EJT2).",
+              "Entregables: incremento potencialmente liberable por Sprint; release v1.0 operativa al mes 6.",
+              "Estimación y calendario: story points + velocity (ej. 8–10/Sprint); hitos en Sprints 4 (compra feliz), 8 (pagos integrados) y 12 (v1.0).",
+              "Riesgos y seguimiento: integración de pagos, concurrencia de stock (US-05) y rendimiento; burndown + review + retro."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Plan de mantenimiento mínimo (1 página)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Tipos esperados: correctivo (defectos), adaptativo (entorno/proveedores), perfectivo (mejoras y rendimiento) y preventivo (refactors).",
+              "Recepción: tablero único (bugs + mejoras) con plantilla (pasos, esperado vs obtenido, impacto).",
+              "Clasificación: Crítica (plata/datos en riesgo), Alta, Media, Baja; prioriza por impacto × urgencia.",
+              "Análisis previo: reproducir, impacto y regresión, estimación; nada se toca sin reproducirlo.",
+              "Implementación y pruebas: rama por cambio, test del caso + regresión, revisión de pares.",
+              "Liberación: versionado semántico + notas; hotfix solo para Crítica en producción.",
+              "Métricas: MTTR, defectos reabiertos, lead time de cambios."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Tarjetas T01–T06 procesadas con el plan",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "T01 pedidos pagados con pago rechazado → correctivo, Crítica: hotfix + conciliar pagos afectados y test de regresión.",
+              "T02 API de pagos discontinuada en 90 días → adaptativo, Alta: planificar migración en 2–3 Sprints antes del corte.",
+              "T03 promo “lleve 3, pague 2” → perfectivo, Media: historia de negocio al backlog, con criterios de aceptación.",
+              "T04 checkout con lógica mezclada y regresiones → preventivo, Alta: refactor por capas con red de tests antes de tocar.",
+              "T05 dato adicional en transacciones → adaptativo, Media: cambio de esquema + migración + reportes.",
+              "T06 consultas degradadas con +300 % de operaciones → perfectivo, Alta: medir, índices/caché y prueba de carga."
+            ],
+            "options": []
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Perfectivo, Media",
+              "Correctivo, Crítica (hotfix)",
+              "Preventivo, Baja",
+              "Adaptativo, Media"
+            ],
+            "question": "T01 (pedidos marcados pagados con pago rechazado) es…",
+            "correctIndex": 1,
+            "explanation": "Defecto en producción con dinero real en riesgo: correctivo crítico, vía hotfix."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "El plan de mantenimiento atiende defectos solo después de la entrega al cliente.",
+            "correctAnswer": true,
+            "explanation": "El mantenimiento (soporte) ocurre tras la entrega; el desarrollo previo usa el plan de desarrollo."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "unidad-3-gestion-de-configuracion",
+    "title": "Unidad 3 — Gestión de configuración del software",
+    "subtitle": "SCM · Versiones · CI/CD · Estrategias de despliegue",
+    "description": "SCM, ítems de configuración, líneas base, control de cambios y versiones, CI/CD y DevOps. Estructura lista: completar con UT3_P1 y EJT5.",
+    "icon": "3",
+    "color": "#D97706",
+    "tags": [
+      "unidad-3",
+      "scm",
+      "versionado",
+      "ci-cd",
+      "devops"
+    ],
+    "sources": [
+      "Material ICS2026_UT3_P1",
+      "EJT5 Estrategias de ramificación"
+    ],
+    "sections": [
+      {
+        "title": "Hoja de ruta — cómo completar esta unidad",
+        "category": "material",
+        "blocks": [
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Unidad 3 — en preparación (misma estructura que U1)",
+            "level": 2
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Esta unidad ya tiene su lugar en la página con la misma estructura que las Unidades 1 y 2 (material + lectura + ejercicios). Seguí la guía COMO-TRABAJAR-U2-U3.md: cada fuente del material va a una sección category material, cada capítulo de la bibliografía a una sección category lectura, y cada ejercicio a una sección category ejercicio con su resolución."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Temario (del material de estudio)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Gestión de configuración: políticas, procesos y herramientas",
+              "Ítems de configuración, repositorio, versiones, líneas base y releases",
+              "Control de cambios y auditorías; proceso de administración de la configuración",
+              "CI/CD, estrategias de despliegue y cultura DevOps"
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Ejercicios pendientes de resolución",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "EJT5 — Estrategia de branching: EC-101/EC-102, BUG-201, HOTFIX-301, release v1.3.0 (resolver como en EJT1)"
+            ],
+            "options": []
+          }
+        ]
+      }
+    ]
+  }
+]
