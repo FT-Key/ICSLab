@@ -95,7 +95,7 @@ export function buildUnidad3(B) {
         'Cambios web: C1 local, C2 que impacta otros objetos, C3 amplio (nueva funcionalidad/navegación), C4 rediseño visible; el proceso se endurece de C1 a C4.',
         'Sin control en web: publicaciones no autorizadas, funcionalidad mal probada, huecos de seguridad y daño económico.',
       ] }),
-      B('quiz', { question: '¿Qué es la ACC?', options: ['Un test automatizado', 'La autoridad que aprueba o rechaza cambios con visión global', 'Una rama de Git', 'Un tipo de baseline'], correctIndex: 1, explanation: 'Autoridad de Control de Cambios: decide con impacto en hardware, desempeño, cliente y calidad.' }),
+      B('quiz', { question: '¿Qué es la ACC?', options: ['El test automatizado que valida cada commit', 'La autoridad que aprueba o rechaza cambios con visión global', 'El responsable de compilar y publicar cada release', 'El documento que lista todos los bugs conocidos del sistema'], correctIndex: 1, explanation: 'Autoridad de Control de Cambios: decide con impacto en hardware, desempeño, cliente y calidad.' }),
       B('truefalse', { statement: 'Antes de la baseline los cambios pueden ser rápidos e informales.', correctAnswer: true, explanation: 'El control formal rige desde la baseline en adelante.' }),
     ],
   }

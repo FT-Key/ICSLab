@@ -157,7 +157,7 @@ export function buildU2Lectura(B) {
         'Fallos típicos: cambiar Scrum en vez de cambiar ellos (ej. alargar el Sprint), imponerlo desde arriba, asumir prohibido lo no dictado. Caso Yahoo: +36 % productividad, 85 % seguiría con Scrum.',
       ] }),
       B('quiz', { question: '¿Qué indica necesitar siempre un “Sprint de Entrega” de estabilización?', options: ['Madurez del equipo', 'Debilidad en prácticas de ingeniería (tests, integración, refactorización)', 'Buena velocidad', 'Exceso de refinement'], correctIndex: 1, explanation: 'Con CI, refactorización y tests efectivos casi no hace falta estabilización.' }),
-      B('truefalse', { statement: 'En la Review solo debe mostrarse lo que cumple la Definition of Done.', correctAnswer: true, explanation: 'Mostrar código desordenado sin probar es simular calidad; el SM debe frenarlo.' }),
+      B('truefalse', { statement: 'En la Sprint Review lo central es la presentación con diapositivas del avance.', correctAnswer: false, explanation: 'Lo central es la conversación profunda con stakeholders sobre el incremento; sin diapositivas y con 30 min de preparación como máximo.' }),
     ],
   }
 
@@ -262,7 +262,7 @@ export function buildU2Lectura(B) {
       B('text', { content: 'Participan todos los developers (≤10); el PO modera y responde pero NO estima. Mazo por persona: 0,1,2,3,5,8,13,20,40,100 (cercanos para lo próximo, grandes solo para épicas; nada de 66 vs 67: falsa precisión). Procedimiento: preguntas → voto privado simultáneo → si hay dispersión, alto/bajo explican → re-voto hasta converger (rara vez >3 rondas). Timer de arena de 2 min para no eternizarse. Funciona por múltiples expertos, diálogo que explicita supuestos y promedio.' }),
       B('quiz', { question: 'Según Boehm, ¿cuál es el error en factibilidad?', options: ['±5 %', 'De 60 % a 160 %', '+10 % / −5 %', 'Cero si se estima bien'], correctIndex: 1, explanation: '20 semanas estimadas → real entre 12 y 32.' }),
       B('quiz', { question: '100 puntos con velocidad 11 por iteración de 2 semanas son…', options: ['9 semanas', 'Unas 20 semanas de calendario', '11 semanas exactas', 'Imposible de calcular'], correctIndex: 1, explanation: '100/11 ≈ 9,1 → 10 iteraciones × 2 semanas = 20 semanas.' }),
-      B('truefalse', { statement: 'En Planning Poker el Product Owner estima junto al equipo.', correctAnswer: false, explanation: 'El PO modera y responde preguntas; estimar es del equipo.' }),
+      B('truefalse', { statement: 'Cambiar el plan equivale a cambiar la fecha de entrega.', correctAnswer: false, explanation: 'Se quita feature, se recorta alcance o se agrega gente: el plan comunica supuestos, no es una fecha fija.' }),
     ],
   }
 
@@ -297,7 +297,7 @@ export function buildU2Lectura(B) {
         'Muy pequeñas (bugs, colores): combinar en una historia de medio día a varios días. Nunca dividir en capas técnicas.',
       ] }),
       B('quiz', { question: '¿Qué es un spike?', options: ['Un bug crítico', 'Un experimento timeboxed para aprender lo justo y poder estimar', 'Una demo fallida', 'Un tipo de planning'], correctIndex: 1, explanation: 'Siempre con límite de tiempo; luego van spike + historia real por separado.' }),
-      B('quiz', { question: '¿Dónde van los criterios de aceptación?', options: ['En el contrato', 'Al dorso de la tarjeta (o campo electrónico), escritos antes de codificar', 'Solo en la cabeza del tester', 'En el manual de usuario'], correctIndex: 1, explanation: 'Notas cortas que capturan la conversación; no una spec IEEE.' }),
+      B('quiz', { question: '¿Dónde van los criterios de aceptación?', options: ['En el contrato', 'Al dorso de la tarjeta (o campo electrónico), escritos antes de codificar', 'En el repositorio, una vez liberada la versión', 'En el manual de usuario'], correctIndex: 1, explanation: 'Notas cortas que capturan la conversación; no una spec IEEE.' }),
       B('truefalse', { statement: 'Dividir “diseñar BD, codificar, testear” es una buena forma de partir una historia grande.', correctAnswer: false, explanation: 'Hay que cortar verticalmente por valor (CRUD o datos), no en capas técnicas.' }),
     ],
   }
@@ -322,7 +322,7 @@ export function buildU2Lectura(B) {
         'Disciplinas (negocio, requisitos, diseño, implementación, pruebas, gestión, entorno) trabajan en casi toda iteración; cambia el esfuerzo relativo.',
         'Términos: ciclo (hasta el release), hito (decisión fin de fase), versión (ejecutable estable fin de iteración), incremento (delta entre versiones).',
       ] }),
-      B('quiz', { question: 'Si una iteración no alcanza, ¿qué se hace según Larman?', options: ['Se extiende la iteración', 'Se recorta alcance y se mantiene la fecha', 'Se agrega más gente', 'Se saltean las pruebas'], correctIndex: 1, explanation: 'Timebox fijo: se quitan tareas a posteriores, nunca se mueve la fecha.' }),
+      B('quiz', { question: 'Según Larman, ¿qué malentendido revela no haber entendido el UP?', options: ['Creer que el UP es iterativo e incremental', 'Creer que Inicio = requisitos, Elaboración = diseño y Construcción = código', 'Creer que cada iteración produce un ejecutable parcial', 'Creer que los riesgos altos se mitigan temprano'], correctIndex: 1, explanation: 'Las fases son planificación, no cascada: todas las disciplinas trabajan en casi toda iteración.' }),
       B('truefalse', { statement: 'En UP la fase de Elaboración es diseñar todo en papel antes de programar.', correctAnswer: false, explanation: 'Elaboración implementa iterativamente el núcleo y mitiga riesgos con código de calidad.' }),
     ],
   }

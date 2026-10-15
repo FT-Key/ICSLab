@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'motion/react'
 import {
@@ -280,6 +280,11 @@ function UnitCard({ topic, onClick, index }: { topic: Topic; onClick: () => void
 /* ── Vista de unidad: secciones agrupadas por categoría ───── */
 function UnitOverview({ topic }: { topic: Topic }) {
   const navigate = useNavigate()
+  // Al entrar/cambiar de unidad, volver arriba: el usuario siempre
+  // percibe que cambió de página.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+  }, [topic.slug])
   const completed = loadCompleted(topic.slug)
   const groups: { key: SectionCategory; heading: string; desc: string }[] = [
     { key: 'material', heading: 'Material de estudio', desc: 'Lo visto en clase: la base de cada unidad.' },
@@ -367,6 +372,15 @@ function ChapterView({ topic, chapterIndex }: { topic: Topic; chapterIndex: numb
   const [completed, setCompleted] = useState<Set<number>>(() => loadCompleted(topic.slug))
   const section = topic.sections[chapterIndex]
   const category = section ? (section.category ?? categoryOf(section.title)) : 'lectura'
+  const headingRef = useRef<HTMLHeadingElement>(null)
+
+  // Al cambiar de sección (siguiente/anterior/píldora), subir al inicio
+  // y llevar el foco al título: sin esto el usuario no nota el cambio
+  // de página porque el scroll se conservaba a mitad del contenido.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+    headingRef.current?.focus({ preventScroll: true })
+  }, [topic.slug, chapterIndex])
 
   const handleSelect = useCallback((i: number) => {
     navigate(`/unidad/${topic.slug}/capitulo/${i}`)
@@ -412,33 +426,50 @@ function ChapterView({ topic, chapterIndex }: { topic: Topic; chapterIndex: numb
             </p>
             <CategoryBadge category={category} />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">{section.title}</h1>
+          <h1
+            ref={headingRef}
+            tabIndex={-1}
+            className="text-3xl md:text-4xl font-bold tracking-tight leading-tight focus:outline-none"
+          >
+            {section.title}
+          </h1>
         </div>
 
         <div className="space-y-5">
           {section.blocks.map((block, bi) => (
-            <ContentBlockRenderer key={bi} block={block} />
+            // key con chapterIndex: reinicia el estado de los quizzes al
+            // cambiar de sección (misma posición, distinto contenido).
+            <ContentBlockRenderer key={`${chapterIndex}-${bi}`} block={block} />
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-black/10 pt-6">
+        <nav
+          aria-label="Navegación entre secciones"
+          className="mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-black/10 pt-6"
+        >
           {chapterIndex > 0 ? (
             <button
               onClick={() => handleSelect(chapterIndex - 1)}
-              className="flex items-center justify-center gap-2 rounded-lg border border-black/10 bg-white px-4 py-3 text-base font-medium text-black/70 transition-all hover:bg-black/5"
+              title={topic.sections[chapterIndex - 1]?.title}
+              className="flex max-w-full items-center justify-center gap-2 rounded-lg border border-black/10 bg-white px-4 py-3 text-base font-medium text-black/70 transition-all hover:bg-black/5"
             >
-              <ArrowLeft size={16} />
-              Sección anterior
+              <ArrowLeft size={16} className="shrink-0" />
+              <span className="truncate">
+                Anterior: {topic.sections[chapterIndex - 1]?.title}
+              </span>
             </button>
           ) : <div />}
 
           {chapterIndex < topic.sections.length - 1 ? (
             <button
               onClick={() => handleSelect(chapterIndex + 1)}
-              className="flex items-center justify-center gap-2 rounded-lg bg-[#111827] px-5 py-3 text-base font-medium text-white transition-transform hover:scale-[1.03] active:scale-[0.98]"
+              title={topic.sections[chapterIndex + 1]?.title}
+              className="flex max-w-full items-center justify-center gap-2 rounded-lg bg-[#111827] px-5 py-3 text-base font-medium text-white transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
-              Siguiente sección
-              <ArrowRight size={16} />
+              <span className="truncate">
+                Siguiente: {topic.sections[chapterIndex + 1]?.title}
+              </span>
+              <ArrowRight size={16} className="shrink-0" />
             </button>
           ) : (
             <div className="text-base text-green-600 font-medium flex items-center gap-1">
@@ -446,7 +477,7 @@ function ChapterView({ topic, chapterIndex }: { topic: Topic; chapterIndex: numb
               ¡Completaste esta unidad!
             </div>
           )}
-        </div>
+        </nav>
       </div>
     </div>
   )
@@ -469,6 +500,10 @@ export default function ReadingSummary({ legacy = false }: { legacy?: boolean })
 
   // El contenido empaquetado se muestra de inmediato; la API refresca en
   // segundo plano y solo reemplaza si trae igual o más contenido.
+  // Home: al volver desde una sección con scroll bajo, empezar arriba.
+  useEffect(() => {
+    if (!slug) window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+  }, [slug])
   if (error) console.warn('[ICS] API no disponible, usando contenido local:', error.message)
   if (!topics?.length) {
     return <ErrorState error="No se encontraron temas. Ejecuta el seeder." onRetry={reload} />
