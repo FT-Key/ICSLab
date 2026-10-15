@@ -51,7 +51,7 @@ secciones, que el frontend agrupa y diferencia automáticamente:
 5. **Sembrar la base (opcional):** `npm run seed:topics --prefix backend`
    (requiere MongoDB). El `gen-unidades.js` además escribe una copia en
    `frontend/src/data/topics.json`, que el sitio usa como fuente principal:
-   la API solo la reemplaza si trae igual o más secciones. Así el deploy del
+   la API solo la reemplaza si trae estrictamente más secciones (con empate gana el bundle, para que una base sin resembrar nunca pise el contenido del deploy). Así el deploy del
    frontend siempre muestra el contenido actualizado sin depender del seed.
 
 ## Reglas de diseño (skill bento en `.opencode/skills/bento/`)

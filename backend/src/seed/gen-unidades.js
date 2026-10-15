@@ -172,7 +172,7 @@ const unidad3 = buildUnidad3(B)
 writeFileSync(DATA_PATH, JSON.stringify([unidad1, unidad2, unidad3], null, 2))
 // Copia empaquetada para el frontend: el sitio usa este JSON como fuente
 // principal (los deploys del frontend siguen a main sin fallar) y la API
-// solo lo reemplaza si trae igual o más contenido.
+// solo lo reemplaza si trae estrictamente más contenido.
 const FRONTEND_COPY = path.resolve(__dirname, '../../../frontend/src/data/topics.json')
 mkdirSync(path.dirname(FRONTEND_COPY), { recursive: true })
 writeFileSync(FRONTEND_COPY, JSON.stringify([unidad1, unidad2, unidad3], null, 2))

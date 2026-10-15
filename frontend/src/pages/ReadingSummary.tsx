@@ -491,15 +491,17 @@ export default function ReadingSummary({ legacy = false }: { legacy?: boolean })
 
   // Fuente principal: contenido empaquetado en el build (siempre
   // sincronizado con esta interfaz). La API solo lo reemplaza si trae
-  // igual o más contenido; si falla o está desactualizada, se ignora.
+  // ESTRICTAMENTE más contenido. Con empate gana el bundle: si la base
+  // de la API quedó sin resembrar, sus datos viejos nunca pisan el
+  // contenido actualizado del deploy.
   const topics = useMemo<Topic[]>(
-    () => (remote?.length && sectionCount(remote) >= sectionCount(bundledTopics) ? remote : bundledTopics),
+    () => (remote?.length && sectionCount(remote) > sectionCount(bundledTopics) ? remote : bundledTopics),
     [remote],
   )
-  const usingLocal = !remote?.length || sectionCount(remote) < sectionCount(bundledTopics)
+  const usingLocal = !remote?.length || sectionCount(remote) <= sectionCount(bundledTopics)
 
   // El contenido empaquetado se muestra de inmediato; la API refresca en
-  // segundo plano y solo reemplaza si trae igual o más contenido.
+  // segundo plano y solo reemplaza si trae estrictamente más contenido.
   // Home: al volver desde una sección con scroll bajo, empezar arriba.
   useEffect(() => {
     if (!slug) window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
