@@ -213,7 +213,9 @@ function UnitCard({ topic, onClick, index }: { topic: Topic; onClick: () => void
       initial={reduce ? false : { opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-      className="cursor-pointer h-full"
+      // min-w-0: evita el desborde horizontal en la grilla (el subtítulo con
+      // truncate/nowrap aportaría su ancho completo como mínimo de la columna)
+      className="cursor-pointer h-full min-w-0"
       onClick={onClick}
     >
       <BentoCard className="h-full bg-white/70 hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-shadow flex flex-col">
@@ -225,7 +227,7 @@ function UnitCard({ topic, onClick, index }: { topic: Topic; onClick: () => void
             {topic.icon || topic.title.charAt(0)}
           </span>
           <div className="min-w-0">
-            <p className="text-xs font-mono font-semibold uppercase tracking-[0.14em] text-black/50 truncate">
+            <p className="text-xs font-mono font-semibold uppercase tracking-[0.14em] text-black/50 line-clamp-2">
               {topic.subtitle}
             </p>
             <h2 className="text-xl md:text-2xl font-bold tracking-tight leading-snug">{topic.title}</h2>
@@ -338,7 +340,7 @@ function UnitOverview({ topic }: { topic: Topic }) {
                   <button
                     key={i}
                     onClick={() => navigate(`/unidad/${topic.slug}/capitulo/${i}`)}
-                    className="flex items-center gap-3 rounded-lg border border-black/5 bg-white/70 px-4 py-3.5 text-left shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-shadow"
+                    className="flex min-w-0 items-center gap-3 rounded-lg border border-black/5 bg-white/70 px-4 py-3.5 text-left shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-shadow"
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black/5 text-xs font-bold text-black/60">
                       {completed.has(i) ? <CheckCircle size={18} weight="fill" className="text-green-600" /> : i + 1}
