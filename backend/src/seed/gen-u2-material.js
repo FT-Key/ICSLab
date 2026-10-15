@@ -21,6 +21,28 @@ export function buildU2Material(B) {
       B('quote', { content: 'Responder al cambio por sobre seguir un plan.', source: 'Manifiesto Ágil (principio)' }),
       B('heading', { content: 'UP: disciplinas, fases y artefactos (puente con U1)', level: 3 }),
       B('text', { content: 'El Proceso Unificado (UP) organiza el desarrollo en disciplinas (requisitos, análisis, diseño, implementación, pruebas, gestión, entorno) que trabajan a lo largo de fases (Inicio, Elaboración, Construcción, Transición), generando artefactos (modelos, documentos, código, casos de prueba). Es el puente entre los modelos tradicionales y Scrum: iterativo e incremental, pero con más estructura formal.' }),
+      B('heading', { content: 'Manifiesto Ágil (2001): 4 valores y 12 principios', level: 3 }),
+      B('keypoints', { items: [
+        'Individuos e interacciones por sobre procesos y herramientas.',
+        'Software funcionando por sobre documentación extensiva.',
+        'Colaboración con el cliente por sobre negociación contractual.',
+        'Respuesta ante el cambio por sobre seguir un plan.',
+      ] }),
+      B('text', { content: 'Los 12 principios desarrollan esos valores: satisfacer al cliente con entregas tempranas y continuas; aceptar cambios aun tardíos; entregar seguido (de 2 semanas a 2 meses); negocio y desarrollo trabajando juntos a diario; equipos motivados con apoyo y confianza; conversación cara a cara; software funcionando como medida de progreso; ritmo sostenible; excelencia técnica y buen diseño continuos; simplicidad; equipos auto-organizados; reflexión y ajuste periódicos.' }),
+      B('heading', { content: 'Kanban aplicado al desarrollo de software', level: 3 }),
+      B('keypoints', { items: [
+        'Tablero visual con columnas (Por hacer / En curso / Hecho) y tarjetas que representan el trabajo.',
+        'Límite de trabajo en progreso (WIP): evita la sobrecarga y deja ver los cuellos de botella.',
+        'Flujo pull: se toma trabajo nuevo solo cuando hay capacidad; sin iteraciones fijas ni roles impuestos.',
+        'Métricas de flujo: lead time (pedido a entrega), throughput (trabajo por unidad de tiempo) y cycle time.',
+      ] }),
+      B('heading', { content: 'Gestión de productos e introducción a Lean', level: 3 }),
+      B('keypoints', { items: [
+        'Gestión de productos: visión del producto, roadmap y backlog único ordenado por valor y retorno (ROI); el PO decide el QUÉ y el equipo el CÓMO.',
+        'Lean en software: eliminar desperdicio (esperas, retrabajo, funcionalidades nunca usadas), amplificar el aprendizaje, decidir lo más tarde posible, entregar rápido, respetar al equipo, cuidar la calidad desde el inicio y optimizar el todo.',
+      ] }),
+      B('quiz', { question: 'Según el Manifiesto Ágil, ¿qué se valora por sobre la documentación extensiva?', options: ['Los procesos y las herramientas', 'El software funcionando', 'La negociación contractual', 'Seguir el plan inicial'], correctIndex: 1, explanation: 'El segundo valor: software funcionando por sobre documentación extensiva (sin eliminarla).' }),
+      B('truefalse', { statement: 'En Kanban, limitar el trabajo en progreso (WIP) evita la sobrecarga y mejora el flujo.', correctAnswer: true, explanation: 'El WIP limitado deja ver cuellos de botella; el trabajo nuevo entra por pull cuando hay capacidad.' }),
       B('heading', { content: 'Scrum: roles, artefactos y eventos', level: 3 }),
       B('text', { content: 'Scrum es un marco ágil con 3 roles (Product Owner, Developers, Scrum Master), 3 artefactos (Pila del Producto, Pila del Sprint, Incremento) y 5 eventos (Sprint, Sprint Planning, Scrum Diario, Demo/Review, Retrospectiva), más el Refinement como actividad continua de clarificar, dividir, estimar y ordenar el backlog.' }),
       B('keypoints', { items: [

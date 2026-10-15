@@ -4,7 +4,7 @@ export default [
   {type:'keypoints',items:[
     'Evolución: de programas individuales a sistemas de ingeniería complejos.',
     'Características: intangible, se desarrolla (no se manufactura), no se desgasta.',
-    'Aplicaciones: proposito personal, línea de negocio, ingeniería/cientifico, embebidos.',
+    'Aplicaciones: propósito personal, línea de negocio, ingeniería/científico, embebidos.',
     'Componentes Web: contenido estático, dinámico, scripts del lado del cliente y del servidor.',
     'Software como producto vs como programa individual.'
   ]},
@@ -14,5 +14,5 @@ export default [
   {type:'quiz',question:'¿Según la jerarquía de Pressman, qué distingue a un producto de software de un simple programa?',options:['El lenguaje de programación utilizado','La documentación, manuales, guías y soporte que lo acompañan','La cantidad de líneas de código','Que funciona sin ningún error'],correctIndex:1,explanation:'Programa = instrucciones ejecutables; producto = programa documentado y empaquetado con manuales, instalación y soporte.'},
   {type:'quiz',question:'¿Por qué el software embebido (IoT, automotriz, médico) exige ultra-confiabilidad y eficiencia?',options:['Porque debe tener la mejor interfaz gráfica del mercado','Porque controla hardware en tiempo real con memoria y energía limitadas','Porque se actualiza cada día con funciones nuevas','Porque solo se ejecuta en servidores cloud'],correctIndex:1,explanation:'Corre dentro de dispositivos con recursos escasos y fallos costosos; la depuración es compleja y el tiempo real no perdona.'},
   {type:'truefalse',statement:'Un programa sin documentación ni manuales ya califica como producto de software.',correctAnswer:false,explanation:'Pressman exige documentación, guías de instalación y soporte: sin eso es solo un programa, no un producto.'},
-  {type:'truefalse',statement:'El software de proposito personal incluye procesadores de texto y hojas de calculo.',correctAnswer:true,explanation:'El software de proposito personal son aplicaciones como Word, Excel o navegadores web que usamos diariamente.'}
+  {type:'truefalse',statement:'El software de propósito personal incluye procesadores de texto y hojas de cálculo.',correctAnswer:true,explanation:'El software de propósito personal son aplicaciones como Word, Excel o navegadores web que usamos diariamente.'}
 ]

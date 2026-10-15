@@ -197,7 +197,7 @@ export function buildU2Lectura(B) {
   }
 
   const L7 = {
-    title: 'Lectura — Kniberg: ejecución, demo, retro y XP',
+    title: 'Lectura — Kniberg: ejecución, demo, retro y XP (Caps. 3 y 4)',
     category: 'lectura',
     blocks: [
       B('heading', { content: 'Task board, burndown y sala (Kniberg, Cap. 3)', level: 2 }),
