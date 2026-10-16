@@ -562,11 +562,11 @@
           {
             "type": "keypoints",
             "items": [
-              "Análisis de requisitos: documentar todo lo que el sistema debe hacer.",
-              "Diseño del sistema: arquitectura de alto nivel y diseño detallado.",
-              "Implementación: código fuente en el lenguaje elegido.",
-              "Integración y pruebas: verificar que todo funcione junto.",
-              "Operaciones y mantenimiento: despliegue y soporte continuo."
+              "1. Análisis de requisitos: documentar todo lo que el sistema debe hacer.",
+              "2. Diseño del sistema: arquitectura de alto nivel y diseño detallado.",
+              "3. Implementación: código fuente en el lenguaje elegido.",
+              "4. Integración y pruebas: verificar que todo funcione junto.",
+              "5. Operaciones y mantenimiento: despliegue y soporte continuo."
             ],
             "options": []
           },
@@ -707,13 +707,13 @@
           {
             "type": "keypoints",
             "items": [
-              "Compilación automática al hacer push al repositorio.",
-              "Ejecución de pruebas unitarias, de integración y end-to-end.",
-              "Análisis estático de código (SonarQube, ESLint).",
-              "Generación de artefactos (Docker images, JAR files).",
-              "Despliegue automático a staging (CD).",
-              "Pruebas de aceptación automatizadas (CD).",
-              "Despliegue a producción con feature flags o blue-green deployment (CD)."
+              "1. Compilación automática al hacer push al repositorio.",
+              "2. Ejecución de pruebas unitarias, de integración y end-to-end.",
+              "3. Análisis estático de código (SonarQube, ESLint).",
+              "4. Generación de artefactos (Docker images, JAR files).",
+              "5. Despliegue automático a staging (CD).",
+              "6. Pruebas de aceptación automatizadas (CD).",
+              "7. Despliegue a producción con feature flags o blue-green deployment (CD)."
             ],
             "options": []
           },
@@ -849,10 +849,10 @@
           {
             "type": "keypoints",
             "items": [
-              "Elicitación: descubrir qué necesita el usuario mediante entrevistas, observación, brainstorming y análisis de sistemas existentes.",
-              "Análisis: clasificar, priorizar y resolver conflictos entre requerimientos.",
-              "Especificación: documentar los requerimientos en formatos estandarizados (SRS, casos de uso, historias de usuario).",
-              "Validación: verificar que los requerimientos sean correctos, completos y consistentes."
+              "1. Elicitación: descubrir qué necesita el usuario mediante entrevistas, observación, brainstorming y análisis de sistemas existentes.",
+              "2. Análisis: clasificar, priorizar y resolver conflictos entre requerimientos.",
+              "3. Especificación: documentar los requerimientos en formatos estandarizados (SRS, casos de uso, historias de usuario).",
+              "4. Validación: verificar que los requerimientos sean correctos, completos y consistentes."
             ],
             "options": []
           },
@@ -935,11 +935,11 @@
           {
             "type": "keypoints",
             "items": [
-              "Solicitud formal del cambio (quién, qué, por qué).",
-              "Análisis de impacto (costo, riesgo, dependencias).",
-              "Decisión (aprobar, rechazar, posponer).",
-              "Implementación (actualizar documentación, código, pruebas).",
-              "Comunicación (notificar a stakeholders)."
+              "1. Solicitud formal del cambio (quién, qué, por qué).",
+              "2. Análisis de impacto (costo, riesgo, dependencias).",
+              "3. Decisión (aprobar, rechazar, posponer).",
+              "4. Implementación (actualizar documentación, código, pruebas).",
+              "5. Comunicación (notificar a stakeholders)."
             ],
             "options": []
           },
@@ -1246,10 +1246,10 @@
           {
             "type": "keypoints",
             "items": [
-              "Planificación técnica: definir arquitectura, tecnologías y herramientas.",
-              "Planificación de desarrollo: estimación de esfuerzo, cronograma y recursos.",
-              "Gestión de proyectos: seguimiento de avance, control de cambios, mitigación de riesgos.",
-              "Seguimiento de hitos (milestones): puntos de verificación que confirman el progreso y alimentan la siguiente fase."
+              "1. Planificación técnica: definir arquitectura, tecnologías y herramientas.",
+              "2. Planificación de desarrollo: estimación de esfuerzo, cronograma y recursos.",
+              "3. Gestión de proyectos: seguimiento de avance, control de cambios, mitigación de riesgos.",
+              "4. Seguimiento de hitos (milestones): puntos de verificación que confirman el progreso y alimentan la siguiente fase."
             ],
             "options": []
           },
@@ -1306,10 +1306,10 @@
           {
             "type": "keypoints",
             "items": [
-              "Prevención: invertir en diseño robusto, capacitación y estándares (reduce fallos futuros).",
-              "Evaluación: pruebas, auditorías y revisión de código (detecta fallos existentes).",
-              "Fallos internos: bugs encontrados antes de entregar al usuario (corregir en desarrollo es barato).",
-              "Fallos externos: bugs que llegan al usuario (costosos por soporte, reputación, pérdida de clientes y demandas legales)."
+              "1. Prevención: invertir en diseño robusto, capacitación y estándares (reduce fallos futuros).",
+              "2. Evaluación: pruebas, auditorías y revisión de código (detecta fallos existentes).",
+              "3. Fallos internos: bugs encontrados antes de entregar al usuario (corregir en desarrollo es barato).",
+              "4. Fallos externos: bugs que llegan al usuario (costosos por soporte, reputación, pérdida de clientes y demandas legales)."
             ],
             "options": []
           },
@@ -1433,11 +1433,11 @@
           {
             "type": "keypoints",
             "items": [
-              "Comunicación: establecer diálogo con el cliente y stakeholders para entender necesidades (reuniones, prototipos, encuestas, análisis de dominio).",
-              "Planificación: definir alcance, estimar esfuerzo (puntos de función, COCOMO) y crear cronograma (Gantt, PERT).",
-              "Modelado: diseñar la arquitectura (capas, microservicios, eventos) y crear modelos de datos (ER, UML) con sus interfaces.",
-              "Construcción: codificar siguiendo estándares, compilar, probar (unitarias, integración, sistema) y documentar.",
-              "Despliegue: entregar al usuario, capacitar, configurar el entorno y monitorear."
+              "1. Comunicación: establecer diálogo con el cliente y stakeholders para entender necesidades (reuniones, prototipos, encuestas, análisis de dominio).",
+              "2. Planificación: definir alcance, estimar esfuerzo (puntos de función, COCOMO) y crear cronograma (Gantt, PERT).",
+              "3. Modelado: diseñar la arquitectura (capas, microservicios, eventos) y crear modelos de datos (ER, UML) con sus interfaces.",
+              "4. Construcción: codificar siguiendo estándares, compilar, probar (unitarias, integración, sistema) y documentar.",
+              "5. Despliegue: entregar al usuario, capacitar, configurar el entorno y monitorear."
             ],
             "options": []
           },
@@ -1476,10 +1476,10 @@
           {
             "type": "keypoints",
             "items": [
-              "Determinar objetivos: qué se quiere lograr en esta iteración.",
-              "Evaluar alternativas y riesgos: identificar opciones técnicas, analizar probabilidad e impacto de cada riesgo y planificar mitigación.",
-              "Desarrollar y verificar: construir y probar el incremento.",
-              "Planear la siguiente fase: revisar resultados y planificar la siguiente vuelta."
+              "1. Determinar objetivos: qué se quiere lograr en esta iteración.",
+              "2. Evaluar alternativas y riesgos: identificar opciones técnicas, analizar probabilidad e impacto de cada riesgo y planificar mitigación.",
+              "3. Desarrollar y verificar: construir y probar el incremento.",
+              "4. Planear la siguiente fase: revisar resultados y planificar la siguiente vuelta."
             ],
             "options": []
           },
@@ -1498,9 +1498,24 @@
           },
           {
             "type": "text",
-            "content": "Scrum vs XP vs Kanban: Scrum se enfoca en la gestión del trabajo (sprints, roles, ceremonias). XP se enfoca en la ingeniería del código (TDD, pair programming, refactoring). Kanban se enfoca en el flujo visual (tablero, WIP limits, métricas de flujo). Muchos equipos combinan: Scrum para gestión + XP para ingeniería + Kanban para visualización. Esta combinación se denomina Scrum-ban.",
             "items": [],
+            "options": [],
+            "content": "Scrum, XP y Kanban se enfocan en aspectos distintos del trabajo:"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Scrum: trabajo gestionado en sprints, con roles y ceremonias.",
+              "XP: ingeniería del código (TDD, pair programming, refactoring).",
+              "Kanban: flujo visual (tablero, WIP limits, métricas de flujo)."
+            ],
             "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Muchos equipos combinan: Scrum para gestión + XP para ingeniería + Kanban para visualización. Esta combinación se denomina Scrum-ban."
           },
           {
             "type": "text",
@@ -1583,25 +1598,13 @@
           },
           {
             "type": "text",
-            "content": "El SWEBOK (Software Engineering Body of Knowledge) es un estándar internacional (ISO/IEC TR 19759) publicado por la IEEE Computer Society que busca caracterizar los contenidos de las disciplinas de la ingeniería de software y promover una visión común del campo.",
+            "content": "El SWEBOK (Software Engineering Body of Knowledge) es un estándar internacional (ISO/IEC TR 19759) publicado por la IEEE Computer Society que busca caracterizar los contenidos de las disciplinas de la ingeniería de software y promover una visión común del campo. Su propósito es dar un marco común a la profesión y sostiene las certificaciones CSDA y CSDP de la IEEE.",
             "items": [],
             "options": []
           },
           {
-            "type": "keypoints",
-            "items": [
-              "Propósito: establecer un marco común de conocimiento para la profesión.",
-              "15 áreas de conocimiento organizadas en 3 secciones.",
-              "Sección I: Fundamentos de computación y bases matemáticas.",
-              "Sección II: Áreas de práctica de la ingeniería de software.",
-              "Sección III: Áreas de conocimiento distintivas de SE.",
-              "Base para certificaciones CSDA y CSDP de la IEEE."
-            ],
-            "options": []
-          },
-          {
             "type": "heading",
-            "content": "Estructura Completa del SWEBOK v3",
+            "content": "Estructura: 3 secciones, 15 áreas",
             "level": 3,
             "items": [],
             "options": []
@@ -1614,37 +1617,12 @@
             "options": []
           },
           {
-            "type": "heading",
-            "content": "Áreas de Conocimiento Relevantes",
-            "level": 3,
-            "items": [],
-            "options": []
-          },
-          {
-            "type": "text",
-            "items": [],
-            "options": [],
-            "content": "Las áreas más relevantes para este módulo son:"
-          },
-          {
             "type": "keypoints",
             "items": [
-              "Requerimientos: obtención, análisis, especificación y validación.",
-              "Diseño: arquitectura, componentes, interfaces y datos.",
-              "Construcción: programación, verificación y análisis de código.",
-              "Pruebas: proceso, diseño, técnicas y evaluación.",
-              "Mantenimiento: control de cambios, reingeniería y prevención de fallas.",
-              "Gestión de Configuración: identificación, control de cambios y contabilidad de estado.",
-              "Ingeniería de Calidad: técnicas, métricas y aseguramiento.",
-              "Gestión de Proyectos: planeación, estimación, seguimiento y riesgos.",
-              "Modelos y Métodos: procesos, ágiles, ciclos de vida y métodos formales."
+              "Sección I – Fundamentos: Computing, Mathematical y Engineering Foundations.",
+              "Sección II – Práctica: Requerimientos, Diseño, Construcción, Pruebas, Mantenimiento, Gestión de Configuración, Gestión de Calidad, Ingeniería de Calidad y Gestión de Ingeniería.",
+              "Sección III – Conocimiento distintivo: Gestión de Proyectos, Gestión de Procesos, Modelos y Métodos, y Profesionalismo."
             ],
-            "options": []
-          },
-          {
-            "type": "text",
-            "content": "El SWEBOK v3 organiza el conocimiento en 3 grandes secciones: Sección I - Fundamentos: Computing Foundations (algoritmos, estructuras de datos, programación), Mathematical Foundations (lógica, probabilidad, estadística), y Engineering Foundations (medición, modelado, optimización). Sección II - Práctica: Requerimientos, Diseño, Construcción, Pruebas, Mantenimiento, Gestión de Configuración, Gestión de Calidad, Ingeniería de Calidad, y Gestión de Ingeniería. Sección III - Conocimiento Distintivo: Gestión de Proyectos, Gestión de Procesos, Modelos y Métodos, y Profesionalismo.",
-            "items": [],
             "options": []
           },
           {
@@ -1662,21 +1640,88 @@
           },
           {
             "type": "heading",
-            "content": "Áreas Clave en Profundidad",
+            "content": "Las 5 áreas del módulo, fase por fase",
             "level": 3,
             "items": [],
             "options": []
           },
           {
             "type": "text",
-            "content": "Requerimientos: obtención (elicitation), análisis (priorización, resolución de conflictos), especificación (SRS, casos de uso, historias de usuario) y validación (revisiones, prototipos, verificación formal). Diseño: arquitectura (patrones: MVC, microservicios, event-driven), componentes (interfaces, contratos), interfaces (APIs REST, GraphQL, gRPC) y datos (modelos ER, esquemas NoSQL). Construcción: programación (estándares, code review), verificación (análisis estático, métricas de código) y gestión de constructores (build systems: Maven, Gradle, npm).",
             "items": [],
+            "options": [],
+            "content": "Requerimientos (4 fases, en orden):"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "1. Obtención (elicitación).",
+              "2. Análisis (priorización y resolución de conflictos).",
+              "3. Especificación (SRS, casos de uso, historias de usuario).",
+              "4. Validación (revisiones, prototipos, verificación formal)."
+            ],
             "options": []
           },
           {
             "type": "text",
-            "content": "Pruebas: proceso (planificación, diseño de casos, ejecución, informes), diseño (equivalence partitioning, boundary value analysis, state transition testing), técnicas (caja blanca: statement/branch/path coverage; caja negra: input/output), y evaluación (métricas de cobertura, defect density, escape rate). Mantenimiento: correctivo (fix bugs), adaptivo (nuevos SO/browsers), perfectivo (nuevas funciones) y preventivo (refactoring para evitar problemas futuros).",
             "items": [],
+            "options": [],
+            "content": "Diseño (4 frentes):"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Arquitectura (patrones: MVC, microservicios, event-driven).",
+              "Componentes (interfaces, contratos).",
+              "Interfaces (APIs REST, GraphQL, gRPC).",
+              "Datos (modelos ER, esquemas NoSQL)."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Construcción (3 frentes):"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Programación (estándares, code review).",
+              "Verificación (análisis estático, métricas de código).",
+              "Gestión de constructores (build systems: Maven, Gradle, npm)."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Pruebas (4 frentes):"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Proceso (planificación, diseño de casos, ejecución, informes).",
+              "Diseño de casos (equivalence partitioning, boundary value analysis, state transition testing).",
+              "Técnicas de caja blanca (statement/branch/path coverage) y de caja negra (input/output).",
+              "Evaluación (métricas de cobertura, defect density, escape rate)."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Mantenimiento (4 tipos):"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Correctivo (corregir defectos).",
+              "Adaptivo (nuevos SO y navegadores).",
+              "Perfectivo (nuevas funciones).",
+              "Preventivo (refactorización para evitar problemas futuros)."
+            ],
             "options": []
           },
           {
@@ -1701,12 +1746,9 @@
           {
             "type": "keypoints",
             "items": [
-              "SWEBOK v3: 3 secciones, 15 áreas de conocimiento.",
-              "Sección I: fundamentos computacionales, matemáticos y de ingeniería.",
-              "Sección II: práctica de SE (requerimientos, diseño, construcción, pruebas, mantenimiento).",
-              "Sección III: conocimiento distintivo (gestión de proyectos, procesos, modelos).",
-              "Sommerville cubre procesos y requerimientos; Pressman calidad y modelos.",
-              "Base para certificaciones CSDA y CSDP de IEEE."
+              "15 áreas en 3 secciones: fundamentos, práctica y conocimiento distintivo.",
+              "Del módulo: Requerimientos, Diseño, Construcción, Pruebas y Mantenimiento.",
+              "Tres libros, un mapa: teoría (Sommerville), práctica (Pressman) y estándar (SWEBOK)."
             ],
             "options": []
           },
@@ -2730,11 +2772,11 @@
           {
             "type": "keypoints",
             "items": [
-              "Una meta de Sprint.",
-              "Una lista de miembros (y su dedicación si no es del 100 %).",
-              "Una Pila de Sprint (historias incluidas).",
-              "Una fecha concreta para la Demo.",
-              "Un lugar y momento definidos para el Scrum Diario."
+              "1. Una meta de Sprint.",
+              "2. Una lista de miembros (y su dedicación si no es del 100 %).",
+              "3. Una Pila de Sprint (historias incluidas).",
+              "4. Una fecha concreta para la Demo.",
+              "5. Un lugar y momento definidos para el Scrum Diario."
             ],
             "options": []
           },

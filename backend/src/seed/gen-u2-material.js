@@ -129,11 +129,11 @@ export function buildU2Material(B) {
       B('text', { content: '“Un buen proceso de planificación contribuye a: reducir el riesgo, reducir la incertidumbre, favorecer una mejor toma de decisiones, establecer confianza y transmitir información.” Se planifica en niveles (día, iteración, release, producto/portafolio): cada nivel mira un horizonte distinto con un detalle distinto.' }),
       B('heading', { content: 'Sprint Planning: sus 5 productos', level: 3 }),
       B('keypoints', { items: [
-        'Una meta de Sprint.',
-        'Una lista de miembros (y su dedicación si no es del 100 %).',
-        'Una Pila de Sprint (historias incluidas).',
-        'Una fecha concreta para la Demo.',
-        'Un lugar y momento definidos para el Scrum Diario.',
+        '1. Una meta de Sprint.',
+        '2. Una lista de miembros (y su dedicación si no es del 100 %).',
+        '3. Una Pila de Sprint (historias incluidas).',
+        '4. Una fecha concreta para la Demo.',
+        '5. Un lugar y momento definidos para el Scrum Diario.',
       ] }),
       B('heading', { content: 'Plan de desarrollo: 11 puntos', level: 3 }),
       B('keypoints', { items: [
