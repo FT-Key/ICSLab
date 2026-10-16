@@ -2932,8 +2932,8 @@
           {
             "type": "keypoints",
             "items": [
-              "Transparencia: proceso y trabajo visibles para quienes lo hacen y quienes lo reciben; las decisiones se basan en el estado de los 3 artefactos. Sin ella, la inspección es engañosa.",
-              "Inspección: artefactos y progreso hacia las metas se revisan frecuente y diligentemente; los 5 eventos dan la cadencia. Sin adaptación posterior, es inútil.",
+              "Transparencia: proceso y trabajo visibles para quienes lo hacen y quienes lo reciben; las decisiones se basan en el estado de los 3 artefactos (Product Backlog, Sprint Backlog e Incremento). Sin ella, la inspección es engañosa.",
+              "Inspección: artefactos y progreso hacia las metas se revisan frecuente y diligentemente; los 5 eventos (Sprint, Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective) dan la cadencia. Sin adaptación posterior, es inútil.",
               "Adaptación: si el proceso o el producto se desvían, se ajustan lo antes posible; exige gente empoderada. Lema: inspeccionar y adaptar en pasos pequeños, repetir."
             ],
             "options": []
