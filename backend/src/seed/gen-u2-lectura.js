@@ -14,7 +14,7 @@ export function buildU2Lectura(B) {
         'Empirismo: el conocimiento viene de la experiencia y las decisiones se basan en lo observado.',
         'Lean thinking: reduce desperdicio y enfoca en lo esencial.',
         'Enfoque iterativo e incremental para optimizar predictibilidad y controlar riesgo.',
-        'Origen: término del rugby (artículo Harvard 1986), primer equipo de Sutherland en Easel (1993), formalizado por Schwaber (1995).',
+        'Origen del nombre “Scrum”: viene del rugby (formación donde todo el equipo empuja junto). Takeuchi y Nonaka lo usan en Harvard Business Review (1986) para equipos que avanzan juntos; Sutherland arma el primer equipo Scrum en Easel (1993); Schwaber lo formaliza en OOPSLA (1995).',
       ] }),
       B('heading', { content: 'Los 3 pilares', level: 3 }),
       B('keypoints', { items: [
@@ -76,8 +76,8 @@ export function buildU2Lectura(B) {
     title: 'Lectura — Scrum Guide 2020: eventos y artefactos',
     category: 'lectura',
     blocks: [
-      B('heading', { content: 'Los 5 eventos (todos inspeccionan y adaptan)', level: 2 }),
-      B('text', { content: 'Regla general: misma hora y lugar para reducir complejidad; no operarlos como está prescrito es perder oportunidades de inspección. El Sprint es el contenedor de los otros cuatro.' }),
+      B('heading', { content: 'Los 5 eventos: inspeccionar y adaptar en cada paso', level: 2 }),
+      B('text', { content: 'Los 5 eventos son Sprint, Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective. Cada uno sirve para inspeccionar (mirar cómo vamos) y adaptar (corregir el rumbo): el Planning planifica el Sprint, la Daily ajusta el plan de 24 h, la Review ajusta el producto con stakeholders y la Retro mejora el proceso. Se hacen siempre a la misma hora y en el mismo lugar para no perder tiempo coordinando; saltearlos o hacerlos mal es perder la chance de detectar desvíos. El Sprint es el contenedor: es el intervalo de tiempo (máx. 1 mes) que incluye a los otros cuatro (Planning al abrir, Dailies durante, Review y Retro al cerrar).' }),
       B('heading', { content: 'Sprint y Sprint Planning', level: 3 }),
       B('keypoints', { items: [
         'Sprint (heartbeat, máx. 1 mes; en la práctica 1 a 4 semanas): convierte ideas en valor. Durante el Sprint no hay cambios que pongan en riesgo la meta, la calidad no baja, el Backlog se refina y el alcance puede renegociarse con el PO. Nunca se alarga.',
