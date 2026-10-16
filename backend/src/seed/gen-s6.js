@@ -10,8 +10,8 @@ export default [
     'Ágil: Scrum, XP, Kanban. Enfoque en personas e interacciones.'
   ]},
   {type:'quote',content:'No existe un proceso único que sirva para todos los proyectos. El proceso debe adaptarse al contexto.',source:'Roger S. Pressman'},
-  {type:'text',content:'El marco de proceso de Pressman incluye 5 actividades: comunicación (con el cliente), planificación (gestión del proyecto), modelado (diseño y arquitectura), construcción (código y pruebas) y despliegue (entrega al usuario). Cada actividad tiene tareas específicas.'},
-  {type:'text',content:'El modelo espiral de Boehm combina iteraciones con análisis de riesgos sistemático. Cada vuelta del espiral tiene 4 cuadrantes: determinar objetivos, evaluar alternativas/riesgos, desarrollar/verificar y planear la siguiente fase. Es ideal para proyectos grandes y de alto riesgo.'},
+  {type:'text',content:'El marco de proceso de Pressman organiza el trabajo en 5 actividades fundamentales, cada una con tareas específicas:'},
+  
   {type:'heading',content:'Comparación de Frameworks Ágiles',level:3},
   {type:'text',content:'Scrum: roles (Product Owner, Scrum Master, equipo), ceremonias (Sprint Planning, Daily, Review, Retrospective), artefactos (Product Backlog, Sprint Backlog, Incremento). Iteraciones de 2-4 semanas. XP: prácticas de ingeniería como programación en parejas, TDD, integración continua, refactorización continua. Kanban: tableros visuales, límites de trabajo en progreso (WIP), flujo continuo sin iteraciones fijas.'},
   {type:'text',content:'Factores para elegir un proceso: tamaño del proyecto, estabilidad de requerimientos, experiencia del equipo, nivel de riesgo, restricciones regulatorias. Proyectos gubernamentales o médicos pueden requerir cascada o espiral. Startups y productos digitales suelen usar ágil.'},
