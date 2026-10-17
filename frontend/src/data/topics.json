@@ -3816,18 +3816,64 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "UP ágil: farmacia, fases y disciplinas",
+            "content": "UP ágil: la metáfora de la farmacia, fases y disciplinas",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El Proceso Unificado (UP, Unified Process) no es un proceso rígido para seguir al pie de la letra: es un marco ADAPTABLE donde cada proyecto decide qué usa. Larman lo define como buenas prácticas reunidas en ese marco: desarrollo iterativo (trabajo en mini-proyectos con feedback), ataque temprano a los riesgos y calidad continua desde el primer día."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La metáfora de la farmacia: el UP es como una farmacia con un estante lleno de medicinas —todas las técnicas y documentos posibles: Modelo de Dominio, Casos de Uso, Visión, Glosario…—. Un proyecto NO se lleva todo el estante: elige solo el subconjunto chico que le hace falta según su tamaño y sus riesgos, y ese menú se registra por escrito en el Marco de Desarrollo (Development Case) del proyecto, el documento que dice qué prácticas usamos y cómo las aplicamos."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El UP ágil va más allá: además de elegir poco, todo es LIGERO. Usa un subconjunto chico de artefactos, los requisitos y el diseño van emergiendo a medida que se avanza (no se escriben todos de una al principio), el Plan de Fase es de alto nivel y el Plan de Iteración detallado solo mira 1 iteración hacia adelante."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Las 4 fases: son planificación, no cascada",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Error clásico (el malentendido que detecta Larman): creer que Inicio = requisitos, Elaboración = diseño y Construcción = código, como si cada fase hiciera UNA sola actividad. En realidad las fases son bloques de planificación que agrupan varias actividades a la vez, y dentro de cada fase el trabajo sigue siendo iterativo. Las 4 fases:"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Inicio: define la visión del producto y comprueba que sea viable (¿se puede construir? ¿vale la pena?). Resultado: un Plan de Fase a alto nivel.",
+              "Elaboración: se atacan los riesgos más altos y se construye el NÚCLEO del sistema (su arquitectura) con código real y pruebas —no en papel—, para que las estimaciones pasen de número inventado a realista.",
+              "Construcción: se implementa el resto de la funcionalidad, iteración tras iteración.",
+              "Transición: prueba beta con usuarios reales y despliegue a producción.",
+              "Ojo: cada fase contiene VARIAS iteraciones; una fase nunca es “hacer solo requisitos” o “solo código”."
+            ],
+            "options": []
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Las 7 disciplinas: qué oficios se practican",
             "level": 3
           },
           {
             "type": "keypoints",
             "items": [
-              "UP = buenas prácticas (desarrollo iterativo, ataque temprano a riesgos, calidad continua) reunidas en un marco adaptable. La metáfora de la farmacia: no te llevas todas las medicinas del estante, elegís solo el subconjunto chico que te hace falta (ej.: Modelo de Dominio, Casos de Uso, Visión, Glosario…) y lo registrás en el Marco de Desarrollo (Development Case) del proyecto.",
-              "UP ágil = ese marco además es ligero: usás un subconjunto de artefactos, los requisitos y el diseño van emergiendo (no se escriben todos de una), el Plan de Fase es de alto nivel y el Plan de Iteración detallado solo llega 1 iteración hacia adelante.",
-              "No entendiste UP si creés que Inicio = requisitos, Elaboración = diseño y Construcción = código.",
-              "Fases (planificación, no cascada): Inicio (visión y viabilidad), Elaboración (núcleo + riesgos + estimados realistas, con código), Construcción (resto) y Transición (beta y despliegue).",
-              "Disciplinas (negocio, requisitos, diseño, implementación, pruebas, gestión, entorno) trabajan en casi toda iteración; cambia el esfuerzo relativo.",
-              "Términos: ciclo (hasta el release), hito (decisión fin de fase), versión (ejecutable estable fin de iteración), incremento (delta entre versiones)."
+              "Disciplinas = los oficios que se practican: negocio, requisitos, diseño, implementación, pruebas, gestión de proyectos y entorno (herramientas y proceso del equipo).",
+              "Se trabajan en CASI TODA iteración, lo que cambia es el esfuerzo relativo: al inicio manda negocio y requisitos, en el medio diseño e implementación, hacia el final pruebas y despliegue. Por eso las fases no son etapas de cascada.",
+              "Términos a no confundir: ciclo = desde el arranque del proyecto hasta el release; hito = punto de decisión al cierre de cada fase (¿seguimos, paramos o cambiamos?); versión = el ejecutable estable que sale al final de cada iteración; incremento = la diferencia (el delta) entre una versión y la anterior."
             ],
             "options": []
           },
