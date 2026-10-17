@@ -4289,7 +4289,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Todo lo creado en el proceso que se pone explícitamente bajo control es un Ítem de Configuración del Software: documentos, diagramas, código, pruebas, datos. Viven en el repositorio (Git, Drive, Jira, Azure DevOps) con mecanismos y estructuras para administrar el cambio en forma efectiva."
+            "content": "Todo lo creado en el proceso que se pone explícitamente bajo control es un Ítem de Configuración del Software (en inglés SCI; en Pressman se lo llama ICS y en este material, CI): documentos, diagramas, código, pruebas, datos. Esos ítems viven en un repositorio (Git, Drive, Jira, Azure DevOps), que es el lugar con los mecanismos y estructuras para administrar el cambio en forma efectiva."
           },
           {
             "type": "heading",
@@ -4306,8 +4306,8 @@
               "Versión: estado identificado de un ítem en un momento (v1.0, hash de commit, build ID).",
               "Línea Base: conjunto aprobado de CIs como referencia (v1.0 Web + v2.3 API + docs).",
               "Release/entrega: sistema liberado para uso de clientes (Release 1.0 estable).",
-              "Control de cambios: procedimiento formal (PR + revisión) para solicitar, revisar y aprobar.",
-              "Auditoría: verificación de integridad y consistencia (docs vs liberación)."
+              "Control de cambios: procedimiento formal para solicitar, revisar y aprobar cada cambio (en Git: Pull Request + revisión de compañeros antes de fusionar).",
+              "Auditoría: verificación de integridad y consistencia (comparar lo documentado contra lo liberado)."
             ],
             "options": []
           },
@@ -4355,14 +4355,35 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "CM según Sommerville: 4 actividades",
+            "content": "¿Qué es CM? Las 4 actividades según Sommerville",
             "level": 2
           },
           {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "CM = políticas + procesos + herramientas para administrar software cambiante. Sin CM: se modifica la versión equivocada, se entrega mal al cliente o se pierde el fuente de una versión. Sus 4 actividades: administración del cambio, gestión de versiones, construcción del sistema y gestión de entregas. Tras QA, todo cambio debe proponerse, registrarse y aprobarse. Vocabulario: SCI, versión, baseline, codeline, mainline (historia de baselines), release, workspace, branching, merging y build."
+            "content": "CM viene de Configuration Management (inglés) y significa Gestión de Configuración: es lo mismo que SCM, pero Sommerville usa la sigla CM. Son las políticas + procesos + herramientas para administrar un software que está en constante cambio. Sin CM: se modifica la versión equivocada, se entrega mal al cliente o se pierde el código fuente de una versión. Las 4 actividades del capítulo son: (1) administración del cambio, (2) gestión de versiones, (3) construcción del sistema y (4) gestión de entregas. Regla: una vez pasada la revisión de calidad (QA), todo cambio tiene que proponerse, registrarse y aprobarse."
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "Vocabulario del capítulo (glosario)",
+            "level": 3
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "SCI (Software Configuration Item) = Ítem de Configuración de Software: todo artefacto bajo control (código, documentos, pruebas, herramientas). En Pressman se llama ICS.",
+              "Versión: estado identificado de un ítem en un momento dado (ej. v1.0).",
+              "Baseline (línea base): foto aprobada del sistema que sirve de referencia para comparar y medir cambios.",
+              "Codeline (línea de código): rama donde evoluciona una parte del producto.",
+              "Mainline (línea principal): la codeline “madre” donde se registran los cambios aprobados; su evolución forma la historia de baselines.",
+              "Release (liberación): versión entregada para uso de los clientes.",
+              "Workspace (área de trabajo): copia privada de cada desarrollador, donde trabaja sin afectar a los demás (check-out / check-in).",
+              "Branching (crear ramas), merging (unir ramas) y build (compilar y ensamblar el sistema en un ejecutable)."
+            ],
+            "options": []
           },
           {
             "type": "heading",
@@ -4374,11 +4395,11 @@
           {
             "type": "keypoints",
             "items": [
-              "Todo cambio (bug o feature) entra por Change Request con formulario: qué se pide, recomendación, costos, componentes, fechas e implementación.",
-              "Proceso: enviar → validar (¿duplicado? ¿malentendido?) → registrar → analizar (implementación + costo/beneficio) → decisión del CCB → modificar + probar → cerrar.",
-              "El CCB decide con vista de negocio con 5 factores: consecuencia de NO hacerlo, beneficio y a cuántos, usuarios afectados, costo (componentes tocados = riesgo) y ciclo de release.",
-              "En ágil/XP el cliente prioriza para la próxima iteración y refactorizar es parte del proceso, no carga.",
-              "Trazabilidad: cada fuente lleva Versión/Modificador/Fecha/Cambio/Razón + ref. al CR."
+              "CRF (Change Request Form, Formulario de Solicitud de Cambio): es el formulario por el que entra TODO cambio (bug o feature). Pide detallar: qué se pide, recomendación, costos, componentes afectados, fechas e implementación propuesta.",
+              "Proceso: enviar la solicitud → validar (¿está duplicada? ¿está bien entendida?) → registrar → analizar (implementación + costo/beneficio) → decide el CCB → modificar + probar → cerrar.",
+              "CCB (Change Control Board, Comité de Control de Cambios): el grupo que aprueba o rechaza cada cambio. Decide con visión de negocio mirando 5 factores: qué pasa si NO se hace, cuánto beneficio y para cuántos, cuántos usuarios se afectan, el costo (tocar varios componentes = más riesgo) y en qué ciclo de release entra.",
+              "En ágil/XP: el cliente prioriza qué entra en la próxima iteración y refactorizar es parte del trabajo normal, no una carga extra.",
+              "Trazabilidad: cada archivo fuente lleva Versión, Modificador, Fecha, Cambio, Razón y el número de la solicitud de cambio (CR) que lo autorizó."
             ],
             "options": []
           },
@@ -4392,9 +4413,9 @@
           {
             "type": "keypoints",
             "items": [
-              "Versiones: identificación única (ButtonManager 1.3), deltas en vez de copias completas, check-out/check-in con workspace privado, ramas y merges (automático si no se solapan, manual si sí).",
-              "Builds: ensamblar + compilar + vincular desde la baseline, automatizado en 1 comando; 3 plataformas separadas (desarrollo, servidor de construcción, objetivo). Integración continua en 7 pasos o build diario si el sistema es enorme.",
-              "Releases: mayor = funcionalidad nueva (se cobra), menor = fixes (gratis). Documentar todo para reconstruir años después; nunca asumir que el cliente instaló la anterior ni que no tocó sus datos."
+              "Versiones: cada una tiene identificación única (ej. ButtonManager 1.3); se guardan deltas (las diferencias) en vez de copias completas; se trabaja con check-out / check-in en el workspace privado; y hay ramas con merges, automáticos si las ramas tocan archivos distintos y manuales si se solapan.",
+              "Builds (construcciones): operación de ensamblar + compilar + vincular el código a partir de una línea base, automatizada en un solo comando. Se usan 3 plataformas separadas: la máquina del desarrollo, el servidor de construcción (que compila solo) y el ambiente objetivo (donde va a correr). Puede hacerse con integración continua en cada commit o, si el sistema es enorme, con al menos un build diario.",
+              "Releases: versión mayor = funcionalidad nueva (se cobra), versión menor = correcciones (gratis). Conviene documentar todo para poder reconstruir la versión años después; y nunca dar por sentado que el cliente instaló la versión anterior ni que no tocó sus datos."
             ],
             "options": []
           },
@@ -4408,7 +4429,7 @@
           {
             "type": "keypoints",
             "items": [
-              "Cada commit a la línea principal dispara un build automatizado: compilar, ejecutar tests, analizar código y empaquetar, con feedback en minutos.",
+              "Integración continua (aquí CI = continuous integration; no confundir con el CI de “Ítem de Configuración”): cada commit a la línea principal dispara un build automatizado que compila, ejecuta los tests, analiza el código y empaqueta, con respuesta en minutos.",
               "Reglas: commits pequeños y frecuentes, batería de tests rápida y confiable, y build roto = prioridad máxima del equipo.",
               "Sin CI los merges se vuelven eventos traumáticos; con CI los conflictos aparecen chicos y se resuelven en el día."
             ],
@@ -4490,7 +4511,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Configuración = programas + documentos + datos del proceso. Sin control, el cambio te controla: caos, baja calidad y retraso. Todo ICS (desde una sección de spec hasta una suite entera, incluyendo herramientas como el compilador) se identifica con nombre único, descripción, recursos y realización; los básicos se agrupan en agregados (ej. DesignSpecification = modelos + diagramas). Las relaciones parte-de e interrelacionado permiten el análisis de impacto. Baseline (IEEE 610.12): especificación acordada que solo cambia por control formal; antes de ella el cambio es informal, después exige evaluación y aprobación."
+            "content": "Configuración = programas + documentos + datos del proceso. Sin control, el cambio te controla: caos, baja calidad y retraso. Todo ICS (Ítem de Configuración de Software, por sus siglas en inglés; en Sommerville se llama SCI) puede ser desde una sección de especificación hasta una suite entera, incluyendo herramientas como el compilador; se identifica con nombre único, descripción, recursos y realización, y los básicos se agrupan en agregados (ej. DesignSpecification = modelos + diagramas). Las relaciones parte-de e interrelacionado permiten el análisis de impacto. Baseline (IEEE 610.12): especificación acordada que solo cambia por control formal; antes de ella el cambio es informal, después exige evaluación y aprobación."
           },
           {
             "type": "heading",
@@ -4502,11 +4523,11 @@
           {
             "type": "keypoints",
             "items": [
-              "Versiones: repositorio + gestión (guardar todo o reconstruir por diferencias) + facilidad de elaboración; conjunto de cambio con razón/quién/cuándo.",
-              "Cambios (flujo formal): petición → evaluación (mérito, colaterales, impacto, costo) → ACC decide → OCI (qué, restricciones, auditoría) → checkout → cambio → revisión/auditoría → checkin → baseline de prueba → SQA → release. Niveles: pre-baseline informal, post-revisión a nivel proyecto, post-liberación formal completo.",
-              "ACC: de 1 gerente a grupo (soft, hard, BD, soporte, marketing); equilibra control vs creatividad.",
-              "Auditoría (6 preguntas): ¿se hizo lo de la OCI y nada extra? ¿hubo revisión técnica? ¿se siguió el proceso? ¿cambio fechado y firmado? ¿registrado/reportado? ¿ICS relacionados actualizados?",
-              "REC (contabilidad): qué, quién, cuándo y qué más se afecta; entrada en cada cambio de ICS, OCI aprobada y auditoría."
+              "Versiones: repositorio + gestión (guardar todo o reconstruir por diferencias) + facilidad de elaboración; cada versión es un conjunto de cambios con razón, quién y cuándo.",
+              "Flujo formal de un cambio (11 pasos): (1) petición, (2) evaluación de mérito, efectos colaterales, impacto y costo, (3) la ACC decide, (4) si aprueba emite la OCI —la orden que dice qué cambiar, con qué restricciones y qué se audita—, (5) checkout (bajar el código), (6) hacer el cambio, (7) revisión o auditoría, (8) checkin (subirlo), (9) crear una línea base de prueba, (10) la aseguradora de calidad (SQA) lo valida y (11) sale la release. Niveles de control: antes de la baseline es informal, después de la baseline requiere revisión a nivel proyecto, y después de liberar es formal y completo.",
+              "ACC (Autoridad de Control de Cambios, equivalente al CCB de Sommerville): puede ser una sola persona (un gerente) o un grupo (software, hardware, base de datos, soporte y marketing); su dilema es equilibrar el control con la creatividad.",
+              "Auditoría (6 preguntas): ¿se hizo lo de la OCI y nada extra? ¿hubo revisión técnica? ¿se siguió el proceso? ¿cambio fechado y firmado? ¿registrado y reportado? ¿ICS relacionados actualizados?",
+              "REC (contabilidad de la configuración): registro que responde qué cambió, quién lo hizo, cuándo y qué más se afecta; se actualiza con cada cambio de ICS, con cada OCI aprobada y con cada auditoría."
             ],
             "options": []
           },
@@ -4564,7 +4585,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "La configuración es el conjunto de características funcionales y físicas descritas en documentación o logradas en el producto. La SCM identifica la configuración en distintos momentos, controla cambios sistemáticamente y mantiene integridad y trazabilidad todo el ciclo de vida. Es proceso de soporte que beneficia a gestión, desarrollo, mantenimiento, SQA y clientes. Se planifica en el SCMP (documento vivo revisado por SQA): organización, actividades, branching/merging, builds, herramientas y métricas."
+            "content": "La configuración es el conjunto de características funcionales y físicas descritas en documentación o logradas en el producto. La SCM identifica la configuración en distintos momentos, controla cambios sistemáticamente y mantiene integridad y trazabilidad todo el ciclo de vida. Es un proceso de soporte que beneficia a gestión, desarrollo, mantenimiento, SQA (aseguramiento de calidad de software, Software Quality Assurance) y clientes. Se planifica en el SCMP (Software Configuration Management Plan, o Plan de SCM): un documento vivo revisado por SQA que cubre organización, actividades, branching/merging, builds, herramientas y métricas."
           },
           {
             "type": "heading",
@@ -4576,11 +4597,11 @@
           {
             "type": "keypoints",
             "items": [
-              "SCI: planes, requisitos, diseño, fuentes, ejecutables, librerías, datos, herramientas, pruebas y docs; balancear visibilidad vs cantidad manejable.",
-              "Versión vs variante (diversidad: plataformas/capacidades); baselines típicas: funcional, asignada, de desarrollo y de producto.",
-              "Biblioteca: trabajo (laxa), proyecto/test y maestra (estricta); con control de acceso y backup.",
-              "Control: SCR formal con análisis de impacto; CCB multinivel con SCM siempre representado; deviation (previa, temporal) vs waiver (aceptar como-está).",
-              "Contabilidad (SCSA): identificación aprobada, estado de cambios, deviations/waivers; reportes y métricas (CRs por SCI, tiempo medio)."
+              "SCI = Ítem de Configuración de Software: planes, requisitos, diseño, fuentes, ejecutables, librerías, datos, herramientas, pruebas y docs; hay que balancear visibilidad completa vs una cantidad que se pueda manejar.",
+              "Versión vs variante (variante = diversidad para distintas plataformas o capacidades); baselines típicas: funcional, asignada, de desarrollo y de producto.",
+              "Bibliotecas de configuración: de trabajo (reglas laxas, donde el desarrollador edita), de proyecto/pruebas y maestra (reglas estrictas); todas con control de acceso y copias de seguridad (backup).",
+              "Control de cambios: SCR (Software Change Request, solicitud de cambio de software) formal con análisis de impacto; CCB (Change Control Board) multinivel —varios niveles de comité— donde SCM siempre tiene representante; deviation (desviación) = autorización previa para apartarse temporalmente de lo planeado, waiver (renuncia) = aceptar “como está” algo que ya se produjo.",
+              "Contabilidad de la configuración (SCSA): registro de la identificación aprobada, el estado de los cambios y las desviaciones/renuncias; genera reportes y métricas (cuántos CRs por SCI, tiempo medio de atención)."
             ],
             "options": []
           },
@@ -4594,10 +4615,10 @@
           {
             "type": "keypoints",
             "items": [
-              "FCA: el ítem cumple sus especificaciones (insumo: V&V). PCA: diseño/docs consistentes con lo construido.",
-              "Release: distribución fuera de desarrollo; recrear versiones, empaquetar (ejecutable, docs, notes, datos), version description + release notes + instrucciones, rastrear distribución, firma digital.",
-              "Building: combinar SCIs correctos en orden reproducible, con herramientas bajo SCM y verificación SQA.",
-              "Herramientas por escala: individual (versiones, builds, CRs), proyecto (workspaces, variantes, distribuido) y company-wide (workflow, roles, certificación)."
+              "FCA (Auditoría de Configuración Funcional): verifica que el ítem cumple sus especificaciones (entra la verificación y validación, V&V). PCA (Auditoría de Configuración Física): verifica que diseño y documentación sean consistentes con lo realmente construido.",
+              "Release (liberación): distribución fuera de desarrollo; hay que poder recrear versiones, empaquetar (ejecutable, docs, notas y datos), escribir la descripción de versión + release notes + instrucciones, rastrear la distribución y firmar digitalmente.",
+              "Building (construcción): combinar los SCIs correctos, en el orden correcto y de forma reproducible, con las herramientas bajo SCM y verificación de SQA.",
+              "Herramientas según la escala: individual (versiones, builds, CRs), de proyecto (workspaces, variantes, trabajo distribuido) y de toda la empresa (flujos de trabajo, roles, certificación)."
             ],
             "options": []
           },
@@ -4651,13 +4672,13 @@
           {
             "type": "keypoints",
             "items": [
-              "Principal (main): siempre desplegable y protegida; solo recibe merges vía PR con revisión + CI en verde; cada merge a main lleva tag de versión.",
+              "Principal (main): siempre desplegable y protegida; solo recibe merges vía PR (Pull Request, la propuesta de fusión que revisa el equipo) + CI (integración continua) en verde; cada merge a main lleva tag de versión.",
               "Develop: integración continua de lo próximo (v1.3.0); de aquí nacen features y bugfixes; se congela solo en release.",
               "Features (feature/EC-101-…): nacen de develop, mueren en develop por PR; una rama por ticket.",
               "Bugs en desarrollo (bugfix/BUG-201-…): nacen de develop (el defecto aún no está en producción) y vuelven a develop.",
               "Hotfixes (hotfix/HOTFIX-301-…): nacen del tag v1.2.0 en main; se mergean a main (nuevo tag v1.2.1 = nueva línea base productiva) Y a develop (forward-merge para no perder la corrección).",
               "Releases (release/v1.3.0-…): nace de develop cuando EC-101+EC-102+BUG-201 están listos; solo entran fixes menores; al cerrar se mergea a main (tag v1.3.0) y a develop; después develop sigue hacia v1.4.0.",
-              "PRs obligatorios siempre hacia main/develop/release; versionado semántico (parche para hotfix, menor para release)."
+              "PRs (Pull Requests) obligatorios siempre hacia main/develop/release; versionado semántico x.y.z (el número de parche cambia en hotfixes, el número menor en releases)."
             ],
             "options": []
           },
