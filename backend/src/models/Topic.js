@@ -40,7 +40,7 @@ const trueFalseBlockSchema = new Schema({
 const contentBlockSchema = new Schema({
   type: {
     type: String,
-    enum: ['text', 'heading', 'keypoints', 'quote', 'quiz', 'truefalse'],
+    enum: ['text', 'heading', 'keypoints', 'quote', 'quiz', 'truefalse', 'accordion'],
     required: true,
   },
   content: String,
@@ -53,6 +53,8 @@ const contentBlockSchema = new Schema({
   explanation: String,
   statement: String,
   correctAnswer: Boolean,
+  title: String,
+  points: [{ title: String, body: String }],
 }, { _id: false })
 
 const sectionSchema = new Schema({

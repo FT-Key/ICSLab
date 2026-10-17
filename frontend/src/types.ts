@@ -36,6 +36,17 @@ export interface TrueFalseBlock {
   explanation: string
 }
 
+export interface AccordionPoint {
+  title: string
+  body: string
+}
+
+export interface AccordionBlock {
+  type: 'accordion'
+  title: string
+  points: AccordionPoint[]
+}
+
 export type ContentBlock =
   | TextBlock
   | HeadingBlock
@@ -43,6 +54,7 @@ export type ContentBlock =
   | QuoteBlock
   | QuizBlock
   | TrueFalseBlock
+  | AccordionBlock
 
 // ── Sections (= chapters) ─────────────────────────────
 export type SectionCategory = 'material' | 'lectura' | 'ejercicio'

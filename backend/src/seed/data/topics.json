@@ -1975,10 +1975,42 @@
             "level": 2
           },
           {
+            "type": "accordion",
+            "items": [],
+            "options": [],
+            "title": "Consigna original (EJT1 — Modelos de proceso 2026). Desplegá cada punto:",
+            "points": [
+              {
+                "title": "La consigna (para todos los casos)",
+                "body": "Para cada uno de los 5 casos: (1) determinar el mejor modelo de proceso de desarrollo de software y (2) proponer una segunda alternativa e indicar por qué es inferior a la primera."
+              },
+              {
+                "title": "Caso 1 — Sistema de liquidación impositiva",
+                "body": "Un organismo gubernamental necesita reemplazar un sistema que calcula un impuesto provincial. Las reglas de cálculo están definidas por normativa vigente y documentadas exhaustivamente. El contrato establece de antemano funcionalidades, documentación obligatoria, fechas de revisión y criterios formales de aceptación. El organismo participa poco durante el desarrollo y espera recibir el sistema completo luego de superar las verificaciones acordadas."
+              },
+              {
+                "title": "Caso 2 — Sistema integral para una universidad",
+                "body": "Una universidad quiere reemplazar progresivamente su sistema académico. El nuevo sistema debe cubrir inscripción de alumnos, gestión de cursos, exámenes, títulos, estadísticas y otros procesos. No es necesario disponer de todo simultáneamente: la prioridad es poner primero en producción inscripción y gestión de cursos y, posteriormente, incorporar los demás módulos sin interrumpir los que ya funcionan."
+              },
+              {
+                "title": "Caso 3 — Plataforma de detección de fraude",
+                "body": "Una entidad financiera quiere desarrollar una nueva plataforma para detectar operaciones fraudulentas en tiempo real. Existen requisitos generales, pero hay incertidumbre respecto de si las tecnologías seleccionadas podrán procesar el volumen esperado con los tiempos de respuesta requeridos. También existen riesgos importantes de seguridad, integración con sistemas existentes y precisión de los algoritmos. Antes de comprometer grandes inversiones, la empresa quiere evaluar esos riesgos mediante desarrollos parciales y pruebas técnicas."
+              },
+              {
+                "title": "Caso 4 — Aplicación para un nuevo negocio digital",
+                "body": "Una empresa está creando una plataforma para conectar profesionales independientes con potenciales clientes. Tiene una idea clara del problema, pero todavía desconoce qué funcionalidades serán más valoradas por los usuarios. Dispone de un responsable de producto que puede trabajar permanentemente con el equipo. Quiere publicar versiones utilizables cada pocas semanas, medir cómo reaccionan los usuarios y modificar las prioridades en función de esa información."
+              },
+              {
+                "title": "Caso 5 — Sistema de apoyo a operadores logísticos",
+                "body": "Una empresa desea reemplazar varias planillas y aplicaciones utilizadas por los operadores de su centro de distribución. Los usuarios saben realizar perfectamente su trabajo, pero tienen dificultades para explicar cómo debería funcionar el nuevo sistema y qué información debería mostrar cada pantalla. Muchas reglas dependen de situaciones excepcionales que recuerdan recién cuando ven una solución funcionando. Quieren comenzar rápido con una versión simplificada, mostrársela a los operadores y modificarla repetidamente hasta comprender correctamente el proceso de trabajo."
+              }
+            ]
+          },
+          {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Consigna: para cada caso (1) determinar el mejor modelo de proceso de desarrollo y (2) proponer una segunda alternativa indicando por qué es inferior a la primera. Método sugerido: subrayar pistas del enunciado (estabilidad de requisitos, entregas parciales, riesgos, participación del cliente) y recién después elegir el modelo."
+            "content": "Método sugerido para resolverlo: subrayar pistas del enunciado (estabilidad de requisitos, entregas parciales, riesgos, participación del cliente) y recién después elegir el modelo. Abajo, caso por caso con la solución."
           },
           {
             "type": "heading",
@@ -3912,10 +3944,42 @@
             "level": 2
           },
           {
+            "type": "accordion",
+            "items": [],
+            "options": [],
+            "title": "Consigna original (EJT2 — Scrum Planning 2026). Desplegá cada punto:",
+            "points": [
+              {
+                "title": "Instrucción general",
+                "body": "Leer detenidamente las 5 historias de usuario para trabajar el planning en clase: evaluar cada una con INVEST, verificar su Definition of Ready, estimar en forma relativa, detectar dependencias y armar el plan de Sprints con la velocity del equipo."
+              },
+              {
+                "title": "US-01 — Consultar detalle de un producto (Prioridad: Alta)",
+                "body": "Como visitante del e-commerce, quiero consultar la información detallada de un producto para conocer sus características, precio y disponibilidad antes de decidir si deseo comprarlo.\n\nDesde el listado, el usuario selecciona un producto y accede a una pantalla con su información (nombre, descripción, precio actual y stock), obtenida del backend con GET /api/products/{id}. No requiere sesión iniciada. Si el producto no existe, se informa claramente (200 OK si existe, 404 Not Found si no).\n\nCriterios de aceptación:\n· CA1 consulta exitosa → muestra nombre, descripción, precio y stock.\n· CA2 acceso sin autenticación → el visitante consulta sin iniciar sesión.\n· CA3 producto inexistente → 404 Not Found y el frontend avisa que no fue encontrado.\n· CA4 integración con el backend → 200 OK con los datos del detalle."
+              },
+              {
+                "title": "US-02 — Agregar un producto al carrito (Prioridad: Alta)",
+                "body": "Como visitante del e-commerce, quiero agregar un producto al carrito de compras para conservarlo mientras continúo seleccionando productos antes de realizar la compra.\n\nDesde el listado o el detalle se agrega indicando cantidad; el carrito refleja producto, cantidad y precio. Si el producto ya está, se contempla la nueva cantidad. El visitante puede navegar y volver al carrito después.\n\nCriterios de aceptación:\n· CA1 agregar un producto → se incorpora al carrito con cantidad y precio.\n· CA2 producto ya existente → el carrito refleja la nueva cantidad.\n· CA3 visualización del carrito → productos, cantidades y precios.\n· CA4 continuidad durante la navegación → al volver, los productos siguen ahí."
+              },
+              {
+                "title": "US-03 — Confirmar la compra y generar una orden (Prioridad: Media)",
+                "body": "Como cliente autenticado, quiero confirmar los productos seleccionados y generar una orden de compra para registrar formalmente mi pedido.\n\nAntes de confirmar: identificación del cliente, dirección de envío, dirección de facturación, productos y cantidades. El frontend llama a POST /api/orders. El backend: valida datos, verifica stock de todos los productos, toma el precio vigente, calcula subtotales y total, registra la orden con sus ítems y descuenta el stock. El precio queda registrado en OrderItem al momento de la compra (cambios posteriores del catálogo no lo alteran). Si falta stock en algún producto, la orden completa se rechaza sin modificar existencias. No incluye procesamiento de pagos.\n\nCriterios de aceptación:\n· CA1 creación exitosa → 201 Created con los datos completos de la orden.\n· CA2 cálculo de importes → subtotal por ítem e importe total.\n· CA3 conservación del precio de compra → UnitPrice congelado al comprar.\n· CA4 actualización del stock → descuento de las cantidades adquiridas.\n· CA5 stock insuficiente → orden no registrada, stock intacto, 400 Bad Request.\n· CA6 información incompleta o inválida → 400 Bad Request con detalle.\n· CA7 usuario no autenticado → no puede crear la orden."
+              },
+              {
+                "title": "US-04 — Consultar mis órdenes (Prioridad: Media)",
+                "body": "Como cliente autenticado, quiero consultar el listado de mis órdenes y filtrarlas por estado para conocer mis compras y hacer seguimiento de su situación.\n\nMuestra como mínimo identificador, fecha, importe total y estado; usa GET /api/orders con filtrado opcional por status y customerId, y parámetros pageNumber/pageSize. Tamaño de página: 10 órdenes. Solo se muestran las órdenes del cliente autenticado. Estados: Pending, Processing, Shipped, Delivered y Cancelled.\n\nCriterios de aceptación:\n· CA1 listado de órdenes → id, fecha, importe total y estado.\n· CA2 solo órdenes del cliente autenticado.\n· CA3 filtrar por estado → solo ese estado.\n· CA4 quitar el filtro → vuelve a mostrar todas.\n· CA5 paginación → máximo 10 por página con navegación.\n· CA6 cliente sin órdenes → aviso (no un error).\n· CA7 error inesperado → 500 Internal Server Error y el frontend informa."
+              },
+              {
+                "title": "US-05 — Evitar la sobreventa de productos (Prioridad: Baja)",
+                "body": "Como cliente que está confirmando una compra, quiero que el sistema garantice la disponibilidad real de los productos al registrar mi orden para evitar comprar unidades que ya adquirió otro cliente.\n\nAnte solicitudes concurrentes sobre el mismo producto, la validación y actualización del stock deben ser consistentes: con 1 unidad y dos clientes simultáneos, solo una orden se completa.\n\nCriterios de aceptación:\n· CA1 compra concurrente con stock insuficiente → solo una orden se registra, stock final 0, la otra se rechaza.\n· CA2 el stock nunca puede quedar negativo (StockQuantity ≥ 0).\n· CA3 atomicidad → si un producto se queda sin stock, la orden entera se rechaza y no se modifica ningún stock.\n· CA4 orden confirmada → registrada, stock actualizado, 201 Created.\n· CA5 orden rechazada → no se registra, 400 Bad Request por falta de stock."
+              }
+            ]
+          },
+          {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Consigna: leer las 5 historias para trabajar el planning en clase. Resolución modelo: evaluar cada historia con INVEST, verificar su Definition of Ready, estimar en forma relativa (Fibonacci 1,2,3,5,8,13), detectar dependencias y armar el plan de Sprints con velocity."
+            "content": "Resolución modelo: evaluar cada historia con INVEST, verificar su Definition of Ready, estimar en forma relativa (Fibonacci 1, 2, 3, 5, 8, 13), detectar dependencias y armar el plan de Sprints con velocity. Abajo, historia por historia."
           },
           {
             "type": "heading",
@@ -4063,10 +4127,42 @@
             "level": 2
           },
           {
+            "type": "accordion",
+            "items": [],
+            "options": [],
+            "title": "Consigna original (EJT4 — Plan de desarrollo y mantenimiento 2026). Desplegá cada punto:",
+            "points": [
+              {
+                "title": "Contexto",
+                "body": "A partir del enunciado del Trabajo Práctico Integrador, el sistema debe permitir gestión de productos, carrito, ventas, pagos, stock y seguimiento de pedidos. El equipo dispone de seis meses para entregar una primera versión operativa; una vez en producción, el mismo equipo será responsable de su mantenimiento."
+              },
+              {
+                "title": "1. Plan de Desarrollo mínimo (1 página)",
+                "body": "Elaborar un plan de desarrollo de una sola página, guiándose por estos aspectos:\n· Alcance inicial → ¿qué incluye la primera versión?\n· Estrategia de desarrollo → ¿qué modelo de proceso o marco de trabajo se implementará?\n· Organización del trabajo → equipo, responsabilidades, iteraciones.\n· Entregables principales → ¿qué se producirá y cuándo?\n· Estimación y calendario → hitos o iteraciones principales.\n· Riesgos y seguimiento → principales riesgos y cómo controlar el avance."
+              },
+              {
+                "title": "2. Compartir con la clase las decisiones del equipo",
+                "body": "Puesta en común de las decisiones del Plan de Desarrollo, dirigida por el docente."
+              },
+              {
+                "title": "3. Plan de Mantenimiento mínimo (1 página)",
+                "body": "Elaborar un plan de mantenimiento de una sola página, guiándose por estos aspectos:\n· Tipos de mantenimiento esperados → ¿cuáles tipos se consideran?\n· Recepción de solicitudes → ¿cómo ingresan defectos y cambios?\n· Clasificación y priorización → ¿cómo se determina la urgencia e impacto?\n· Análisis del cambio → ¿qué se evalúa antes de modificar el producto?\n· Implementación y pruebas → ¿cómo se modifica y valida?\n· Liberación → ¿cómo se despliega el cambio?\n· Seguimiento → ¿qué información o métricas se registran?"
+              },
+              {
+                "title": "4. Compartir con la clase las definiciones del equipo",
+                "body": "Puesta en común de las definiciones del Plan de Mantenimiento, dirigida por el docente."
+              },
+              {
+                "title": "5. Procesar las tarjetas T01–T06 con el Plan de Mantenimiento",
+                "body": "· T01 — Algunos pedidos quedan registrados como pagados aunque el proveedor de pagos haya rechazado la operación.\n· T02 — El proveedor de pagos anuncia que la versión de su API utilizada actualmente será discontinuada dentro de 90 días.\n· T03 — Comercial solicita incorporar promociones del tipo “lleve 3, pague 2”.\n· T04 — El módulo de checkout concentra lógica de negocio, acceso a datos y comunicación con servicios externos; modificaciones recientes produjeron varias regresiones.\n· T05 — La empresa debe comenzar a registrar información adicional asociada a las transacciones.\n· T06 — El número de operaciones aumentó un 300 % y determinadas consultas comienzan a degradar el rendimiento.\n\nPara cada tarjeta: clasificarla según el plan (tipo de mantenimiento + prioridad) y decidir cómo atenderla."
+              }
+            ]
+          },
+          {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Contexto: e-commerce (productos, carrito, ventas, pagos, stock, seguimiento), 6 meses para la primera versión operativa y el mismo equipo mantiene después. Resolución: plan de desarrollo mínimo de 1 página, plan de mantenimiento mínimo de 1 página, decisión ante el recorte del 30 % y procesamiento de las 6 tarjetas con el plan."
+            "content": "Resolución modelo a continuación: el plan de desarrollo y el plan de mantenimiento responden a las consignas 1 y 3, la puesta en común responde a las consignas 2 y 4 (con un extra sobre un recorte presupuestario del 30 %), y el procesamiento de tarjetas responde a la consigna 5."
           },
           {
             "type": "heading",
@@ -4778,10 +4874,54 @@
             "level": 2
           },
           {
+            "type": "accordion",
+            "items": [],
+            "options": [],
+            "title": "Consigna original (EJT5 — Control de versiones, estrategias de ramificación 2026). Desplegá cada punto:",
+            "points": [
+              {
+                "title": "Objetivo",
+                "body": "Diseñar una estrategia de control de versiones que permita gestionar de manera ordenada el desarrollo evolutivo, la corrección de defectos y la atención de incidentes críticos del e-commerce, manteniendo la rama principal y las líneas base del producto consistentes y trazables."
+              },
+              {
+                "title": "Contexto y estado inicial",
+                "body": "E-commerce con React, .NET y SQL Server. Versión en producción: v1.2.0, identificada con un tag sobre la rama principal (línea base actualmente desplegada). En paralelo se prepara la futura v1.3.0. Hasta ahora se usó Git sin estrategia formal, lo que dificulta saber qué cambios forman parte de cada versión y cómo llevar correcciones de producción al código en desarrollo.\n\nTickets planificados:\n· EC-101 (nueva funcionalidad) → promociones “lleve 3 y pague 2”; puede afectar precios, backend, carrito, interfaz React y pruebas. Versión objetivo: 1.3.0.\n· EC-102 (nueva funcionalidad) → visualización detallada de los estados de un pedido en el perfil del cliente. Versión objetivo: 1.3.0."
+              },
+              {
+                "title": "Situación 1 — Defecto durante el desarrollo: BUG-201",
+                "body": "Stock incorrecto al cancelar un pedido: las unidades reservadas no siempre se restituyen. El defecto NO está en producción, solo en el código de la próxima versión. Determinar: desde qué rama se corrige · si corresponde crear una rama específica · dónde se integra después · qué relación tiene con EC-101 y EC-102."
+              },
+              {
+                "title": "Situación 2 — Incidente crítico en producción: HOTFIX-301",
+                "body": "En v1.2.0, respuestas rechazadas del proveedor de pagos se interpretan como pagos aprobados. Afecta transacciones reales: debe corregirse de inmediato, sin esperar a la 1.3.0. Determinar: de qué rama o línea base parte la corrección · qué rama se usa · cómo se valida · cómo llega a producción · cómo se identifica la nueva versión productiva · cómo se incorpora al desarrollo en curso para no perderla en v1.3.0."
+              },
+              {
+                "title": "Situación 3 — Preparación de la versión v1.3.0",
+                "body": "Finalizados EC-101, EC-102 y BUG-201, pueden aparecer defectos menores durante las pruebas finales. Determinar: si se usa una rama específica de preparación · qué cambios pueden entrar en esa etapa · dónde se corrigen · cómo se integra finalmente la versión · cómo se genera la nueva línea base · cómo continúa el desarrollo después de liberar."
+              },
+              {
+                "title": "Consigna general y 10 aspectos mínimos",
+                "body": "Diseñar una estrategia de branching para el repositorio. No exige usar literalmente GitFlow, GitHub Flow ni Trunk-Based: se puede adoptar, adaptar o diseñar una propia, siempre que se justifique y resuelva los escenarios. Debe definir como mínimo:\n· Rama principal → propósito y contenido.\n· Rama/s de desarrollo → si existen y qué función cumplen.\n· Features → origen, nomenclatura y destino.\n· Bugs → forma de tratamiento.\n· Hotfixes → origen y destino.\n· Releases → forma de preparación.\n· Integraciones → cuándo y cómo se realizan.\n· Pull Requests → cuándo son obligatorios.\n· Versionado → criterio utilizado.\n· Líneas base → cómo se crean, identifican y mantienen."
+              },
+              {
+                "title": "Secuencia que debe resolver la estrategia",
+                "body": "v1.2.0 en producción → comienza EC-101 → comienza en paralelo EC-102 → se detecta BUG-201 en pruebas → aparece HOTFIX-301 en producción → HOTFIX-301 se corrige y nace una nueva versión productiva → la corrección se incorpora también al desarrollo en curso → finalizan EC-101, EC-102 y BUG-201 → se prepara y libera la v1.3.0."
+              },
+              {
+                "title": "Entregables",
+                "body": "· Documento de estrategia de branching (máx. 2 páginas): tipos de ramas, propósito, reglas de creación e integración, bugs y hotfixes, releases, versionado y líneas base.\n· Diagrama de ramas: historia del repositorio desde v1.2.0 hasta v1.3.0 con EC-101, EC-102, BUG-201, HOTFIX-301, integraciones/merges y tags.\n· Resolución de tickets: tabla con rama origen, rama creada, destino de integración, versión afectada y justificación para EC-101, EC-102, BUG-201 (1.3.0) y HOTFIX-301 (1.2.1 / 1.3.0)."
+              },
+              {
+                "title": "Criterios de evaluación",
+                "body": "Coherencia interna de la estrategia · trazabilidad entre tickets, ramas, merges, tags y versiones · tratamiento correcto de bugs y hotfixes sin perder correcciones · mantenimiento consistente de la rama principal y de las líneas base · capacidad de justificar las decisiones ante el escenario planteado."
+              }
+            ]
+          },
+          {
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Situación: e-commerce (React + .NET + SQL Server) con v1.2.0 en producción (tag sobre la rama principal = línea base actual) y v1.3.0 en preparación, pero sin estrategia formal de ramas. Hay que diseñar una que resuelva la secuencia: EC-101 + EC-102 en paralelo, BUG-201 en desarrollo, HOTFIX-301 en producción, y release v1.3.0. Estrategia modelo: principal protegida + develop + feature/bugfix/hotfix/release (GitFlow adaptado)."
+            "content": "Situación resumida: e-commerce (React + .NET + SQL Server) con v1.2.0 en producción (tag sobre la rama principal = línea base actual) y v1.3.0 en preparación, pero sin estrategia formal de ramas. Hay que diseñar una que resuelva la secuencia: EC-101 + EC-102 en paralelo, BUG-201 en desarrollo, HOTFIX-301 en producción, y release v1.3.0. Estrategia modelo: principal protegida + develop + feature/bugfix/hotfix/release (GitFlow adaptado)."
           },
           {
             "type": "heading",

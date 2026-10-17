@@ -3,14 +3,14 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'motion/react'
 import {
   BookOpen, ArrowRight, CheckCircle, XCircle, ArrowLeft,
-  GraduationCap, PenNib, Books,
+  GraduationCap, PenNib, Books, CaretDown,
 } from '@phosphor-icons/react'
 import BentoCard from '../components/BentoCard'
 import ChapterNav from '../components/ChapterNav'
 import { useAsync } from '../hooks/useAsync'
 import { api } from '../api/client'
 import bundledTopicsJson from '../data/topics.json'
-import type { Topic, ContentBlock, QuizBlock, TrueFalseBlock, SectionCategory } from '../types'
+import type { Topic, ContentBlock, QuizBlock, TrueFalseBlock, AccordionBlock, SectionCategory } from '../types'
 
 const bundledTopics = bundledTopicsJson as unknown as Topic[]
 const sectionCount = (ts: Topic[]) => ts.reduce((n, t) => n + t.sections.length, 0)
@@ -163,6 +163,47 @@ function TrueFalseBlockComponent({ block }: { block: TrueFalseBlock }) {
   )
 }
 
+function AccordionBlockComponent({ block }: { block: AccordionBlock }) {
+  const [open, setOpen] = useState<number[]>([])
+  const toggle = (i: number) =>
+    setOpen((prev) => (prev.includes(i) ? prev.filter((x) => x !== i) : [...prev, i]))
+
+  return (
+    <div className="my-5 overflow-hidden rounded-lg border border-[#80A1C1]/40 bg-white/80">
+      <div className="flex items-center gap-2 border-b border-black/10 bg-[#80A1C1]/10 px-4 py-3 md:px-5">
+        <BookOpen size={16} className="shrink-0 text-[#2c4a63]" />
+        <p className="text-sm md:text-base font-semibold text-[#2c4a63]">{block.title}</p>
+      </div>
+      <ul className="divide-y divide-black/5">
+        {block.points.map((p, i) => {
+          const isOpen = open.includes(i)
+          return (
+            <li key={i}>
+              <button
+                type="button"
+                onClick={() => toggle(i)}
+                aria-expanded={isOpen}
+                className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-base md:text-lg font-medium text-black/80 transition-colors hover:bg-black/[0.03] md:px-5"
+              >
+                <span>{p.title}</span>
+                <CaretDown
+                  size={16}
+                  className={`shrink-0 text-black/40 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {isOpen && (
+                <p className="whitespace-pre-line px-4 pb-4 text-base leading-relaxed text-black/75 md:px-5 md:text-lg">
+                  {p.body}
+                </p>
+              )}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+}
+
 function ContentBlockRenderer({ block }: { block: ContentBlock }) {
   switch (block.type) {
     case 'heading':
@@ -195,6 +236,8 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
       return <QuizBlockComponent block={block} />
     case 'truefalse':
       return <TrueFalseBlockComponent block={block} />
+    case 'accordion':
+      return <AccordionBlockComponent block={block} />
     default:
       return null
   }
