@@ -917,7 +917,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "Las historias de usuario siguen el formato: Como [rol], quiero [funcionalidad] para [beneficio]. Los criterios de aceptación definen cuándo una historia está completa (Given/When/Then)."
+            "content": "Las historias de usuario siguen el formato: Como [rol], quiero [funcionalidad] para [beneficio]. Los criterios de aceptación definen cuándo una historia está completa; el formato Given/When/Then (base del BDD, que se estudia en la Unidad 2) sirve para escribirlos."
           },
           {
             "type": "heading",
@@ -2538,7 +2538,7 @@
             "type": "text",
             "items": [],
             "options": [],
-            "content": "El corazón del material: qué es una historia y sus 3 partes, jerarquía epic/feature/historia, formato de Story Card, criterios de aceptación, INVEST, casos de uso 2.0 y las definiciones de Ready y Done."
+            "content": "El corazón del material: qué es una historia y sus 3 partes, jerarquía epic/feature/historia, formato de Story Card, criterios de aceptación, BDD con Given/When/Then, INVEST, casos de uso 2.0 y las definiciones de Ready y Done."
           },
           {
             "type": "heading",
@@ -2631,6 +2631,77 @@
             "items": [],
             "options": [],
             "content": "“Proporcionan criterios básicos que pueden utilizarse para determinar si una historia está completamente implementada. Contar con criterios que nos indiquen cuándo algo está hecho es la mejor manera de evitar dedicarle demasiado o muy poco tiempo y esfuerzo.” Idealmente se escriben mientras cliente y desarrolladores discuten la historia, preguntando: ¿qué más necesitan saber los programadores?; ¿qué asumo sobre cómo se implementará?; ¿existen circunstancias en que se comportaría diferente (ej. estados Pending/Processing/Shipped/Delivered/Cancelled, página de 10 órdenes vacía)?; ¿qué puede salir mal (error de red, producto sin stock)?"
+          },
+          {
+            "type": "heading",
+            "items": [],
+            "options": [],
+            "content": "BDD (Behavior-Driven Development): criterios que se ejecutan",
+            "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "BDD (Behavior-Driven Development, o desarrollo guiado por el comportamiento) es una práctica que nace de los criterios de aceptación: en vez de dejarlos como lista en prosa, se escriben en un lenguaje común que entienden por igual el cliente, el analista y el programador, y que además se automatiza como prueba. Su punto de partida es una conversación de tres roles —cliente/PO, desarrollador y tester— que se conoce como los “Tres Amigos” (Three Amigos): la historia se discute con ejemplos concretos antes de escribir una sola línea de código."
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "El formato clásico para escribir cada criterio es Given/When/Then, traducido al español como Dado/Cuando/Entonces: Dado describe el contexto inicial (estado del sistema antes de actuar), Cuando describe la acción que realiza el usuario, y Entonces describe el resultado esperado que se verifica. Se suele agregar un cuarto bloque, Y (And), para encadenar más contexto o más verificaciones. Regla práctica: si un criterio no se puede escribir en este formato, probablemente no esté suficientemente claro."
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "Dado (Given): el contexto o estado inicial del sistema.",
+              "Cuando (When): la acción o evento que dispara el comportamiento.",
+              "Entonces (Then): el resultado observable que se espera y se verifica.",
+              "Y (And): encadena pasos adicionales o verificaciones extra.",
+              "Ejemplo con US-01 (consulta de producto): Dado que el producto con id 42 existe, Cuando el visitante solicita GET /api/products/42, Entonces el sistema responde 200 con nombre, descripción, precio y stock.",
+              "Ejemplo de caso negativo (US-01): Dado que no existe producto con id 999, Cuando el visitante solicita GET /api/products/999, Entonces el sistema responde 404 y muestra un mensaje claro."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "La ventaja del formato es que estos criterios, escritos en un lenguaje de texto plano y estructurado (el más conocido es Gherkin, con palabras clave como Feature, Scenario, Dado/Cuando/Entonces), pueden ejecutarse automáticamente como pruebas funcionales mediante herramientas como Cucumber, SpecFlow o JBehave. Así el criterio de aceptación deja de ser un documento que se lee una vez y se convierte en una prueba viva que se corre en cada build: si alguien rompe el comportamiento, el build falla. Esto conecta directamente con la integración continua (CI) de la Unidad 3 y con la Definition of Done: una historia no está “hecha” si sus escenarios BDD no pasan."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "El contexto o estado inicial del sistema",
+              "La acción que realiza el usuario",
+              "El resultado observable esperado y verificable",
+              "Los roles involucrados en la historia"
+            ],
+            "question": "En Given/When/Then, ¿qué describe el bloque Then?",
+            "correctIndex": 2,
+            "explanation": "Then verifica el resultado esperado; el contexto es Given y la acción es When."
+          },
+          {
+            "type": "quiz",
+            "items": [],
+            "options": [
+              "Un rol del equipo Scrum",
+              "Un lenguaje de texto plano para escribir escenarios Given/When/Then",
+              "Una métrica de velocidad del equipo",
+              "Una baseline de SCM"
+            ],
+            "question": "¿Qué es Gherkin en el contexto de BDD?",
+            "correctIndex": 1,
+            "explanation": "Gherkin es el lenguaje estructurado (Feature, Scenario, Dado/Cuando/Entonces) que usan herramientas como Cucumber."
+          },
+          {
+            "type": "truefalse",
+            "items": [],
+            "options": [],
+            "statement": "Una historia cuyos escenarios BDD no pasan puede considerarse cumplida según la Definition of Done.",
+            "correctAnswer": false,
+            "explanation": "La DoD exige que las pruebas pasen: sin escenarios BDD verdes, la historia no está hecha."
           },
           {
             "type": "heading",
