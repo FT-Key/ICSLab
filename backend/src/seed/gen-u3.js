@@ -2,11 +2,11 @@
 // Pressman 22, SWEBOK 6) + ejercicio resuelto (EJT5 branching).
 export function buildUnidad3(B) {
   const M1 = {
-    title: 'Material de estudio — SCM: el cambio y sus definiciones',
+    title: 'Material de estudio — SCM (Gestión de Configuración del Software): el cambio y sus definiciones',
     category: 'material',
     blocks: [
       B('heading', { content: 'Gestión de configuración del software (clase UT3-P1)', level: 2 }),
-      B('text', { content: 'La Unidad 3 estudia: gestión de configuración (SCM), identificación de elementos, líneas base y control de cambios, control de versiones y código fuente, integración continua (CI), entrega y despliegue continuos (CD), estrategias de despliegue y cultura DevOps. Bibliografía: Sommerville Cap. 25, Pressman Cap. 22 y SWEBOK Cap. 6.' }),
+      B('text', { content: 'La Unidad 3 estudia la SCM (Software Configuration Management, en español Gestión de Configuración del Software), más las actividades que la componen: identificación de elementos, líneas base y control de cambios, control de versiones y código fuente, integración continua (CI), entrega y despliegue continuos (CD), estrategias de despliegue y cultura DevOps. Bibliografía: Sommerville Cap. 25, Pressman Cap. 22 y SWEBOK Cap. 6.' }),
       B('heading', { content: 'El cambio: primera ley de la ingeniería de sistemas', level: 3 }),
       B('quote', { content: 'Sin importar dónde se esté en el ciclo de vida del sistema, el sistema cambiará, y el deseo por cambiar persistirá a lo largo del ciclo de vida.', source: 'Bersoff, Henderson y Siegel' }),
       B('keypoints', { items: [
@@ -15,7 +15,8 @@ export function buildUnidad3(B) {
         'Reorganizaciones o cambios de tamaño alteran prioridades o la estructura del equipo.',
         'Restricciones de presupuesto o calendario obligan a redefinir el sistema.',
       ] }),
-      B('heading', { content: 'Tres definiciones + síntesis (todas valen para el parcial)', level: 3 }),
+      B('heading', { content: '¿Qué es la SCM? Tres definiciones (todas valen para el parcial)', level: 3 }),
+      B('text', { content: 'Las tres principales definiciones de Gestión de Configuración del Software (SCM), una por bibliografía:' }),
       B('quote', { content: 'Se ocupa de las políticas, los procesos y las herramientas para administrar los sistemas cambiantes de software.', source: 'Ian Sommerville' }),
       B('quote', { content: 'Es un conjunto de actividades para administrar el cambio a lo largo del ciclo de vida del software.', source: 'Roger Pressman' }),
       B('quote', { content: 'Disciplina que aplica dirección técnica y administrativa para identificar y documentar características de un elemento de configuración, controlar sus cambios, registrar su estado y verificar el cumplimiento de requisitos.', source: 'SWEBOK v3.0' }),
