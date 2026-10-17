@@ -4535,17 +4535,46 @@
             "type": "heading",
             "items": [],
             "options": [],
-            "content": "SCM para web (4 conflictos y 4 clases de cambio)",
+            "content": "SCM para web: 4 conflictos y 4 clases de cambio",
             "level": 3
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Un sitio web pone la gestión de configuración bajo presión porque cambia todo el tiempo y lo editan muchas personas a la vez. Pressman describe 4 conflictos típicos que hay que resolver:"
           },
           {
             "type": "keypoints",
             "items": [
-              "Conflictos: contenido (clasificar por estático/dinámico y longevidad), personas (muchos autores no ingenieros), escalabilidad (cambios chicos, efectos lejanos) y políticas (¿quién posee y responde?).",
-              "Cambios web: C1 local, C2 que impacta otros objetos, C3 amplio (nueva funcionalidad/navegación), C4 rediseño visible; el proceso se endurece de C1 a C4.",
-              "Sin control en web: publicaciones no autorizadas, funcionalidad mal probada, huecos de seguridad y daño económico."
+              "Conflicto de contenido: el sitio tiene montones de contenidos (textos, imágenes, enlaces), una mezcla de contenido estático (no cambia) y dinámico (se genera o actualiza seguido), y con distinta longevidad —algunas páginas viven años, otras duran días—. Hay que clasificar cada contenido para saber cuánto vive y quién lo controla.",
+              "Conflicto de personas: en un sitio web escriben y publican muchos autores que no son ingenieros de software (redactores, diseñadores, marketing). Todos necesitan editar, pero sin perder el control.",
+              "Conflicto de escalabilidad: los cambios son chicos (una frase, una foto, un precio) pero sus efectos son lejanos: pueden romper plantillas, menús, enlaces o funciones en otras partes del sitio.",
+              "Conflicto de políticas: si nadie definió quién es dueño de cada página y quién responde cuando algo se rompe, los cambios se aprueban a pulmón. Hace falta dejar por escrito roles y responsabilidades."
             ],
             "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Además, los cambios web se clasifican en 4 niveles según cuánto tocan, y el proceso de aprobación se vuelve más estricto a medida que sube el nivel:"
+          },
+          {
+            "type": "keypoints",
+            "items": [
+              "C1 — cambio local: toca un solo objeto y no afecta a nada más (corregir una errata en una página). Trámite mínimo.",
+              "C2 — cambio con efecto en otros objetos: modifica algo que está relacionado con otros contenidos (mover un producto de categoría rompe su página y los filtros). Requiere revisar lo relacionado.",
+              "C3 — cambio amplio: agrega funcionalidad o navegación nueva (un carrito de compras, un menú nuevo). Exige análisis de impacto y pruebas.",
+              "C4 — rediseño visible: cambia la apariencia general del sitio (nuevo look and feel). Es el más formal: aprobación, pruebas completas y plan de despliegue."
+            ],
+            "options": []
+          },
+          {
+            "type": "text",
+            "items": [],
+            "options": [],
+            "content": "Si no se controla nada, el resultado es previsible: cualquiera publica sin autorización, llega funcionalidad mal probada a producción, quedan huecos de seguridad abiertos y eso termina en daño económico y de imagen para el negocio."
           },
           {
             "type": "quiz",
